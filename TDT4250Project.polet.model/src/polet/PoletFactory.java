@@ -31,15 +31,6 @@ public interface PoletFactory extends EFactory {
 	Categories createCategories();
 
 	/**
-	 * Returns a new object of class '<em>Price</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Price</em>'.
-	 * @generated
-	 */
-	Price createPrice();
-
-	/**
 	 * Returns a new object of class '<em>Product</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,15 +38,6 @@ public interface PoletFactory extends EFactory {
 	 * @generated
 	 */
 	Product createProduct();
-
-	/**
-	 * Returns a new object of class '<em>Alcohol Content</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Alcohol Content</em>'.
-	 * @generated
-	 */
-	AlcoholContent createAlcoholContent();
 
 	/**
 	 * Returns a new object of class '<em>Country</em>'.
@@ -85,13 +67,22 @@ public interface PoletFactory extends EFactory {
 	ProductType createProductType();
 
 	/**
-	 * Returns a new object of class '<em>Volume</em>'.
+	 * Returns a new object of class '<em>Krone Per Volume</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Volume</em>'.
+	 * @return a new object of class '<em>Krone Per Volume</em>'.
 	 * @generated
 	 */
-	Volume createVolume();
+	KronePerVolume createKronePerVolume();
+
+	/**
+	 * Returns a new object of class '<em>Krone Per Alcohol</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Krone Per Alcohol</em>'.
+	 * @generated
+	 */
+	KronePerAlcohol createKronePerAlcohol();
 
 	/**
 	 * Returns the package supported by this factory.

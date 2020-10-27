@@ -5,39 +5,29 @@
   <eClassifiers xsi:type="ecore:EClass" name="Categories">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Products" upperBound="-1"
         eType="#//Product" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="alcoholContents" upperBound="-1"
-        eType="#//AlcoholContent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="countries" upperBound="-1"
         eType="#//Country" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Prices" upperBound="-1"
-        eType="#//Price" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="productTypes" upperBound="-1"
         eType="#//ProductType" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="volumes" upperBound="-1"
-        eType="#//Volume" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Price">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="salesPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kronePerVolumes" upperBound="-1"
+        eType="#//KronePerVolume" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alcoholPerKrones" upperBound="-1"
+        eType="#//KronePerAlcohol" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Product">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="productId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="alcoholContent" eType="#//AlcoholContent"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="price" eType="#//Price"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="country" eType="#//Country"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="productType" eType="#//ProductType"
         eOpposite="#//ProductType/products"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Volume" eType="#//Volume"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alcoholPerKrone" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kronePerVolume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        derived="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AlcoholContent">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percent" unique="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kronePerVolume" eType="#//KronePerVolume"
+        eOpposite="#//KronePerVolume/products"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alcoholPerKrone" eType="#//KronePerAlcohol"
+        eOpposite="#//KronePerAlcohol/products"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alcoholContent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Volume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Country">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -67,8 +57,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
         eType="#//Product" eOpposite="#//Product/productType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Volume">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="liters" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        iD="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="KronePerVolume">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        derived="true" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
+        eType="#//Product" eOpposite="#//Product/kronePerVolume"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KronePerAlcohol">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        derived="true" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
+        eType="#//Product" eOpposite="#//Product/alcoholPerKrone"/>
   </eClassifiers>
 </ecore:EPackage>

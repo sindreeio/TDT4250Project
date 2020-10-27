@@ -8,17 +8,15 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import polet.AlcoholContent;
 import polet.Categories;
 import polet.Country;
+import polet.KronePerAlcohol;
+import polet.KronePerVolume;
 import polet.PoletFactory;
 import polet.PoletPackage;
-import polet.Price;
 import polet.Product;
 import polet.ProductType;
 import polet.Region;
-import polet.Volume;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,21 +37,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass priceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass productEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass alcoholContentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,7 +65,14 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass volumeEClass = null;
+	private EClass kronePerVolumeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass kronePerAlcoholEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -167,7 +158,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCategories_AlcoholContents() {
+	public EReference getCategories_Countries() {
 		return (EReference)categoriesEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -176,7 +167,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCategories_Countries() {
+	public EReference getCategories_ProductTypes() {
 		return (EReference)categoriesEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -185,7 +176,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCategories_Prices() {
+	public EReference getCategories_KronePerVolumes() {
 		return (EReference)categoriesEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -194,35 +185,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCategories_ProductTypes() {
+	public EReference getCategories_AlcoholPerKrones() {
 		return (EReference)categoriesEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCategories_Volumes() {
-		return (EReference)categoriesEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPrice() {
-		return priceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPrice_SalesPrice() {
-		return (EAttribute)priceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -248,61 +212,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProduct_AlcoholContent() {
-		return (EReference)productEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getProduct_Name() {
-		return (EAttribute)productEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProduct_Price() {
-		return (EReference)productEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProduct_Country() {
-		return (EReference)productEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProduct_ProductType() {
-		return (EReference)productEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProduct_Volume() {
-		return (EReference)productEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getProduct_AlcoholPerKrone() {
+	public EAttribute getProduct_AlcoholContent() {
 		return (EAttribute)productEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -311,7 +221,43 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getProduct_KronePerVolume() {
+	public EAttribute getProduct_Name() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProduct_Price() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProduct_Country() {
+		return (EReference)productEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProduct_ProductType() {
+		return (EReference)productEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProduct_Volume() {
 		return (EAttribute)productEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -320,8 +266,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAlcoholContent() {
-		return alcoholContentEClass;
+	public EReference getProduct_AlcoholPerKrone() {
+		return (EReference)productEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -329,8 +275,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAlcoholContent_Percent() {
-		return (EAttribute)alcoholContentEClass.getEStructuralFeatures().get(0);
+	public EReference getProduct_KronePerVolume() {
+		return (EReference)productEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -464,8 +410,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVolume() {
-		return volumeEClass;
+	public EClass getKronePerVolume() {
+		return kronePerVolumeEClass;
 	}
 
 	/**
@@ -473,8 +419,44 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVolume_Liters() {
-		return (EAttribute)volumeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getKronePerVolume_DerivedNumber() {
+		return (EAttribute)kronePerVolumeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getKronePerVolume_Products() {
+		return (EReference)kronePerVolumeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getKronePerAlcohol() {
+		return kronePerAlcoholEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKronePerAlcohol_DerivedNumber() {
+		return (EAttribute)kronePerAlcoholEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getKronePerAlcohol_Products() {
+		return (EReference)kronePerAlcoholEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -507,28 +489,21 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		// Create classes and their features
 		categoriesEClass = createEClass(CATEGORIES);
 		createEReference(categoriesEClass, CATEGORIES__PRODUCTS);
-		createEReference(categoriesEClass, CATEGORIES__ALCOHOL_CONTENTS);
 		createEReference(categoriesEClass, CATEGORIES__COUNTRIES);
-		createEReference(categoriesEClass, CATEGORIES__PRICES);
 		createEReference(categoriesEClass, CATEGORIES__PRODUCT_TYPES);
-		createEReference(categoriesEClass, CATEGORIES__VOLUMES);
-
-		priceEClass = createEClass(PRICE);
-		createEAttribute(priceEClass, PRICE__SALES_PRICE);
+		createEReference(categoriesEClass, CATEGORIES__KRONE_PER_VOLUMES);
+		createEReference(categoriesEClass, CATEGORIES__ALCOHOL_PER_KRONES);
 
 		productEClass = createEClass(PRODUCT);
 		createEAttribute(productEClass, PRODUCT__PRODUCT_ID);
-		createEReference(productEClass, PRODUCT__ALCOHOL_CONTENT);
 		createEAttribute(productEClass, PRODUCT__NAME);
-		createEReference(productEClass, PRODUCT__PRICE);
 		createEReference(productEClass, PRODUCT__COUNTRY);
 		createEReference(productEClass, PRODUCT__PRODUCT_TYPE);
-		createEReference(productEClass, PRODUCT__VOLUME);
-		createEAttribute(productEClass, PRODUCT__ALCOHOL_PER_KRONE);
-		createEAttribute(productEClass, PRODUCT__KRONE_PER_VOLUME);
-
-		alcoholContentEClass = createEClass(ALCOHOL_CONTENT);
-		createEAttribute(alcoholContentEClass, ALCOHOL_CONTENT__PERCENT);
+		createEReference(productEClass, PRODUCT__KRONE_PER_VOLUME);
+		createEReference(productEClass, PRODUCT__ALCOHOL_PER_KRONE);
+		createEAttribute(productEClass, PRODUCT__PRICE);
+		createEAttribute(productEClass, PRODUCT__ALCOHOL_CONTENT);
+		createEAttribute(productEClass, PRODUCT__VOLUME);
 
 		countryEClass = createEClass(COUNTRY);
 		createEAttribute(countryEClass, COUNTRY__COUNTRY_ID);
@@ -547,8 +522,13 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		createEReference(productTypeEClass, PRODUCT_TYPE__PRODUCED_IN);
 		createEReference(productTypeEClass, PRODUCT_TYPE__PRODUCTS);
 
-		volumeEClass = createEClass(VOLUME);
-		createEAttribute(volumeEClass, VOLUME__LITERS);
+		kronePerVolumeEClass = createEClass(KRONE_PER_VOLUME);
+		createEAttribute(kronePerVolumeEClass, KRONE_PER_VOLUME__DERIVED_NUMBER);
+		createEReference(kronePerVolumeEClass, KRONE_PER_VOLUME__PRODUCTS);
+
+		kronePerAlcoholEClass = createEClass(KRONE_PER_ALCOHOL);
+		createEAttribute(kronePerAlcoholEClass, KRONE_PER_ALCOHOL__DERIVED_NUMBER);
+		createEReference(kronePerAlcoholEClass, KRONE_PER_ALCOHOL__PRODUCTS);
 	}
 
 	/**
@@ -583,28 +563,21 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(categoriesEClass, Categories.class, "Categories", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCategories_Products(), this.getProduct(), null, "Products", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCategories_AlcoholContents(), this.getAlcoholContent(), null, "alcoholContents", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCategories_Countries(), this.getCountry(), null, "countries", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCategories_Prices(), this.getPrice(), null, "Prices", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCategories_ProductTypes(), this.getProductType(), null, "productTypes", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCategories_Volumes(), this.getVolume(), null, "volumes", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(priceEClass, Price.class, "Price", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPrice_SalesPrice(), ecorePackage.getEFloat(), "salesPrice", null, 0, 1, Price.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCategories_KronePerVolumes(), this.getKronePerVolume(), null, "kronePerVolumes", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCategories_AlcoholPerKrones(), this.getKronePerAlcohol(), null, "alcoholPerKrones", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(productEClass, Product.class, "Product", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProduct_ProductId(), ecorePackage.getEString(), "productId", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_AlcoholContent(), this.getAlcoholContent(), null, "alcoholContent", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProduct_Name(), ecorePackage.getEString(), "name", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_Price(), this.getPrice(), null, "price", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_Country(), this.getCountry(), null, "country", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_ProductType(), this.getProductType(), this.getProductType_Products(), "productType", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_Volume(), this.getVolume(), null, "Volume", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProduct_AlcoholPerKrone(), ecorePackage.getEFloat(), "alcoholPerKrone", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProduct_KronePerVolume(), ecorePackage.getEFloat(), "kronePerVolume", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(alcoholContentEClass, AlcoholContent.class, "AlcoholContent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAlcoholContent_Percent(), ecorePackage.getEFloat(), "percent", null, 0, 1, AlcoholContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProduct_KronePerVolume(), this.getKronePerVolume(), this.getKronePerVolume_Products(), "kronePerVolume", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProduct_AlcoholPerKrone(), this.getKronePerAlcohol(), this.getKronePerAlcohol_Products(), "alcoholPerKrone", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduct_Price(), ecorePackage.getEFloat(), "price", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduct_AlcoholContent(), ecorePackage.getEFloat(), "alcoholContent", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduct_Volume(), ecorePackage.getEFloat(), "Volume", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(countryEClass, Country.class, "Country", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCountry_CountryId(), ecorePackage.getEString(), "countryId", null, 0, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -623,8 +596,13 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		initEReference(getProductType_ProducedIn(), this.getRegion(), this.getRegion_Produces(), "producedIn", null, 0, -1, ProductType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProductType_Products(), this.getProduct(), this.getProduct_ProductType(), "products", null, 0, -1, ProductType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(volumeEClass, Volume.class, "Volume", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVolume_Liters(), ecorePackage.getEFloat(), "liters", null, 0, 1, Volume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(kronePerVolumeEClass, KronePerVolume.class, "KronePerVolume", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKronePerVolume_DerivedNumber(), ecorePackage.getEFloat(), "derivedNumber", null, 0, 1, KronePerVolume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getKronePerVolume_Products(), this.getProduct(), this.getProduct_KronePerVolume(), "products", null, 0, -1, KronePerVolume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(kronePerAlcoholEClass, KronePerAlcohol.class, "KronePerAlcohol", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getKronePerAlcohol_DerivedNumber(), ecorePackage.getEFloat(), "derivedNumber", null, 0, 1, KronePerAlcohol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getKronePerAlcohol_Products(), this.getProduct(), this.getProduct_AlcoholPerKrone(), "products", null, 0, -1, KronePerAlcohol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

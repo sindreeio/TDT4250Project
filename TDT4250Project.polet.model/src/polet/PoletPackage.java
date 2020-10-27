@@ -76,31 +76,13 @@ public interface PoletPackage extends EPackage {
 	int CATEGORIES__PRODUCTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Alcohol Contents</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIES__ALCOHOL_CONTENTS = 1;
-
-	/**
 	 * The feature id for the '<em><b>Countries</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIES__COUNTRIES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Prices</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIES__PRICES = 3;
+	int CATEGORIES__COUNTRIES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Product Types</b></em>' containment reference list.
@@ -109,16 +91,25 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIES__PRODUCT_TYPES = 4;
+	int CATEGORIES__PRODUCT_TYPES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Volumes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Krone Per Volumes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIES__VOLUMES = 5;
+	int CATEGORIES__KRONE_PER_VOLUMES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Alcohol Per Krones</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORIES__ALCOHOL_PER_KRONES = 4;
 
 	/**
 	 * The number of structural features of the '<em>Categories</em>' class.
@@ -127,7 +118,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIES_FEATURE_COUNT = 6;
+	int CATEGORIES_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Categories</em>' class.
@@ -139,43 +130,6 @@ public interface PoletPackage extends EPackage {
 	int CATEGORIES_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link polet.impl.PriceImpl <em>Price</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see polet.impl.PriceImpl
-	 * @see polet.impl.PoletPackageImpl#getPrice()
-	 * @generated
-	 */
-	int PRICE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Sales Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRICE__SALES_PRICE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Price</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRICE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Price</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRICE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link polet.impl.ProductImpl <em>Product</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -183,7 +137,7 @@ public interface PoletPackage extends EPackage {
 	 * @see polet.impl.PoletPackageImpl#getProduct()
 	 * @generated
 	 */
-	int PRODUCT = 2;
+	int PRODUCT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Product Id</b></em>' attribute.
@@ -195,31 +149,13 @@ public interface PoletPackage extends EPackage {
 	int PRODUCT__PRODUCT_ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Alcohol Content</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCT__ALCOHOL_CONTENT = 1;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__NAME = 2;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCT__PRICE = 3;
+	int PRODUCT__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Country</b></em>' reference.
@@ -228,7 +164,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__COUNTRY = 4;
+	int PRODUCT__COUNTRY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Product Type</b></em>' reference.
@@ -237,34 +173,52 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__PRODUCT_TYPE = 5;
+	int PRODUCT__PRODUCT_TYPE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Volume</b></em>' reference.
+	 * The feature id for the '<em><b>Krone Per Volume</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__VOLUME = 6;
+	int PRODUCT__KRONE_PER_VOLUME = 4;
 
 	/**
-	 * The feature id for the '<em><b>Alcohol Per Krone</b></em>' attribute.
+	 * The feature id for the '<em><b>Alcohol Per Krone</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__ALCOHOL_PER_KRONE = 7;
+	int PRODUCT__ALCOHOL_PER_KRONE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Krone Per Volume</b></em>' attribute.
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__KRONE_PER_VOLUME = 8;
+	int PRODUCT__PRICE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Alcohol Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__ALCOHOL_CONTENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Volume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__VOLUME = 8;
 
 	/**
 	 * The number of structural features of the '<em>Product</em>' class.
@@ -285,43 +239,6 @@ public interface PoletPackage extends EPackage {
 	int PRODUCT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link polet.impl.AlcoholContentImpl <em>Alcohol Content</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see polet.impl.AlcoholContentImpl
-	 * @see polet.impl.PoletPackageImpl#getAlcoholContent()
-	 * @generated
-	 */
-	int ALCOHOL_CONTENT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Percent</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALCOHOL_CONTENT__PERCENT = 0;
-
-	/**
-	 * The number of structural features of the '<em>Alcohol Content</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALCOHOL_CONTENT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Alcohol Content</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALCOHOL_CONTENT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link polet.impl.CountryImpl <em>Country</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -329,7 +246,7 @@ public interface PoletPackage extends EPackage {
 	 * @see polet.impl.PoletPackageImpl#getCountry()
 	 * @generated
 	 */
-	int COUNTRY = 4;
+	int COUNTRY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Country Id</b></em>' attribute.
@@ -384,7 +301,7 @@ public interface PoletPackage extends EPackage {
 	 * @see polet.impl.PoletPackageImpl#getRegion()
 	 * @generated
 	 */
-	int REGION = 5;
+	int REGION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Region Id</b></em>' attribute.
@@ -448,7 +365,7 @@ public interface PoletPackage extends EPackage {
 	 * @see polet.impl.PoletPackageImpl#getProductType()
 	 * @generated
 	 */
-	int PRODUCT_TYPE = 6;
+	int PRODUCT_TYPE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Product Type Id</b></em>' attribute.
@@ -505,42 +422,96 @@ public interface PoletPackage extends EPackage {
 	int PRODUCT_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link polet.impl.VolumeImpl <em>Volume</em>}' class.
+	 * The meta object id for the '{@link polet.impl.KronePerVolumeImpl <em>Krone Per Volume</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see polet.impl.VolumeImpl
-	 * @see polet.impl.PoletPackageImpl#getVolume()
+	 * @see polet.impl.KronePerVolumeImpl
+	 * @see polet.impl.PoletPackageImpl#getKronePerVolume()
 	 * @generated
 	 */
-	int VOLUME = 7;
+	int KRONE_PER_VOLUME = 5;
 
 	/**
-	 * The feature id for the '<em><b>Liters</b></em>' attribute.
+	 * The feature id for the '<em><b>Derived Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUME__LITERS = 0;
+	int KRONE_PER_VOLUME__DERIVED_NUMBER = 0;
 
 	/**
-	 * The number of structural features of the '<em>Volume</em>' class.
+	 * The feature id for the '<em><b>Products</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUME_FEATURE_COUNT = 1;
+	int KRONE_PER_VOLUME__PRODUCTS = 1;
 
 	/**
-	 * The number of operations of the '<em>Volume</em>' class.
+	 * The number of structural features of the '<em>Krone Per Volume</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUME_OPERATION_COUNT = 0;
+	int KRONE_PER_VOLUME_FEATURE_COUNT = 2;
 
+	/**
+	 * The number of operations of the '<em>Krone Per Volume</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KRONE_PER_VOLUME_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link polet.impl.KronePerAlcoholImpl <em>Krone Per Alcohol</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see polet.impl.KronePerAlcoholImpl
+	 * @see polet.impl.PoletPackageImpl#getKronePerAlcohol()
+	 * @generated
+	 */
+	int KRONE_PER_ALCOHOL = 6;
+
+	/**
+	 * The feature id for the '<em><b>Derived Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KRONE_PER_ALCOHOL__DERIVED_NUMBER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Products</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KRONE_PER_ALCOHOL__PRODUCTS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Krone Per Alcohol</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KRONE_PER_ALCOHOL_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Krone Per Alcohol</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KRONE_PER_ALCOHOL_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link polet.Categories <em>Categories</em>}'.
@@ -564,17 +535,6 @@ public interface PoletPackage extends EPackage {
 	EReference getCategories_Products();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link polet.Categories#getAlcoholContents <em>Alcohol Contents</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Alcohol Contents</em>'.
-	 * @see polet.Categories#getAlcoholContents()
-	 * @see #getCategories()
-	 * @generated
-	 */
-	EReference getCategories_AlcoholContents();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link polet.Categories#getCountries <em>Countries</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -584,17 +544,6 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCategories_Countries();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link polet.Categories#getPrices <em>Prices</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Prices</em>'.
-	 * @see polet.Categories#getPrices()
-	 * @see #getCategories()
-	 * @generated
-	 */
-	EReference getCategories_Prices();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link polet.Categories#getProductTypes <em>Product Types</em>}'.
@@ -608,36 +557,26 @@ public interface PoletPackage extends EPackage {
 	EReference getCategories_ProductTypes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link polet.Categories#getVolumes <em>Volumes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link polet.Categories#getKronePerVolumes <em>Krone Per Volumes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Volumes</em>'.
-	 * @see polet.Categories#getVolumes()
+	 * @return the meta object for the containment reference list '<em>Krone Per Volumes</em>'.
+	 * @see polet.Categories#getKronePerVolumes()
 	 * @see #getCategories()
 	 * @generated
 	 */
-	EReference getCategories_Volumes();
+	EReference getCategories_KronePerVolumes();
 
 	/**
-	 * Returns the meta object for class '{@link polet.Price <em>Price</em>}'.
+	 * Returns the meta object for the containment reference list '{@link polet.Categories#getAlcoholPerKrones <em>Alcohol Per Krones</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Price</em>'.
-	 * @see polet.Price
+	 * @return the meta object for the containment reference list '<em>Alcohol Per Krones</em>'.
+	 * @see polet.Categories#getAlcoholPerKrones()
+	 * @see #getCategories()
 	 * @generated
 	 */
-	EClass getPrice();
-
-	/**
-	 * Returns the meta object for the attribute '{@link polet.Price#getSalesPrice <em>Sales Price</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Sales Price</em>'.
-	 * @see polet.Price#getSalesPrice()
-	 * @see #getPrice()
-	 * @generated
-	 */
-	EAttribute getPrice_SalesPrice();
+	EReference getCategories_AlcoholPerKrones();
 
 	/**
 	 * Returns the meta object for class '{@link polet.Product <em>Product</em>}'.
@@ -661,15 +600,15 @@ public interface PoletPackage extends EPackage {
 	EAttribute getProduct_ProductId();
 
 	/**
-	 * Returns the meta object for the reference '{@link polet.Product#getAlcoholContent <em>Alcohol Content</em>}'.
+	 * Returns the meta object for the attribute '{@link polet.Product#getAlcoholContent <em>Alcohol Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Alcohol Content</em>'.
+	 * @return the meta object for the attribute '<em>Alcohol Content</em>'.
 	 * @see polet.Product#getAlcoholContent()
 	 * @see #getProduct()
 	 * @generated
 	 */
-	EReference getProduct_AlcoholContent();
+	EAttribute getProduct_AlcoholContent();
 
 	/**
 	 * Returns the meta object for the attribute '{@link polet.Product#getName <em>Name</em>}'.
@@ -683,15 +622,15 @@ public interface PoletPackage extends EPackage {
 	EAttribute getProduct_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link polet.Product#getPrice <em>Price</em>}'.
+	 * Returns the meta object for the attribute '{@link polet.Product#getPrice <em>Price</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Price</em>'.
+	 * @return the meta object for the attribute '<em>Price</em>'.
 	 * @see polet.Product#getPrice()
 	 * @see #getProduct()
 	 * @generated
 	 */
-	EReference getProduct_Price();
+	EAttribute getProduct_Price();
 
 	/**
 	 * Returns the meta object for the reference '{@link polet.Product#getCountry <em>Country</em>}'.
@@ -716,58 +655,37 @@ public interface PoletPackage extends EPackage {
 	EReference getProduct_ProductType();
 
 	/**
-	 * Returns the meta object for the reference '{@link polet.Product#getVolume <em>Volume</em>}'.
+	 * Returns the meta object for the attribute '{@link polet.Product#getVolume <em>Volume</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Volume</em>'.
+	 * @return the meta object for the attribute '<em>Volume</em>'.
 	 * @see polet.Product#getVolume()
 	 * @see #getProduct()
 	 * @generated
 	 */
-	EReference getProduct_Volume();
+	EAttribute getProduct_Volume();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.Product#getAlcoholPerKrone <em>Alcohol Per Krone</em>}'.
+	 * Returns the meta object for the reference '{@link polet.Product#getAlcoholPerKrone <em>Alcohol Per Krone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Alcohol Per Krone</em>'.
+	 * @return the meta object for the reference '<em>Alcohol Per Krone</em>'.
 	 * @see polet.Product#getAlcoholPerKrone()
 	 * @see #getProduct()
 	 * @generated
 	 */
-	EAttribute getProduct_AlcoholPerKrone();
+	EReference getProduct_AlcoholPerKrone();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.Product#getKronePerVolume <em>Krone Per Volume</em>}'.
+	 * Returns the meta object for the reference '{@link polet.Product#getKronePerVolume <em>Krone Per Volume</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Krone Per Volume</em>'.
+	 * @return the meta object for the reference '<em>Krone Per Volume</em>'.
 	 * @see polet.Product#getKronePerVolume()
 	 * @see #getProduct()
 	 * @generated
 	 */
-	EAttribute getProduct_KronePerVolume();
-
-	/**
-	 * Returns the meta object for class '{@link polet.AlcoholContent <em>Alcohol Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Alcohol Content</em>'.
-	 * @see polet.AlcoholContent
-	 * @generated
-	 */
-	EClass getAlcoholContent();
-
-	/**
-	 * Returns the meta object for the attribute '{@link polet.AlcoholContent#getPercent <em>Percent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Percent</em>'.
-	 * @see polet.AlcoholContent#getPercent()
-	 * @see #getAlcoholContent()
-	 * @generated
-	 */
-	EAttribute getAlcoholContent_Percent();
+	EReference getProduct_KronePerVolume();
 
 	/**
 	 * Returns the meta object for class '{@link polet.Country <em>Country</em>}'.
@@ -921,25 +839,68 @@ public interface PoletPackage extends EPackage {
 	EReference getProductType_Products();
 
 	/**
-	 * Returns the meta object for class '{@link polet.Volume <em>Volume</em>}'.
+	 * Returns the meta object for class '{@link polet.KronePerVolume <em>Krone Per Volume</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Volume</em>'.
-	 * @see polet.Volume
+	 * @return the meta object for class '<em>Krone Per Volume</em>'.
+	 * @see polet.KronePerVolume
 	 * @generated
 	 */
-	EClass getVolume();
+	EClass getKronePerVolume();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.Volume#getLiters <em>Liters</em>}'.
+	 * Returns the meta object for the attribute '{@link polet.KronePerVolume#getDerivedNumber <em>Derived Number</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Liters</em>'.
-	 * @see polet.Volume#getLiters()
-	 * @see #getVolume()
+	 * @return the meta object for the attribute '<em>Derived Number</em>'.
+	 * @see polet.KronePerVolume#getDerivedNumber()
+	 * @see #getKronePerVolume()
 	 * @generated
 	 */
-	EAttribute getVolume_Liters();
+	EAttribute getKronePerVolume_DerivedNumber();
+
+	/**
+	 * Returns the meta object for the reference list '{@link polet.KronePerVolume#getProducts <em>Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Products</em>'.
+	 * @see polet.KronePerVolume#getProducts()
+	 * @see #getKronePerVolume()
+	 * @generated
+	 */
+	EReference getKronePerVolume_Products();
+
+	/**
+	 * Returns the meta object for class '{@link polet.KronePerAlcohol <em>Krone Per Alcohol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Krone Per Alcohol</em>'.
+	 * @see polet.KronePerAlcohol
+	 * @generated
+	 */
+	EClass getKronePerAlcohol();
+
+	/**
+	 * Returns the meta object for the attribute '{@link polet.KronePerAlcohol#getDerivedNumber <em>Derived Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Derived Number</em>'.
+	 * @see polet.KronePerAlcohol#getDerivedNumber()
+	 * @see #getKronePerAlcohol()
+	 * @generated
+	 */
+	EAttribute getKronePerAlcohol_DerivedNumber();
+
+	/**
+	 * Returns the meta object for the reference list '{@link polet.KronePerAlcohol#getProducts <em>Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Products</em>'.
+	 * @see polet.KronePerAlcohol#getProducts()
+	 * @see #getKronePerAlcohol()
+	 * @generated
+	 */
+	EReference getKronePerAlcohol_Products();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -983,28 +944,12 @@ public interface PoletPackage extends EPackage {
 		EReference CATEGORIES__PRODUCTS = eINSTANCE.getCategories_Products();
 
 		/**
-		 * The meta object literal for the '<em><b>Alcohol Contents</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CATEGORIES__ALCOHOL_CONTENTS = eINSTANCE.getCategories_AlcoholContents();
-
-		/**
 		 * The meta object literal for the '<em><b>Countries</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference CATEGORIES__COUNTRIES = eINSTANCE.getCategories_Countries();
-
-		/**
-		 * The meta object literal for the '<em><b>Prices</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CATEGORIES__PRICES = eINSTANCE.getCategories_Prices();
 
 		/**
 		 * The meta object literal for the '<em><b>Product Types</b></em>' containment reference list feature.
@@ -1015,30 +960,20 @@ public interface PoletPackage extends EPackage {
 		EReference CATEGORIES__PRODUCT_TYPES = eINSTANCE.getCategories_ProductTypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Volumes</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Krone Per Volumes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CATEGORIES__VOLUMES = eINSTANCE.getCategories_Volumes();
+		EReference CATEGORIES__KRONE_PER_VOLUMES = eINSTANCE.getCategories_KronePerVolumes();
 
 		/**
-		 * The meta object literal for the '{@link polet.impl.PriceImpl <em>Price</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see polet.impl.PriceImpl
-		 * @see polet.impl.PoletPackageImpl#getPrice()
-		 * @generated
-		 */
-		EClass PRICE = eINSTANCE.getPrice();
-
-		/**
-		 * The meta object literal for the '<em><b>Sales Price</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Alcohol Per Krones</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRICE__SALES_PRICE = eINSTANCE.getPrice_SalesPrice();
+		EReference CATEGORIES__ALCOHOL_PER_KRONES = eINSTANCE.getCategories_AlcoholPerKrones();
 
 		/**
 		 * The meta object literal for the '{@link polet.impl.ProductImpl <em>Product</em>}' class.
@@ -1059,12 +994,12 @@ public interface PoletPackage extends EPackage {
 		EAttribute PRODUCT__PRODUCT_ID = eINSTANCE.getProduct_ProductId();
 
 		/**
-		 * The meta object literal for the '<em><b>Alcohol Content</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Alcohol Content</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRODUCT__ALCOHOL_CONTENT = eINSTANCE.getProduct_AlcoholContent();
+		EAttribute PRODUCT__ALCOHOL_CONTENT = eINSTANCE.getProduct_AlcoholContent();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1075,12 +1010,12 @@ public interface PoletPackage extends EPackage {
 		EAttribute PRODUCT__NAME = eINSTANCE.getProduct_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Price</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRODUCT__PRICE = eINSTANCE.getProduct_Price();
+		EAttribute PRODUCT__PRICE = eINSTANCE.getProduct_Price();
 
 		/**
 		 * The meta object literal for the '<em><b>Country</b></em>' reference feature.
@@ -1099,46 +1034,28 @@ public interface PoletPackage extends EPackage {
 		EReference PRODUCT__PRODUCT_TYPE = eINSTANCE.getProduct_ProductType();
 
 		/**
-		 * The meta object literal for the '<em><b>Volume</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Volume</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRODUCT__VOLUME = eINSTANCE.getProduct_Volume();
+		EAttribute PRODUCT__VOLUME = eINSTANCE.getProduct_Volume();
 
 		/**
-		 * The meta object literal for the '<em><b>Alcohol Per Krone</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Alcohol Per Krone</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRODUCT__ALCOHOL_PER_KRONE = eINSTANCE.getProduct_AlcoholPerKrone();
+		EReference PRODUCT__ALCOHOL_PER_KRONE = eINSTANCE.getProduct_AlcoholPerKrone();
 
 		/**
-		 * The meta object literal for the '<em><b>Krone Per Volume</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Krone Per Volume</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRODUCT__KRONE_PER_VOLUME = eINSTANCE.getProduct_KronePerVolume();
-
-		/**
-		 * The meta object literal for the '{@link polet.impl.AlcoholContentImpl <em>Alcohol Content</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see polet.impl.AlcoholContentImpl
-		 * @see polet.impl.PoletPackageImpl#getAlcoholContent()
-		 * @generated
-		 */
-		EClass ALCOHOL_CONTENT = eINSTANCE.getAlcoholContent();
-
-		/**
-		 * The meta object literal for the '<em><b>Percent</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ALCOHOL_CONTENT__PERCENT = eINSTANCE.getAlcoholContent_Percent();
+		EReference PRODUCT__KRONE_PER_VOLUME = eINSTANCE.getProduct_KronePerVolume();
 
 		/**
 		 * The meta object literal for the '{@link polet.impl.CountryImpl <em>Country</em>}' class.
@@ -1259,22 +1176,56 @@ public interface PoletPackage extends EPackage {
 		EReference PRODUCT_TYPE__PRODUCTS = eINSTANCE.getProductType_Products();
 
 		/**
-		 * The meta object literal for the '{@link polet.impl.VolumeImpl <em>Volume</em>}' class.
+		 * The meta object literal for the '{@link polet.impl.KronePerVolumeImpl <em>Krone Per Volume</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see polet.impl.VolumeImpl
-		 * @see polet.impl.PoletPackageImpl#getVolume()
+		 * @see polet.impl.KronePerVolumeImpl
+		 * @see polet.impl.PoletPackageImpl#getKronePerVolume()
 		 * @generated
 		 */
-		EClass VOLUME = eINSTANCE.getVolume();
+		EClass KRONE_PER_VOLUME = eINSTANCE.getKronePerVolume();
 
 		/**
-		 * The meta object literal for the '<em><b>Liters</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Derived Number</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VOLUME__LITERS = eINSTANCE.getVolume_Liters();
+		EAttribute KRONE_PER_VOLUME__DERIVED_NUMBER = eINSTANCE.getKronePerVolume_DerivedNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KRONE_PER_VOLUME__PRODUCTS = eINSTANCE.getKronePerVolume_Products();
+
+		/**
+		 * The meta object literal for the '{@link polet.impl.KronePerAlcoholImpl <em>Krone Per Alcohol</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see polet.impl.KronePerAlcoholImpl
+		 * @see polet.impl.PoletPackageImpl#getKronePerAlcohol()
+		 * @generated
+		 */
+		EClass KRONE_PER_ALCOHOL = eINSTANCE.getKronePerAlcohol();
+
+		/**
+		 * The meta object literal for the '<em><b>Derived Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KRONE_PER_ALCOHOL__DERIVED_NUMBER = eINSTANCE.getKronePerAlcohol_DerivedNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KRONE_PER_ALCOHOL__PRODUCTS = eINSTANCE.getKronePerAlcohol_Products();
 
 	}
 

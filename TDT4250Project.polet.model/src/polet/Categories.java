@@ -16,11 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link polet.Categories#getProducts <em>Products</em>}</li>
- *   <li>{@link polet.Categories#getAlcoholContents <em>Alcohol Contents</em>}</li>
  *   <li>{@link polet.Categories#getCountries <em>Countries</em>}</li>
- *   <li>{@link polet.Categories#getPrices <em>Prices</em>}</li>
  *   <li>{@link polet.Categories#getProductTypes <em>Product Types</em>}</li>
- *   <li>{@link polet.Categories#getVolumes <em>Volumes</em>}</li>
+ *   <li>{@link polet.Categories#getKronePerVolumes <em>Krone Per Volumes</em>}</li>
+ *   <li>{@link polet.Categories#getAlcoholPerKrones <em>Alcohol Per Krones</em>}</li>
  * </ul>
  *
  * @see polet.PoletPackage#getCategories()
@@ -41,18 +40,6 @@ public interface Categories extends EObject {
 	EList<Product> getProducts();
 
 	/**
-	 * Returns the value of the '<em><b>Alcohol Contents</b></em>' containment reference list.
-	 * The list contents are of type {@link polet.AlcoholContent}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Alcohol Contents</em>' containment reference list.
-	 * @see polet.PoletPackage#getCategories_AlcoholContents()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<AlcoholContent> getAlcoholContents();
-
-	/**
 	 * Returns the value of the '<em><b>Countries</b></em>' containment reference list.
 	 * The list contents are of type {@link polet.Country}.
 	 * <!-- begin-user-doc -->
@@ -63,18 +50,6 @@ public interface Categories extends EObject {
 	 * @generated
 	 */
 	EList<Country> getCountries();
-
-	/**
-	 * Returns the value of the '<em><b>Prices</b></em>' containment reference list.
-	 * The list contents are of type {@link polet.Price}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prices</em>' containment reference list.
-	 * @see polet.PoletPackage#getCategories_Prices()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Price> getPrices();
 
 	/**
 	 * Returns the value of the '<em><b>Product Types</b></em>' containment reference list.
@@ -89,15 +64,27 @@ public interface Categories extends EObject {
 	EList<ProductType> getProductTypes();
 
 	/**
-	 * Returns the value of the '<em><b>Volumes</b></em>' containment reference list.
-	 * The list contents are of type {@link polet.Volume}.
+	 * Returns the value of the '<em><b>Krone Per Volumes</b></em>' containment reference list.
+	 * The list contents are of type {@link polet.KronePerVolume}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Volumes</em>' containment reference list.
-	 * @see polet.PoletPackage#getCategories_Volumes()
+	 * @return the value of the '<em>Krone Per Volumes</em>' containment reference list.
+	 * @see polet.PoletPackage#getCategories_KronePerVolumes()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Volume> getVolumes();
+	EList<KronePerVolume> getKronePerVolumes();
+
+	/**
+	 * Returns the value of the '<em><b>Alcohol Per Krones</b></em>' containment reference list.
+	 * The list contents are of type {@link polet.KronePerAlcohol}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Alcohol Per Krones</em>' containment reference list.
+	 * @see polet.PoletPackage#getCategories_AlcoholPerKrones()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<KronePerAlcohol> getAlcoholPerKrones();
 
 } // Categories

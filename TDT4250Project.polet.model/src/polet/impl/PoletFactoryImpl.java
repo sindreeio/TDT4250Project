@@ -57,13 +57,12 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case PoletPackage.CATEGORIES: return createCategories();
-			case PoletPackage.PRICE: return createPrice();
 			case PoletPackage.PRODUCT: return createProduct();
-			case PoletPackage.ALCOHOL_CONTENT: return createAlcoholContent();
 			case PoletPackage.COUNTRY: return createCountry();
 			case PoletPackage.REGION: return createRegion();
 			case PoletPackage.PRODUCT_TYPE: return createProductType();
-			case PoletPackage.VOLUME: return createVolume();
+			case PoletPackage.KRONE_PER_VOLUME: return createKronePerVolume();
+			case PoletPackage.KRONE_PER_ALCOHOL: return createKronePerAlcohol();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -84,29 +83,9 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Price createPrice() {
-		PriceImpl price = new PriceImpl();
-		return price;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Product createProduct() {
 		ProductImpl product = new ProductImpl();
 		return product;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AlcoholContent createAlcoholContent() {
-		AlcoholContentImpl alcoholContent = new AlcoholContentImpl();
-		return alcoholContent;
 	}
 
 	/**
@@ -144,9 +123,19 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Volume createVolume() {
-		VolumeImpl volume = new VolumeImpl();
-		return volume;
+	public KronePerVolume createKronePerVolume() {
+		KronePerVolumeImpl kronePerVolume = new KronePerVolumeImpl();
+		return kronePerVolume;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KronePerAlcohol createKronePerAlcohol() {
+		KronePerAlcoholImpl kronePerAlcohol = new KronePerAlcoholImpl();
+		return kronePerAlcohol;
 	}
 
 	/**

@@ -72,21 +72,9 @@ public class PoletSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PoletPackage.PRICE: {
-				Price price = (Price)theEObject;
-				T result = casePrice(price);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case PoletPackage.PRODUCT: {
 				Product product = (Product)theEObject;
 				T result = caseProduct(product);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PoletPackage.ALCOHOL_CONTENT: {
-				AlcoholContent alcoholContent = (AlcoholContent)theEObject;
-				T result = caseAlcoholContent(alcoholContent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -108,9 +96,15 @@ public class PoletSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PoletPackage.VOLUME: {
-				Volume volume = (Volume)theEObject;
-				T result = caseVolume(volume);
+			case PoletPackage.KRONE_PER_VOLUME: {
+				KronePerVolume kronePerVolume = (KronePerVolume)theEObject;
+				T result = caseKronePerVolume(kronePerVolume);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PoletPackage.KRONE_PER_ALCOHOL: {
+				KronePerAlcohol kronePerAlcohol = (KronePerAlcohol)theEObject;
+				T result = caseKronePerAlcohol(kronePerAlcohol);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -134,21 +128,6 @@ public class PoletSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Price</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Price</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrice(Price object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Product</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -160,21 +139,6 @@ public class PoletSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProduct(Product object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Alcohol Content</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Alcohol Content</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAlcoholContent(AlcoholContent object) {
 		return null;
 	}
 
@@ -224,17 +188,32 @@ public class PoletSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Volume</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Krone Per Volume</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Volume</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Krone Per Volume</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVolume(Volume object) {
+	public T caseKronePerVolume(KronePerVolume object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Krone Per Alcohol</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Krone Per Alcohol</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKronePerAlcohol(KronePerAlcohol object) {
 		return null;
 	}
 

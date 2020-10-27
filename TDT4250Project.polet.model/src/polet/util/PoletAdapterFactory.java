@@ -72,16 +72,8 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 				return createCategoriesAdapter();
 			}
 			@Override
-			public Adapter casePrice(Price object) {
-				return createPriceAdapter();
-			}
-			@Override
 			public Adapter caseProduct(Product object) {
 				return createProductAdapter();
-			}
-			@Override
-			public Adapter caseAlcoholContent(AlcoholContent object) {
-				return createAlcoholContentAdapter();
 			}
 			@Override
 			public Adapter caseCountry(Country object) {
@@ -96,8 +88,12 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 				return createProductTypeAdapter();
 			}
 			@Override
-			public Adapter caseVolume(Volume object) {
-				return createVolumeAdapter();
+			public Adapter caseKronePerVolume(KronePerVolume object) {
+				return createKronePerVolumeAdapter();
+			}
+			@Override
+			public Adapter caseKronePerAlcohol(KronePerAlcohol object) {
+				return createKronePerAlcoholAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -134,20 +130,6 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link polet.Price <em>Price</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see polet.Price
-	 * @generated
-	 */
-	public Adapter createPriceAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link polet.Product <em>Product</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -158,20 +140,6 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProductAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link polet.AlcoholContent <em>Alcohol Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see polet.AlcoholContent
-	 * @generated
-	 */
-	public Adapter createAlcoholContentAdapter() {
 		return null;
 	}
 
@@ -218,16 +186,30 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link polet.Volume <em>Volume</em>}'.
+	 * Creates a new adapter for an object of class '{@link polet.KronePerVolume <em>Krone Per Volume</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see polet.Volume
+	 * @see polet.KronePerVolume
 	 * @generated
 	 */
-	public Adapter createVolumeAdapter() {
+	public Adapter createKronePerVolumeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link polet.KronePerAlcohol <em>Krone Per Alcohol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see polet.KronePerAlcohol
+	 * @generated
+	 */
+	public Adapter createKronePerAlcoholAdapter() {
 		return null;
 	}
 
