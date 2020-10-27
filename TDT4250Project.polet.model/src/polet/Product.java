@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link polet.Product#getProductId <em>Product Id</em>}</li>
  *   <li>{@link polet.Product#getName <em>Name</em>}</li>
- *   <li>{@link polet.Product#getCountry <em>Country</em>}</li>
+ *   <li>{@link polet.Product#getRegion <em>Region</em>}</li>
  *   <li>{@link polet.Product#getProductType <em>Product Type</em>}</li>
  *   <li>{@link polet.Product#getKronePerVolume <em>Krone Per Volume</em>}</li>
  *   <li>{@link polet.Product#getAlcoholPerKrone <em>Alcohol Per Krone</em>}</li>
@@ -96,6 +96,28 @@ public interface Product extends EObject {
 	void setName(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Region</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Region</em>' reference.
+	 * @see #setRegion(Region)
+	 * @see polet.PoletPackage#getProduct_Region()
+	 * @model
+	 * @generated
+	 */
+	Region getRegion();
+
+	/**
+	 * Sets the value of the '{@link polet.Product#getRegion <em>Region</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Region</em>' reference.
+	 * @see #getRegion()
+	 * @generated
+	 */
+	void setRegion(Region value);
+
+	/**
 	 * Returns the value of the '<em><b>Price</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -116,28 +138,6 @@ public interface Product extends EObject {
 	 * @generated
 	 */
 	void setPrice(float value);
-
-	/**
-	 * Returns the value of the '<em><b>Country</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Country</em>' reference.
-	 * @see #setCountry(Country)
-	 * @see polet.PoletPackage#getProduct_Country()
-	 * @model
-	 * @generated
-	 */
-	Country getCountry();
-
-	/**
-	 * Sets the value of the '{@link polet.Product#getCountry <em>Country</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Country</em>' reference.
-	 * @see #getCountry()
-	 * @generated
-	 */
-	void setCountry(Country value);
 
 	/**
 	 * Returns the value of the '<em><b>Product Type</b></em>' reference.

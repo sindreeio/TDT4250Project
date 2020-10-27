@@ -10,12 +10,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import polet.Country;
 import polet.KronePerAlcohol;
 import polet.KronePerVolume;
 import polet.PoletPackage;
 import polet.Product;
 import polet.ProductType;
+import polet.Region;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import polet.ProductType;
  * <ul>
  *   <li>{@link polet.impl.ProductImpl#getProductId <em>Product Id</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getName <em>Name</em>}</li>
- *   <li>{@link polet.impl.ProductImpl#getCountry <em>Country</em>}</li>
+ *   <li>{@link polet.impl.ProductImpl#getRegion <em>Region</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getProductType <em>Product Type</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getKronePerVolume <em>Krone Per Volume</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getAlcoholPerKrone <em>Alcohol Per Krone</em>}</li>
@@ -80,14 +80,14 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCountry() <em>Country</em>}' reference.
+	 * The cached value of the '{@link #getRegion() <em>Region</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCountry()
+	 * @see #getRegion()
 	 * @generated
 	 * @ordered
 	 */
-	protected Country country;
+	protected Region region;
 
 	/**
 	 * The cached value of the '{@link #getProductType() <em>Product Type</em>}' reference.
@@ -266,6 +266,44 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Region getRegion() {
+		if (region != null && region.eIsProxy()) {
+			InternalEObject oldRegion = (InternalEObject)region;
+			region = (Region)eResolveProxy(oldRegion);
+			if (region != oldRegion) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PoletPackage.PRODUCT__REGION, oldRegion, region));
+			}
+		}
+		return region;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Region basicGetRegion() {
+		return region;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRegion(Region newRegion) {
+		Region oldRegion = region;
+		region = newRegion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__REGION, oldRegion, region));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public float getPrice() {
 		return price;
 	}
@@ -280,44 +318,6 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 		price = newPrice;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__PRICE, oldPrice, price));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Country getCountry() {
-		if (country != null && country.eIsProxy()) {
-			InternalEObject oldCountry = (InternalEObject)country;
-			country = (Country)eResolveProxy(oldCountry);
-			if (country != oldCountry) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PoletPackage.PRODUCT__COUNTRY, oldCountry, country));
-			}
-		}
-		return country;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Country basicGetCountry() {
-		return country;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCountry(Country newCountry) {
-		Country oldCountry = country;
-		country = newCountry;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__COUNTRY, oldCountry, country));
 	}
 
 	/**
@@ -575,9 +575,9 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 				return getProductId();
 			case PoletPackage.PRODUCT__NAME:
 				return getName();
-			case PoletPackage.PRODUCT__COUNTRY:
-				if (resolve) return getCountry();
-				return basicGetCountry();
+			case PoletPackage.PRODUCT__REGION:
+				if (resolve) return getRegion();
+				return basicGetRegion();
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
 				if (resolve) return getProductType();
 				return basicGetProductType();
@@ -611,8 +611,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 			case PoletPackage.PRODUCT__NAME:
 				setName((String)newValue);
 				return;
-			case PoletPackage.PRODUCT__COUNTRY:
-				setCountry((Country)newValue);
+			case PoletPackage.PRODUCT__REGION:
+				setRegion((Region)newValue);
 				return;
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
 				setProductType((ProductType)newValue);
@@ -650,8 +650,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 			case PoletPackage.PRODUCT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case PoletPackage.PRODUCT__COUNTRY:
-				setCountry((Country)null);
+			case PoletPackage.PRODUCT__REGION:
+				setRegion((Region)null);
 				return;
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
 				setProductType((ProductType)null);
@@ -687,8 +687,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 				return PRODUCT_ID_EDEFAULT == null ? productId != null : !PRODUCT_ID_EDEFAULT.equals(productId);
 			case PoletPackage.PRODUCT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case PoletPackage.PRODUCT__COUNTRY:
-				return country != null;
+			case PoletPackage.PRODUCT__REGION:
+				return region != null;
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
 				return productType != null;
 			case PoletPackage.PRODUCT__KRONE_PER_VOLUME:

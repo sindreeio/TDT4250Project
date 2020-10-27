@@ -158,13 +158,13 @@ public interface PoletPackage extends EPackage {
 	int PRODUCT__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' reference.
+	 * The feature id for the '<em><b>Region</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__COUNTRY = 2;
+	int PRODUCT__REGION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Product Type</b></em>' reference.
@@ -622,6 +622,17 @@ public interface PoletPackage extends EPackage {
 	EAttribute getProduct_Name();
 
 	/**
+	 * Returns the meta object for the reference '{@link polet.Product#getRegion <em>Region</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Region</em>'.
+	 * @see polet.Product#getRegion()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EReference getProduct_Region();
+
+	/**
 	 * Returns the meta object for the attribute '{@link polet.Product#getPrice <em>Price</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -631,17 +642,6 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getProduct_Price();
-
-	/**
-	 * Returns the meta object for the reference '{@link polet.Product#getCountry <em>Country</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Country</em>'.
-	 * @see polet.Product#getCountry()
-	 * @see #getProduct()
-	 * @generated
-	 */
-	EReference getProduct_Country();
 
 	/**
 	 * Returns the meta object for the reference '{@link polet.Product#getProductType <em>Product Type</em>}'.
@@ -1010,20 +1010,20 @@ public interface PoletPackage extends EPackage {
 		EAttribute PRODUCT__NAME = eINSTANCE.getProduct_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Region</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT__REGION = eINSTANCE.getProduct_Region();
+
+		/**
 		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute PRODUCT__PRICE = eINSTANCE.getProduct_Price();
-
-		/**
-		 * The meta object literal for the '<em><b>Country</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRODUCT__COUNTRY = eINSTANCE.getProduct_Country();
 
 		/**
 		 * The meta object literal for the '<em><b>Product Type</b></em>' reference feature.
