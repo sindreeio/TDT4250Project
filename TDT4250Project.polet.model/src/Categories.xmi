@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polet:Categories
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:polet="platform:/plugin/TDT4250Project.polet/model/polet.ecore"
+    xsi:schemaLocation="platform:/plugin/TDT4250Project.polet/model/polet.ecore ../model/polet.ecore">
+  <Products
+      productId="123245678"
+      name="Rødvin"
+      region="5432"
+      productType="56564563"
+      kronePerVolume="44.0"
+      alcoholPerKrone="69.0"
+      price="1000.0"
+      alcoholContent="12.0"
+      Volume="1.0"/>
+  <countries
+      countryId="123245678"
+      country="Frankrike">
+    <regions
+        regionId="5432"
+        region="bkdsjj"/>
+  </countries>
+  <productTypes
+      productTypeId="56564563"
+      productTypeName="JAJA"
+      products="123245678"/>
+  <kronePerVolumes
+      derivedNumber="44.0"
+      products="123245678"/>
+  <alcoholPerKrones
+      derivedNumber="69.0"
+      products="123245678"/>
+</polet:Categories>

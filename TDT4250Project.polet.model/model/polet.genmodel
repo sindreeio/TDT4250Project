@@ -5,7 +5,7 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>polet.ecore</foreignModel>
-  <genPackages prefix="Polet" disposableProviderFactory="true" ecorePackage="polet.ecore#/">
+  <genPackages prefix="Polet" resource="XMI" disposableProviderFactory="true" ecorePackage="polet.ecore#/">
     <genClasses ecoreClass="polet.ecore#//Categories">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polet.ecore#//Categories/Products"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polet.ecore#//Categories/countries"/>

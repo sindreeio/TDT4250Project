@@ -18,7 +18,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="productId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="country" eType="#//Country"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="region" eType="#//Region"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="productType" eType="#//ProductType"
         eOpposite="#//ProductType/products"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="kronePerVolume" eType="#//KronePerVolume"
