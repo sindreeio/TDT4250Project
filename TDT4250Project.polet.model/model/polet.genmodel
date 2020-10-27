@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/TDT4250Project.polet.model/src" modelPluginID="TDT4250Project.polet.model"
+    modelName="Polet" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>polet.ecore</foreignModel>
+  <genPackages prefix="Polet" disposableProviderFactory="true" ecorePackage="polet.ecore#/">
+    <genClasses ecoreClass="polet.ecore#//Categories">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polet.ecore#//Categories/Products"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polet.ecore#//Categories/alcoholContents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polet.ecore#//Categories/countries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polet.ecore#//Categories/Prices"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polet.ecore#//Categories/productTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polet.ecore#//Categories/volumes"/>
+    </genClasses>
+    <genClasses ecoreClass="polet.ecore#//Price">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Price/salesPrice"/>
+    </genClasses>
+    <genClasses ecoreClass="polet.ecore#//Product">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Product/productId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polet.ecore#//Product/alcoholContent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Product/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polet.ecore#//Product/price"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polet.ecore#//Product/country"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polet.ecore#//Product/productType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polet.ecore#//Product/Volume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Product/alcoholPerKrone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Product/kronePerVolume"/>
+    </genClasses>
+    <genClasses ecoreClass="polet.ecore#//AlcoholContent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//AlcoholContent/percent"/>
+    </genClasses>
+    <genClasses ecoreClass="polet.ecore#//Country">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Country/countryId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Country/country"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polet.ecore#//Country/regions"/>
+    </genClasses>
+    <genClasses ecoreClass="polet.ecore#//Region">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Region/regionId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Region/region"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference polet.ecore#//Region/country"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polet.ecore#//Region/produces"/>
+    </genClasses>
+    <genClasses ecoreClass="polet.ecore#//ProductType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//ProductType/productTypeId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//ProductType/productTypeName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polet.ecore#//ProductType/producedIn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polet.ecore#//ProductType/products"/>
+    </genClasses>
+    <genClasses ecoreClass="polet.ecore#//Volume">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polet.ecore#//Volume/liters"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
