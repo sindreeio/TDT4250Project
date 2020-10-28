@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polet:Categories xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:polet="platform:/plugin/TDT4250Project.polet/model/polet.ecore" xsi:schemaLocation="platform:/plugin/TDT4250Project.polet/model/polet.ecore ../TDT4250Project.polet.model/model/polet.ecore">
   <Products productId="123" name="Øl" region="3" productType="1" kronePerVolume="//@kronePerVolumes.0" alcoholPerKrone="//@alcoholPerKrones.0"/>
-  <countries countryId="5" country="NOe">
+  <countries countryId="7436278" country="NOe">
     <regions regionId="3" region="Oslo"/>
   </countries>
   <productTypes productTypeId="1" productTypeName="Brygg" products="123"/>

@@ -4,7 +4,7 @@
     <semanticResources>Categories.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-TP5kBhSEeurxfUgcNzSGg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5WEysRkHEeuvrokYTZnmzQ" name="new PoletDiagram" repPath="#_5WBIUBkHEeuvrokYTZnmzQ" changeId="e8ffe20d-cac1-43fc-b089-6acfcbcf9aaf">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5WEysRkHEeuvrokYTZnmzQ" name="new PoletDiagram" repPath="#_5WBIUBkHEeuvrokYTZnmzQ" changeId="89d0dded-6f58-4b96-b571-0b0f4faee278">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']"/>
         <target xmi:type="polet:Categories" href="Categories.xmi#/"/>
       </ownedRepresentationDescriptors>
@@ -36,13 +36,13 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5Wm-MhkHEeuvrokYTZnmzQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_5WlwERkHEeuvrokYTZnmzQ" fontColor="4376022" fontName=".AppleSystemUIFont" fontHeight="12"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5WlwEhkHEeuvrokYTZnmzQ" x="30" y="30" width="30" height="30"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5WlwEhkHEeuvrokYTZnmzQ" x="30" y="30" width="114" height="101"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_5WlJARkHEeuvrokYTZnmzQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_5WlJAhkHEeuvrokYTZnmzQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_5Wj64RkHEeuvrokYTZnmzQ" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5Wj64hkHEeuvrokYTZnmzQ" x="200" y="80"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5Wj64hkHEeuvrokYTZnmzQ" x="200" y="80" width="217" height="157"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_5WNVkhkHEeuvrokYTZnmzQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_5WpacBkHEeuvrokYTZnmzQ" type="4001" element="_5WZi0BkHEeuvrokYTZnmzQ" source="_5WebUBkHEeuvrokYTZnmzQ" target="_5WlwEBkHEeuvrokYTZnmzQ">
@@ -59,7 +59,7 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_5WpachkHEeuvrokYTZnmzQ" fontName=".AppleSystemUIFont" fontHeight="12"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5WpacxkHEeuvrokYTZnmzQ" points="[15, -13, -84, 71]$[84, -72, -15, 12]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5W6gMBkHEeuvrokYTZnmzQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5W6gMRkHEeuvrokYTZnmzQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5W6gMRkHEeuvrokYTZnmzQ" id="(0.13157894736842105,0.1485148514851485)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -78,8 +78,8 @@
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_5WXGkBkHEeuvrokYTZnmzQ" name="NOe">
-      <target xmi:type="polet:Country" href="Categories.xmi#5"/>
-      <semanticElements xmi:type="polet:Country" href="Categories.xmi#5"/>
+      <target xmi:type="polet:Country" href="Categories.xmi#7436278"/>
+      <semanticElements xmi:type="polet:Country" href="Categories.xmi#7436278"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
