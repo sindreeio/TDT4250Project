@@ -4,7 +4,7 @@
     <semanticResources>Categories.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-TP5kBhSEeurxfUgcNzSGg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BQLkwBhTEeurxfUgcNzSGg" name="new PoletDiagram" repPath="#_BP0_cBhTEeurxfUgcNzSGg" changeId="e0a6a1ad-1190-40a5-9c90-96ec4f115457">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BQLkwBhTEeurxfUgcNzSGg" name="new PoletDiagram" repPath="#_BP0_cBhTEeurxfUgcNzSGg" changeId="8de465a1-05cd-4eb8-8956-6d3394266940">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']"/>
         <target xmi:type="polet:Categories" href="Categories.xmi#/"/>
       </ownedRepresentationDescriptors>
@@ -71,22 +71,22 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Zn9ZNhhZEeurxfUgcNzSGg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Zn9ZMRhZEeurxfUgcNzSGg" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zn9ZMhhZEeurxfUgcNzSGg" x="242" y="450" width="393" height="105"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zn9ZMhhZEeurxfUgcNzSGg" x="246" y="450" width="393" height="105"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_BQpe0RhTEeurxfUgcNzSGg"/>
         <edges xmi:type="notation:Edge" xmi:id="_Zn-nUBhZEeurxfUgcNzSGg" type="4001" element="_ZnjwkBhZEeurxfUgcNzSGg" source="_hzoo4BhTEeurxfUgcNzSGg" target="_Zn-AQBhZEeurxfUgcNzSGg">
           <children xmi:type="notation:Node" xmi:id="_Zn-nVBhZEeurxfUgcNzSGg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zn-nVRhZEeurxfUgcNzSGg" x="9" y="-5"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zn-nVRhZEeurxfUgcNzSGg" x="4" y="3"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Zn-nVhhZEeurxfUgcNzSGg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zn-nVxhZEeurxfUgcNzSGg" x="-8" y="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zn-nVxhZEeurxfUgcNzSGg" x="4" y="7"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Zn-nWBhZEeurxfUgcNzSGg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zn-nWRhZEeurxfUgcNzSGg" x="-8" y="9"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zn-nWRhZEeurxfUgcNzSGg" x="-4" y="8"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Zn-nURhZEeurxfUgcNzSGg"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_Zn-nUhhZEeurxfUgcNzSGg" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Zn-nUxhZEeurxfUgcNzSGg" points="[-60, 49, 303, -248]$[-348, 284, 15, -13]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Zn-nUxhZEeurxfUgcNzSGg" points="[-66, 44, 373, -253]$[-417, 282, 22, -15]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zn-nWhhZEeurxfUgcNzSGg" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Zn-nWxhZEeurxfUgcNzSGg" id="(0.189873417721519,0.2459016393442623)"/>
         </edges>
