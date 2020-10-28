@@ -7,7 +7,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="lib" path="/Users/adrian/Dropbox/Skole/Avansert Programvaredesign/Project/TDT4250Project/TDT4250Project.polet.model/lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="/Users/adrian/Dropbox/Skole/Avansert Programvaredesign/Project/TDT4250Project/TDT4250Project.polet.model/lib/gson-2.8.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
