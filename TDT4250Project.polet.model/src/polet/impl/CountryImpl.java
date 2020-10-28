@@ -31,7 +31,7 @@ import polet.Region;
  * </p>
  * <ul>
  *   <li>{@link polet.impl.CountryImpl#getCountryId <em>Country Id</em>}</li>
- *   <li>{@link polet.impl.CountryImpl#getCountry <em>Country</em>}</li>
+ *   <li>{@link polet.impl.CountryImpl#getName <em>Name</em>}</li>
  *   <li>{@link polet.impl.CountryImpl#getRegions <em>Regions</em>}</li>
  * </ul>
  *
@@ -59,24 +59,24 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	protected String countryId = COUNTRY_ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCountry() <em>Country</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCountry()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COUNTRY_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getCountry() <em>Country</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCountry()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String country = COUNTRY_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getRegions() <em>Regions</em>}' containment reference list.
@@ -133,8 +133,8 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCountry() {
-		return country;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -142,11 +142,11 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCountry(String newCountry) {
-		String oldCountry = country;
-		country = newCountry;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.COUNTRY__COUNTRY, oldCountry, country));
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.COUNTRY__NAME, oldName, name));
 	}
 
 	/**
@@ -200,8 +200,8 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 		switch (featureID) {
 			case PoletPackage.COUNTRY__COUNTRY_ID:
 				return getCountryId();
-			case PoletPackage.COUNTRY__COUNTRY:
-				return getCountry();
+			case PoletPackage.COUNTRY__NAME:
+				return getName();
 			case PoletPackage.COUNTRY__REGIONS:
 				return getRegions();
 		}
@@ -220,8 +220,8 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 			case PoletPackage.COUNTRY__COUNTRY_ID:
 				setCountryId((String)newValue);
 				return;
-			case PoletPackage.COUNTRY__COUNTRY:
-				setCountry((String)newValue);
+			case PoletPackage.COUNTRY__NAME:
+				setName((String)newValue);
 				return;
 			case PoletPackage.COUNTRY__REGIONS:
 				getRegions().clear();
@@ -242,8 +242,8 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 			case PoletPackage.COUNTRY__COUNTRY_ID:
 				setCountryId(COUNTRY_ID_EDEFAULT);
 				return;
-			case PoletPackage.COUNTRY__COUNTRY:
-				setCountry(COUNTRY_EDEFAULT);
+			case PoletPackage.COUNTRY__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case PoletPackage.COUNTRY__REGIONS:
 				getRegions().clear();
@@ -262,8 +262,8 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 		switch (featureID) {
 			case PoletPackage.COUNTRY__COUNTRY_ID:
 				return COUNTRY_ID_EDEFAULT == null ? countryId != null : !COUNTRY_ID_EDEFAULT.equals(countryId);
-			case PoletPackage.COUNTRY__COUNTRY:
-				return COUNTRY_EDEFAULT == null ? country != null : !COUNTRY_EDEFAULT.equals(country);
+			case PoletPackage.COUNTRY__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PoletPackage.COUNTRY__REGIONS:
 				return regions != null && !regions.isEmpty();
 		}
@@ -282,8 +282,8 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (countryId: ");
 		result.append(countryId);
-		result.append(", country: ");
-		result.append(country);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

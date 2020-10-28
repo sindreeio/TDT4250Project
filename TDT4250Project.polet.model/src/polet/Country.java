@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link polet.Country#getCountryId <em>Country Id</em>}</li>
- *   <li>{@link polet.Country#getCountry <em>Country</em>}</li>
+ *   <li>{@link polet.Country#getName <em>Name</em>}</li>
  *   <li>{@link polet.Country#getRegions <em>Regions</em>}</li>
  * </ul>
  *
@@ -48,26 +48,26 @@ public interface Country extends EObject {
 	void setCountryId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Country</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Country</em>' attribute.
-	 * @see #setCountry(String)
-	 * @see polet.PoletPackage#getCountry_Country()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see polet.PoletPackage#getCountry_Name()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	String getCountry();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link polet.Country#getCountry <em>Country</em>}' attribute.
+	 * Sets the value of the '{@link polet.Country#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Country</em>' attribute.
-	 * @see #getCountry()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setCountry(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Regions</b></em>' containment reference list.

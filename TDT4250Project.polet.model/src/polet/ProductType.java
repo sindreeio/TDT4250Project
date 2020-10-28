@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link polet.ProductType#getProductTypeId <em>Product Type Id</em>}</li>
- *   <li>{@link polet.ProductType#getProductTypeName <em>Product Type Name</em>}</li>
+ *   <li>{@link polet.ProductType#getName <em>Name</em>}</li>
  *   <li>{@link polet.ProductType#getProducedIn <em>Produced In</em>}</li>
  *   <li>{@link polet.ProductType#getProducts <em>Products</em>}</li>
  * </ul>
@@ -49,26 +49,26 @@ public interface ProductType extends EObject {
 	void setProductTypeId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Product Type Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Product Type Name</em>' attribute.
-	 * @see #setProductTypeName(String)
-	 * @see polet.PoletPackage#getProductType_ProductTypeName()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see polet.PoletPackage#getProductType_Name()
 	 * @model
 	 * @generated
 	 */
-	String getProductTypeName();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link polet.ProductType#getProductTypeName <em>Product Type Name</em>}' attribute.
+	 * Sets the value of the '{@link polet.ProductType#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Product Type Name</em>' attribute.
-	 * @see #getProductTypeName()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setProductTypeName(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Produced In</b></em>' reference list.

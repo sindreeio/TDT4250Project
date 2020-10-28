@@ -3,6 +3,7 @@
 package polet.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -63,8 +64,40 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 			case PoletPackage.PRODUCT_TYPE: return createProductType();
 			case PoletPackage.KRONE_PER_VOLUME: return createKronePerVolume();
 			case PoletPackage.KRONE_PER_ALCOHOL: return createKronePerAlcohol();
+			case PoletPackage.MEAL_TYPE: return createMealType();
+			case PoletPackage.RECEPIE: return createRecepie();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case PoletPackage.MEAL_TYPES:
+				return createMealTypesFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case PoletPackage.MEAL_TYPES:
+				return convertMealTypesToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -136,6 +169,44 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 	public KronePerAlcohol createKronePerAlcohol() {
 		KronePerAlcoholImpl kronePerAlcohol = new KronePerAlcoholImpl();
 		return kronePerAlcohol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MealType createMealType() {
+		MealTypeImpl mealType = new MealTypeImpl();
+		return mealType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Recepie createRecepie() {
+		RecepieImpl recepie = new RecepieImpl();
+		return recepie;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createMealTypesFromString(EDataType eDataType, String initialValue) {
+		return (String)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMealTypesToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

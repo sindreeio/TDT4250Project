@@ -19,9 +19,11 @@ import polet.Categories;
 import polet.Country;
 import polet.KronePerAlcohol;
 import polet.KronePerVolume;
+import polet.MealType;
 import polet.PoletPackage;
 import polet.Product;
 import polet.ProductType;
+import polet.Recepie;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,6 +38,8 @@ import polet.ProductType;
  *   <li>{@link polet.impl.CategoriesImpl#getProductTypes <em>Product Types</em>}</li>
  *   <li>{@link polet.impl.CategoriesImpl#getKronePerVolumes <em>Krone Per Volumes</em>}</li>
  *   <li>{@link polet.impl.CategoriesImpl#getAlcoholPerKrones <em>Alcohol Per Krones</em>}</li>
+ *   <li>{@link polet.impl.CategoriesImpl#getRecepies <em>Recepies</em>}</li>
+ *   <li>{@link polet.impl.CategoriesImpl#getMealTypes <em>Meal Types</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,6 +94,26 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 	 * @ordered
 	 */
 	protected EList<KronePerAlcohol> alcoholPerKrones;
+
+	/**
+	 * The cached value of the '{@link #getRecepies() <em>Recepies</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRecepies()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Recepie> recepies;
+
+	/**
+	 * The cached value of the '{@link #getMealTypes() <em>Meal Types</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMealTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MealType> mealTypes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +199,30 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Recepie> getRecepies() {
+		if (recepies == null) {
+			recepies = new EObjectContainmentEList<Recepie>(Recepie.class, this, PoletPackage.CATEGORIES__RECEPIES);
+		}
+		return recepies;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<MealType> getMealTypes() {
+		if (mealTypes == null) {
+			mealTypes = new EObjectContainmentEList<MealType>(MealType.class, this, PoletPackage.CATEGORIES__MEAL_TYPES);
+		}
+		return mealTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -188,6 +236,10 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 				return ((InternalEList<?>)getKronePerVolumes()).basicRemove(otherEnd, msgs);
 			case PoletPackage.CATEGORIES__ALCOHOL_PER_KRONES:
 				return ((InternalEList<?>)getAlcoholPerKrones()).basicRemove(otherEnd, msgs);
+			case PoletPackage.CATEGORIES__RECEPIES:
+				return ((InternalEList<?>)getRecepies()).basicRemove(otherEnd, msgs);
+			case PoletPackage.CATEGORIES__MEAL_TYPES:
+				return ((InternalEList<?>)getMealTypes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -210,6 +262,10 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 				return getKronePerVolumes();
 			case PoletPackage.CATEGORIES__ALCOHOL_PER_KRONES:
 				return getAlcoholPerKrones();
+			case PoletPackage.CATEGORIES__RECEPIES:
+				return getRecepies();
+			case PoletPackage.CATEGORIES__MEAL_TYPES:
+				return getMealTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -243,6 +299,14 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 				getAlcoholPerKrones().clear();
 				getAlcoholPerKrones().addAll((Collection<? extends KronePerAlcohol>)newValue);
 				return;
+			case PoletPackage.CATEGORIES__RECEPIES:
+				getRecepies().clear();
+				getRecepies().addAll((Collection<? extends Recepie>)newValue);
+				return;
+			case PoletPackage.CATEGORIES__MEAL_TYPES:
+				getMealTypes().clear();
+				getMealTypes().addAll((Collection<? extends MealType>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -270,6 +334,12 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 			case PoletPackage.CATEGORIES__ALCOHOL_PER_KRONES:
 				getAlcoholPerKrones().clear();
 				return;
+			case PoletPackage.CATEGORIES__RECEPIES:
+				getRecepies().clear();
+				return;
+			case PoletPackage.CATEGORIES__MEAL_TYPES:
+				getMealTypes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -292,6 +362,10 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 				return kronePerVolumes != null && !kronePerVolumes.isEmpty();
 			case PoletPackage.CATEGORIES__ALCOHOL_PER_KRONES:
 				return alcoholPerKrones != null && !alcoholPerKrones.isEmpty();
+			case PoletPackage.CATEGORIES__RECEPIES:
+				return recepies != null && !recepies.isEmpty();
+			case PoletPackage.CATEGORIES__MEAL_TYPES:
+				return mealTypes != null && !mealTypes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

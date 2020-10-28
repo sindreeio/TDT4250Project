@@ -4,6 +4,7 @@ package polet;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -112,13 +113,31 @@ public interface PoletPackage extends EPackage {
 	int CATEGORIES__ALCOHOL_PER_KRONES = 4;
 
 	/**
+	 * The feature id for the '<em><b>Recepies</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORIES__RECEPIES = 5;
+
+	/**
+	 * The feature id for the '<em><b>Meal Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORIES__MEAL_TYPES = 6;
+
+	/**
 	 * The number of structural features of the '<em>Categories</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIES_FEATURE_COUNT = 5;
+	int CATEGORIES_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Categories</em>' class.
@@ -221,13 +240,22 @@ public interface PoletPackage extends EPackage {
 	int PRODUCT__VOLUME = 8;
 
 	/**
+	 * The feature id for the '<em><b>Sutible For</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__SUTIBLE_FOR = 9;
+
+	/**
 	 * The number of structural features of the '<em>Product</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_FEATURE_COUNT = 9;
+	int PRODUCT_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Product</em>' class.
@@ -258,13 +286,13 @@ public interface PoletPackage extends EPackage {
 	int COUNTRY__COUNTRY_ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY__COUNTRY = 1;
+	int COUNTRY__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Regions</b></em>' containment reference list.
@@ -313,13 +341,13 @@ public interface PoletPackage extends EPackage {
 	int REGION__REGION_ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Region</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGION__REGION = 1;
+	int REGION__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Country</b></em>' container reference.
@@ -377,13 +405,13 @@ public interface PoletPackage extends EPackage {
 	int PRODUCT_TYPE__PRODUCT_TYPE_ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Product Type Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_TYPE__PRODUCT_TYPE_NAME = 1;
+	int PRODUCT_TYPE__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Produced In</b></em>' reference list.
@@ -514,6 +542,117 @@ public interface PoletPackage extends EPackage {
 	int KRONE_PER_ALCOHOL_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link polet.impl.MealTypeImpl <em>Meal Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see polet.impl.MealTypeImpl
+	 * @see polet.impl.PoletPackageImpl#getMealType()
+	 * @generated
+	 */
+	int MEAL_TYPE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Meal Types</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEAL_TYPE__MEAL_TYPES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Meal Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEAL_TYPE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Meal Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEAL_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link polet.impl.RecepieImpl <em>Recepie</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see polet.impl.RecepieImpl
+	 * @see polet.impl.PoletPackageImpl#getRecepie()
+	 * @generated
+	 */
+	int RECEPIE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEPIE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Recepie Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEPIE__RECEPIE_ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Meal Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEPIE__MEAL_TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEPIE__LINK = 3;
+
+	/**
+	 * The number of structural features of the '<em>Recepie</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEPIE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Recepie</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEPIE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '<em>Meal Types</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see polet.impl.PoletPackageImpl#getMealTypes()
+	 * @generated
+	 */
+	int MEAL_TYPES = 9;
+
+	/**
 	 * Returns the meta object for class '{@link polet.Categories <em>Categories</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -577,6 +716,28 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCategories_AlcoholPerKrones();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link polet.Categories#getRecepies <em>Recepies</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Recepies</em>'.
+	 * @see polet.Categories#getRecepies()
+	 * @see #getCategories()
+	 * @generated
+	 */
+	EReference getCategories_Recepies();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link polet.Categories#getMealTypes <em>Meal Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Meal Types</em>'.
+	 * @see polet.Categories#getMealTypes()
+	 * @see #getCategories()
+	 * @generated
+	 */
+	EReference getCategories_MealTypes();
 
 	/**
 	 * Returns the meta object for class '{@link polet.Product <em>Product</em>}'.
@@ -666,6 +827,17 @@ public interface PoletPackage extends EPackage {
 	EAttribute getProduct_Volume();
 
 	/**
+	 * Returns the meta object for the reference list '{@link polet.Product#getSutibleFor <em>Sutible For</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Sutible For</em>'.
+	 * @see polet.Product#getSutibleFor()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EReference getProduct_SutibleFor();
+
+	/**
 	 * Returns the meta object for the reference '{@link polet.Product#getAlcoholPerKrone <em>Alcohol Per Krone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -709,15 +881,15 @@ public interface PoletPackage extends EPackage {
 	EAttribute getCountry_CountryId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.Country#getCountry <em>Country</em>}'.
+	 * Returns the meta object for the attribute '{@link polet.Country#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Country</em>'.
-	 * @see polet.Country#getCountry()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see polet.Country#getName()
 	 * @see #getCountry()
 	 * @generated
 	 */
-	EAttribute getCountry_Country();
+	EAttribute getCountry_Name();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link polet.Country#getRegions <em>Regions</em>}'.
@@ -752,15 +924,15 @@ public interface PoletPackage extends EPackage {
 	EAttribute getRegion_RegionId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.Region#getRegion <em>Region</em>}'.
+	 * Returns the meta object for the attribute '{@link polet.Region#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Region</em>'.
-	 * @see polet.Region#getRegion()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see polet.Region#getName()
 	 * @see #getRegion()
 	 * @generated
 	 */
-	EAttribute getRegion_Region();
+	EAttribute getRegion_Name();
 
 	/**
 	 * Returns the meta object for the container reference '{@link polet.Region#getCountry <em>Country</em>}'.
@@ -806,15 +978,15 @@ public interface PoletPackage extends EPackage {
 	EAttribute getProductType_ProductTypeId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.ProductType#getProductTypeName <em>Product Type Name</em>}'.
+	 * Returns the meta object for the attribute '{@link polet.ProductType#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Product Type Name</em>'.
-	 * @see polet.ProductType#getProductTypeName()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see polet.ProductType#getName()
 	 * @see #getProductType()
 	 * @generated
 	 */
-	EAttribute getProductType_ProductTypeName();
+	EAttribute getProductType_Name();
 
 	/**
 	 * Returns the meta object for the reference list '{@link polet.ProductType#getProducedIn <em>Produced In</em>}'.
@@ -903,6 +1075,93 @@ public interface PoletPackage extends EPackage {
 	EReference getKronePerAlcohol_Products();
 
 	/**
+	 * Returns the meta object for class '{@link polet.MealType <em>Meal Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Meal Type</em>'.
+	 * @see polet.MealType
+	 * @generated
+	 */
+	EClass getMealType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link polet.MealType#getMealTypes <em>Meal Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Meal Types</em>'.
+	 * @see polet.MealType#getMealTypes()
+	 * @see #getMealType()
+	 * @generated
+	 */
+	EAttribute getMealType_MealTypes();
+
+	/**
+	 * Returns the meta object for class '{@link polet.Recepie <em>Recepie</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Recepie</em>'.
+	 * @see polet.Recepie
+	 * @generated
+	 */
+	EClass getRecepie();
+
+	/**
+	 * Returns the meta object for the attribute '{@link polet.Recepie#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see polet.Recepie#getName()
+	 * @see #getRecepie()
+	 * @generated
+	 */
+	EAttribute getRecepie_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link polet.Recepie#getRecepieId <em>Recepie Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Recepie Id</em>'.
+	 * @see polet.Recepie#getRecepieId()
+	 * @see #getRecepie()
+	 * @generated
+	 */
+	EAttribute getRecepie_RecepieId();
+
+	/**
+	 * Returns the meta object for the reference '{@link polet.Recepie#getMealType <em>Meal Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Meal Type</em>'.
+	 * @see polet.Recepie#getMealType()
+	 * @see #getRecepie()
+	 * @generated
+	 */
+	EReference getRecepie_MealType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link polet.Recepie#getLink <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Link</em>'.
+	 * @see polet.Recepie#getLink()
+	 * @see #getRecepie()
+	 * @generated
+	 */
+	EAttribute getRecepie_Link();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Meal Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Meal Types</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="enumeration='Fish Light%20meat Pork Beef Dessert Cheese Vegetables Lamb Shellfish Wild Apertif'"
+	 * @generated
+	 */
+	EDataType getMealTypes();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -976,6 +1235,22 @@ public interface PoletPackage extends EPackage {
 		EReference CATEGORIES__ALCOHOL_PER_KRONES = eINSTANCE.getCategories_AlcoholPerKrones();
 
 		/**
+		 * The meta object literal for the '<em><b>Recepies</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CATEGORIES__RECEPIES = eINSTANCE.getCategories_Recepies();
+
+		/**
+		 * The meta object literal for the '<em><b>Meal Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CATEGORIES__MEAL_TYPES = eINSTANCE.getCategories_MealTypes();
+
+		/**
 		 * The meta object literal for the '{@link polet.impl.ProductImpl <em>Product</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1042,6 +1317,14 @@ public interface PoletPackage extends EPackage {
 		EAttribute PRODUCT__VOLUME = eINSTANCE.getProduct_Volume();
 
 		/**
+		 * The meta object literal for the '<em><b>Sutible For</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT__SUTIBLE_FOR = eINSTANCE.getProduct_SutibleFor();
+
+		/**
 		 * The meta object literal for the '<em><b>Alcohol Per Krone</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1076,12 +1359,12 @@ public interface PoletPackage extends EPackage {
 		EAttribute COUNTRY__COUNTRY_ID = eINSTANCE.getCountry_CountryId();
 
 		/**
-		 * The meta object literal for the '<em><b>Country</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COUNTRY__COUNTRY = eINSTANCE.getCountry_Country();
+		EAttribute COUNTRY__NAME = eINSTANCE.getCountry_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Regions</b></em>' containment reference list feature.
@@ -1110,12 +1393,12 @@ public interface PoletPackage extends EPackage {
 		EAttribute REGION__REGION_ID = eINSTANCE.getRegion_RegionId();
 
 		/**
-		 * The meta object literal for the '<em><b>Region</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute REGION__REGION = eINSTANCE.getRegion_Region();
+		EAttribute REGION__NAME = eINSTANCE.getRegion_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Country</b></em>' container reference feature.
@@ -1152,12 +1435,12 @@ public interface PoletPackage extends EPackage {
 		EAttribute PRODUCT_TYPE__PRODUCT_TYPE_ID = eINSTANCE.getProductType_ProductTypeId();
 
 		/**
-		 * The meta object literal for the '<em><b>Product Type Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRODUCT_TYPE__PRODUCT_TYPE_NAME = eINSTANCE.getProductType_ProductTypeName();
+		EAttribute PRODUCT_TYPE__NAME = eINSTANCE.getProductType_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Produced In</b></em>' reference list feature.
@@ -1226,6 +1509,76 @@ public interface PoletPackage extends EPackage {
 		 * @generated
 		 */
 		EReference KRONE_PER_ALCOHOL__PRODUCTS = eINSTANCE.getKronePerAlcohol_Products();
+
+		/**
+		 * The meta object literal for the '{@link polet.impl.MealTypeImpl <em>Meal Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see polet.impl.MealTypeImpl
+		 * @see polet.impl.PoletPackageImpl#getMealType()
+		 * @generated
+		 */
+		EClass MEAL_TYPE = eINSTANCE.getMealType();
+
+		/**
+		 * The meta object literal for the '<em><b>Meal Types</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEAL_TYPE__MEAL_TYPES = eINSTANCE.getMealType_MealTypes();
+
+		/**
+		 * The meta object literal for the '{@link polet.impl.RecepieImpl <em>Recepie</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see polet.impl.RecepieImpl
+		 * @see polet.impl.PoletPackageImpl#getRecepie()
+		 * @generated
+		 */
+		EClass RECEPIE = eINSTANCE.getRecepie();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECEPIE__NAME = eINSTANCE.getRecepie_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Recepie Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECEPIE__RECEPIE_ID = eINSTANCE.getRecepie_RecepieId();
+
+		/**
+		 * The meta object literal for the '<em><b>Meal Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RECEPIE__MEAL_TYPE = eINSTANCE.getRecepie_MealType();
+
+		/**
+		 * The meta object literal for the '<em><b>Link</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECEPIE__LINK = eINSTANCE.getRecepie_Link();
+
+		/**
+		 * The meta object literal for the '<em>Meal Types</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see polet.impl.PoletPackageImpl#getMealTypes()
+		 * @generated
+		 */
+		EDataType MEAL_TYPES = eINSTANCE.getMealTypes();
 
 	}
 
