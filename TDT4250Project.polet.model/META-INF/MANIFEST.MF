@@ -13,5 +13,7 @@ Export-Package: polet,
  polet.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.xmi;visibility:=reexport
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.apache.httpcomponents.httpclient;bundle-version="4.5.10",
+ org.apache.httpcomponents.httpcore;bundle-version="4.4.12"
 Bundle-ActivationPolicy: lazy
