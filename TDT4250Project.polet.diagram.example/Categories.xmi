@@ -6,29 +6,33 @@
     xmlns:polet="platform:/plugin/TDT4250Project.polet/model/polet.ecore"
     xsi:schemaLocation="platform:/plugin/TDT4250Project.polet/model/polet.ecore polet.ecore">
   <Products
-      productId="1234"
-      name="werwer"
-      region="14677"
-      productType="587487"
-      price="123.0"
-      alcoholContent="12.0"
+      productId="6"
+      name="Øl"
+      region="5"
+      productType="2"
+      kronePerVolume="//@kronePerVolumes.0"
+      alcoholPerKrone="//@alcoholPerKrones.0"
       sutibleFor="//@mealTypes.0"/>
   <countries
-      countryId="432"
-      name="sfdsf">
+      countryId="3"
+      name="Norge">
     <regions
-        regionId="14677"
-        name="dsfdsf"/>
+        regionId="5"
+        name="Oslo"/>
   </countries>
   <productTypes
-      productTypeId="587487"
-      name="fddsfa"
-      products="1234"/>
+      productTypeId="2"
+      name="Drikke"
+      products="6"/>
+  <kronePerVolumes
+      products="6"/>
+  <alcoholPerKrones
+      products="6"/>
   <recepies
-      name="safdfgdas"
-      recepieId="6532676"
+      name="FaarIKaal"
+      recepieId="1"
       mealType="//@mealTypes.0"
-      link="a.no"/>
+      link="www"/>
   <mealTypes
-      mealTypes="Fish"/>
+      mealTypes="Lamb"/>
 </polet:Categories>
