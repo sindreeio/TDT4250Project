@@ -85,7 +85,7 @@ local.properties
 .json
 
 # Ignore a Constants.java file
-#Constants.java
+Constants.java
 
 # Package Files #
 *.jar
