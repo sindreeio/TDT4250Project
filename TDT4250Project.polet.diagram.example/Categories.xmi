@@ -6,29 +6,29 @@
     xmlns:polet="platform:/plugin/TDT4250Project.polet/model/polet.ecore"
     xsi:schemaLocation="platform:/plugin/TDT4250Project.polet/model/polet.ecore polet.ecore">
   <Products
-      productId="123"
-      name="siufhiu"
-      region="1234567"
-      productType="324"
-      alcoholContent="798798.0"
-      Volume="123.0"
+      productId="1234"
+      name="werwer"
+      region="14677"
+      productType="587487"
+      price="123.0"
+      alcoholContent="12.0"
       sutibleFor="//@mealTypes.0"/>
   <countries
-      countryId="12445"
-      name="njksdaf">
+      countryId="432"
+      name="sfdsf">
     <regions
-        regionId="1234567"
-        name="asd"/>
+        regionId="14677"
+        name="dsfdsf"/>
   </countries>
   <productTypes
-      productTypeId="324"
-      name="ji"
-      products="123"/>
+      productTypeId="587487"
+      name="fddsfa"
+      products="1234"/>
   <recepies
-      name="Fack off"
-      recepieId="8776865654"
+      name="safdfgdas"
+      recepieId="6532676"
       mealType="//@mealTypes.0"
       link="a.no"/>
   <mealTypes
-      mealTypes="Light meat"/>
+      mealTypes="Fish"/>
 </polet:Categories>
