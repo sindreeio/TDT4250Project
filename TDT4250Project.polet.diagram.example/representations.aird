@@ -126,8 +126,8 @@
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ZnhUUhhZEeurxfUgcNzSGg" name="Frankrike">
-      <target xmi:type="polet:Country" href="Categories.xmi#123245678"/>
-      <semanticElements xmi:type="polet:Country" href="Categories.xmi#123245678"/>
+      <target xmi:type="polet:Country" href="Categories.xmi#67856"/>
+      <semanticElements xmi:type="polet:Country" href="Categories.xmi#67856"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
