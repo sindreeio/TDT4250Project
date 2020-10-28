@@ -16,6 +16,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import static polet.util.Constants.API_KEY;
+
 public class DataGenerator {
 	
 	public static void main(String[] args) {
@@ -36,7 +38,7 @@ public class DataGenerator {
             URI uri = builder.build();
             
             HttpGet request = new HttpGet(uri);
-            request.setHeader("Ocp-Apim-Subscription-Key", "");
+            request.setHeader("Ocp-Apim-Subscription-Key", API_KEY);
 
             HttpResponse response = httpclient.execute(request);
             HttpEntity entity = response.getEntity();

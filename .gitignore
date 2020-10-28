@@ -84,8 +84,8 @@ local.properties
 # Data files from Json
 .json
 
-# Ignore a ApiService.java file
-ApiService.java
+# Ignore a Constants.java file
+#Constants.java
 
 # Package Files #
 *.jar
