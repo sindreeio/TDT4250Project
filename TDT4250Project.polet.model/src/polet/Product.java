@@ -2,6 +2,7 @@
  */
 package polet;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link polet.Product#getPrice <em>Price</em>}</li>
  *   <li>{@link polet.Product#getAlcoholContent <em>Alcohol Content</em>}</li>
  *   <li>{@link polet.Product#getVolume <em>Volume</em>}</li>
+ *   <li>{@link polet.Product#getSutibleFor <em>Sutible For</em>}</li>
  * </ul>
  *
  * @see polet.PoletPackage#getProduct()
@@ -184,6 +186,18 @@ public interface Product extends EObject {
 	 * @generated
 	 */
 	void setVolume(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Sutible For</b></em>' reference list.
+	 * The list contents are of type {@link polet.MealType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sutible For</em>' reference list.
+	 * @see polet.PoletPackage#getProduct_SutibleFor()
+	 * @model
+	 * @generated
+	 */
+	EList<MealType> getSutibleFor();
 
 	/**
 	 * Returns the value of the '<em><b>Alcohol Per Krone</b></em>' reference.

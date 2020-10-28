@@ -33,7 +33,7 @@ import polet.Region;
  * </p>
  * <ul>
  *   <li>{@link polet.impl.RegionImpl#getRegionId <em>Region Id</em>}</li>
- *   <li>{@link polet.impl.RegionImpl#getRegion <em>Region</em>}</li>
+ *   <li>{@link polet.impl.RegionImpl#getName <em>Name</em>}</li>
  *   <li>{@link polet.impl.RegionImpl#getCountry <em>Country</em>}</li>
  *   <li>{@link polet.impl.RegionImpl#getProduces <em>Produces</em>}</li>
  * </ul>
@@ -62,24 +62,24 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 	protected String regionId = REGION_ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getRegion() <em>Region</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegion()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REGION_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getRegion() <em>Region</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegion()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String region = REGION_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProduces() <em>Produces</em>}' reference list.
@@ -136,8 +136,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRegion() {
-		return region;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -145,11 +145,11 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRegion(String newRegion) {
-		String oldRegion = region;
-		region = newRegion;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.REGION__REGION, oldRegion, region));
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.REGION__NAME, oldName, name));
 	}
 
 	/**
@@ -264,8 +264,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 		switch (featureID) {
 			case PoletPackage.REGION__REGION_ID:
 				return getRegionId();
-			case PoletPackage.REGION__REGION:
-				return getRegion();
+			case PoletPackage.REGION__NAME:
+				return getName();
 			case PoletPackage.REGION__COUNTRY:
 				return getCountry();
 			case PoletPackage.REGION__PRODUCES:
@@ -286,8 +286,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 			case PoletPackage.REGION__REGION_ID:
 				setRegionId((String)newValue);
 				return;
-			case PoletPackage.REGION__REGION:
-				setRegion((String)newValue);
+			case PoletPackage.REGION__NAME:
+				setName((String)newValue);
 				return;
 			case PoletPackage.REGION__COUNTRY:
 				setCountry((Country)newValue);
@@ -311,8 +311,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 			case PoletPackage.REGION__REGION_ID:
 				setRegionId(REGION_ID_EDEFAULT);
 				return;
-			case PoletPackage.REGION__REGION:
-				setRegion(REGION_EDEFAULT);
+			case PoletPackage.REGION__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case PoletPackage.REGION__COUNTRY:
 				setCountry((Country)null);
@@ -334,8 +334,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 		switch (featureID) {
 			case PoletPackage.REGION__REGION_ID:
 				return REGION_ID_EDEFAULT == null ? regionId != null : !REGION_ID_EDEFAULT.equals(regionId);
-			case PoletPackage.REGION__REGION:
-				return REGION_EDEFAULT == null ? region != null : !REGION_EDEFAULT.equals(region);
+			case PoletPackage.REGION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PoletPackage.REGION__COUNTRY:
 				return getCountry() != null;
 			case PoletPackage.REGION__PRODUCES:
@@ -356,8 +356,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (regionId: ");
 		result.append(regionId);
-		result.append(", region: ");
-		result.append(region);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

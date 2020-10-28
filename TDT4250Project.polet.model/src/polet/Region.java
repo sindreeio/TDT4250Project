@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link polet.Region#getRegionId <em>Region Id</em>}</li>
- *   <li>{@link polet.Region#getRegion <em>Region</em>}</li>
+ *   <li>{@link polet.Region#getName <em>Name</em>}</li>
  *   <li>{@link polet.Region#getCountry <em>Country</em>}</li>
  *   <li>{@link polet.Region#getProduces <em>Produces</em>}</li>
  * </ul>
@@ -50,26 +50,26 @@ public interface Region extends EObject {
 	void setRegionId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Region</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Region</em>' attribute.
-	 * @see #setRegion(String)
-	 * @see polet.PoletPackage#getRegion_Region()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see polet.PoletPackage#getRegion_Name()
 	 * @model
 	 * @generated
 	 */
-	String getRegion();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link polet.Region#getRegion <em>Region</em>}' attribute.
+	 * Sets the value of the '{@link polet.Region#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Region</em>' attribute.
-	 * @see #getRegion()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setRegion(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Country</b></em>' container reference.

@@ -20,6 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link polet.Categories#getProductTypes <em>Product Types</em>}</li>
  *   <li>{@link polet.Categories#getKronePerVolumes <em>Krone Per Volumes</em>}</li>
  *   <li>{@link polet.Categories#getAlcoholPerKrones <em>Alcohol Per Krones</em>}</li>
+ *   <li>{@link polet.Categories#getRecepies <em>Recepies</em>}</li>
+ *   <li>{@link polet.Categories#getMealTypes <em>Meal Types</em>}</li>
  * </ul>
  *
  * @see polet.PoletPackage#getCategories()
@@ -86,5 +88,29 @@ public interface Categories extends EObject {
 	 * @generated
 	 */
 	EList<KronePerAlcohol> getAlcoholPerKrones();
+
+	/**
+	 * Returns the value of the '<em><b>Recepies</b></em>' containment reference list.
+	 * The list contents are of type {@link polet.Recepie}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Recepies</em>' containment reference list.
+	 * @see polet.PoletPackage#getCategories_Recepies()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Recepie> getRecepies();
+
+	/**
+	 * Returns the value of the '<em><b>Meal Types</b></em>' containment reference list.
+	 * The list contents are of type {@link polet.MealType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Meal Types</em>' containment reference list.
+	 * @see polet.PoletPackage#getCategories_MealTypes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MealType> getMealTypes();
 
 } // Categories

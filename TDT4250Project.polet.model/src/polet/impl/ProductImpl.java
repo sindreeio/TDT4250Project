@@ -2,16 +2,20 @@
  */
 package polet.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import polet.KronePerAlcohol;
 import polet.KronePerVolume;
+import polet.MealType;
 import polet.PoletPackage;
 import polet.Product;
 import polet.ProductType;
@@ -34,6 +38,7 @@ import polet.Region;
  *   <li>{@link polet.impl.ProductImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getAlcoholContent <em>Alcohol Content</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getVolume <em>Volume</em>}</li>
+ *   <li>{@link polet.impl.ProductImpl#getSutibleFor <em>Sutible For</em>}</li>
  * </ul>
  *
  * @generated
@@ -178,6 +183,16 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * @ordered
 	 */
 	protected float volume = VOLUME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSutibleFor() <em>Sutible For</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSutibleFor()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MealType> sutibleFor;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -406,6 +421,18 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<MealType> getSutibleFor() {
+		if (sutibleFor == null) {
+			sutibleFor = new EObjectResolvingEList<MealType>(MealType.class, this, PoletPackage.PRODUCT__SUTIBLE_FOR);
+		}
+		return sutibleFor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public KronePerAlcohol getAlcoholPerKrone() {
 		if (alcoholPerKrone != null && alcoholPerKrone.eIsProxy()) {
 			InternalEObject oldAlcoholPerKrone = (InternalEObject)alcoholPerKrone;
@@ -593,6 +620,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 				return getAlcoholContent();
 			case PoletPackage.PRODUCT__VOLUME:
 				return getVolume();
+			case PoletPackage.PRODUCT__SUTIBLE_FOR:
+				return getSutibleFor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -602,6 +631,7 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -631,6 +661,10 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 				return;
 			case PoletPackage.PRODUCT__VOLUME:
 				setVolume((Float)newValue);
+				return;
+			case PoletPackage.PRODUCT__SUTIBLE_FOR:
+				getSutibleFor().clear();
+				getSutibleFor().addAll((Collection<? extends MealType>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -671,6 +705,9 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 			case PoletPackage.PRODUCT__VOLUME:
 				setVolume(VOLUME_EDEFAULT);
 				return;
+			case PoletPackage.PRODUCT__SUTIBLE_FOR:
+				getSutibleFor().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -701,6 +738,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 				return alcoholContent != ALCOHOL_CONTENT_EDEFAULT;
 			case PoletPackage.PRODUCT__VOLUME:
 				return volume != VOLUME_EDEFAULT;
+			case PoletPackage.PRODUCT__SUTIBLE_FOR:
+				return sutibleFor != null && !sutibleFor.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

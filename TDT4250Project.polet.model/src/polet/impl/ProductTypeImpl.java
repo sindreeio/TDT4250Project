@@ -32,7 +32,7 @@ import polet.Region;
  * </p>
  * <ul>
  *   <li>{@link polet.impl.ProductTypeImpl#getProductTypeId <em>Product Type Id</em>}</li>
- *   <li>{@link polet.impl.ProductTypeImpl#getProductTypeName <em>Product Type Name</em>}</li>
+ *   <li>{@link polet.impl.ProductTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link polet.impl.ProductTypeImpl#getProducedIn <em>Produced In</em>}</li>
  *   <li>{@link polet.impl.ProductTypeImpl#getProducts <em>Products</em>}</li>
  * </ul>
@@ -61,24 +61,24 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 	protected String productTypeId = PRODUCT_TYPE_ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getProductTypeName() <em>Product Type Name</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProductTypeName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PRODUCT_TYPE_NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getProductTypeName() <em>Product Type Name</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProductTypeName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String productTypeName = PRODUCT_TYPE_NAME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProducedIn() <em>Produced In</em>}' reference list.
@@ -145,8 +145,8 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getProductTypeName() {
-		return productTypeName;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -154,11 +154,11 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProductTypeName(String newProductTypeName) {
-		String oldProductTypeName = productTypeName;
-		productTypeName = newProductTypeName;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_NAME, oldProductTypeName, productTypeName));
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT_TYPE__NAME, oldName, name));
 	}
 
 	/**
@@ -228,8 +228,8 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 		switch (featureID) {
 			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_ID:
 				return getProductTypeId();
-			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_NAME:
-				return getProductTypeName();
+			case PoletPackage.PRODUCT_TYPE__NAME:
+				return getName();
 			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
 				return getProducedIn();
 			case PoletPackage.PRODUCT_TYPE__PRODUCTS:
@@ -250,8 +250,8 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_ID:
 				setProductTypeId((String)newValue);
 				return;
-			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_NAME:
-				setProductTypeName((String)newValue);
+			case PoletPackage.PRODUCT_TYPE__NAME:
+				setName((String)newValue);
 				return;
 			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
 				getProducedIn().clear();
@@ -276,8 +276,8 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_ID:
 				setProductTypeId(PRODUCT_TYPE_ID_EDEFAULT);
 				return;
-			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_NAME:
-				setProductTypeName(PRODUCT_TYPE_NAME_EDEFAULT);
+			case PoletPackage.PRODUCT_TYPE__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
 				getProducedIn().clear();
@@ -299,8 +299,8 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 		switch (featureID) {
 			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_ID:
 				return PRODUCT_TYPE_ID_EDEFAULT == null ? productTypeId != null : !PRODUCT_TYPE_ID_EDEFAULT.equals(productTypeId);
-			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_NAME:
-				return PRODUCT_TYPE_NAME_EDEFAULT == null ? productTypeName != null : !PRODUCT_TYPE_NAME_EDEFAULT.equals(productTypeName);
+			case PoletPackage.PRODUCT_TYPE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
 				return producedIn != null && !producedIn.isEmpty();
 			case PoletPackage.PRODUCT_TYPE__PRODUCTS:
@@ -321,8 +321,8 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (productTypeId: ");
 		result.append(productTypeId);
-		result.append(", productTypeName: ");
-		result.append(productTypeName);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

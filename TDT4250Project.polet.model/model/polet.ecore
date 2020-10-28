@@ -16,7 +16,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="recepies" upperBound="-1"
         eType="#//Recepie" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mealTypes" upperBound="-1"
-        eType="#//MealType"/>
+        eType="#//MealType" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Product">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="productId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

@@ -108,6 +108,18 @@ public class PoletSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PoletPackage.MEAL_TYPE: {
+				MealType mealType = (MealType)theEObject;
+				T result = caseMealType(mealType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PoletPackage.RECEPIE: {
+				Recepie recepie = (Recepie)theEObject;
+				T result = caseRecepie(recepie);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -214,6 +226,36 @@ public class PoletSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseKronePerAlcohol(KronePerAlcohol object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Meal Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Meal Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMealType(MealType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Recepie</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Recepie</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRecepie(Recepie object) {
 		return null;
 	}
 

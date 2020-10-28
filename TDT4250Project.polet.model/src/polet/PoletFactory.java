@@ -85,6 +85,24 @@ public interface PoletFactory extends EFactory {
 	KronePerAlcohol createKronePerAlcohol();
 
 	/**
+	 * Returns a new object of class '<em>Meal Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Meal Type</em>'.
+	 * @generated
+	 */
+	MealType createMealType();
+
+	/**
+	 * Returns a new object of class '<em>Recepie</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Recepie</em>'.
+	 * @generated
+	 */
+	Recepie createRecepie();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
