@@ -1,38 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<polet:Categories
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:polet="platform:/plugin/TDT4250Project.polet/model/polet.ecore"
-    xsi:schemaLocation="platform:/plugin/TDT4250Project.polet/model/polet.ecore polet.ecore">
-  <Products
-      productId="6"
-      name="Øl"
-      region="5"
-      productType="2"
-      kronePerVolume="//@kronePerVolumes.0"
-      alcoholPerKrone="//@alcoholPerKrones.0"
-      sutibleFor="//@mealTypes.0"/>
-  <countries
-      countryId="3"
-      name="Norge">
-    <regions
-        regionId="5"
-        name="Oslo"/>
+<polet:Categories xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:polet="platform:/plugin/TDT4250Project.polet/model/polet.ecore" xsi:schemaLocation="platform:/plugin/TDT4250Project.polet/model/polet.ecore ../TDT4250Project.polet.model/model/polet.ecore">
+  <Products productId="6" name="Øl" region="5" productType="2" kronePerVolume="//@kronePerVolumes.0" alcoholPerKrone="//@alcoholPerKrones.0" sutibleFor="//@mealTypes.0"/>
+  <countries countryId="3" name="Norge">
+    <regions regionId="5" name="Oslo"/>
   </countries>
-  <productTypes
-      productTypeId="2"
-      name="Drikke"
-      products="6"/>
-  <kronePerVolumes
-      products="6"/>
-  <alcoholPerKrones
-      products="6"/>
-  <recepies
-      name="FaarIKaal"
-      recepieId="1"
-      mealType="//@mealTypes.0"
-      link="www"/>
-  <mealTypes
-      mealTypes="Lamb"/>
+  <productTypes productTypeId="2" name="Drikke" products="6"/>
+  <kronePerVolumes products="6"/>
+  <alcoholPerKrones products="6"/>
+  <recepies name="FaarIKaal" recepieId="1" mealType="//@mealTypes.0" link="www"/>
+  <recepies/>
+  <mealTypes mealTypes="Lamb"/>
 </polet:Categories>
