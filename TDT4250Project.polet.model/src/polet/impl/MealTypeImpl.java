@@ -2,15 +2,23 @@
  */
 package polet.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import polet.MealType;
 import polet.PoletPackage;
+import polet.Product;
+import polet.Recipe;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,31 +28,53 @@ import polet.PoletPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link polet.impl.MealTypeImpl#getMealTypes <em>Meal Types</em>}</li>
+ *   <li>{@link polet.impl.MealTypeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link polet.impl.MealTypeImpl#getRecipies <em>Recipies</em>}</li>
+ *   <li>{@link polet.impl.MealTypeImpl#getProducts <em>Products</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealType {
 	/**
-	 * The default value of the '{@link #getMealTypes() <em>Meal Types</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMealTypes()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MEAL_TYPES_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getMealTypes() <em>Meal Types</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMealTypes()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String mealTypes = MEAL_TYPES_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRecipies() <em>Recipies</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRecipies()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Recipe> recipies;
+
+	/**
+	 * The cached value of the '{@link #getProducts() <em>Products</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProducts()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Product> products;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +100,8 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMealTypes() {
-		return mealTypes;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -79,11 +109,68 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMealTypes(String newMealTypes) {
-		String oldMealTypes = mealTypes;
-		mealTypes = newMealTypes;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.MEAL_TYPE__MEAL_TYPES, oldMealTypes, mealTypes));
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.MEAL_TYPE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Recipe> getRecipies() {
+		if (recipies == null) {
+			recipies = new EObjectWithInverseResolvingEList<Recipe>(Recipe.class, this, PoletPackage.MEAL_TYPE__RECIPIES, PoletPackage.RECIPE__MEAL_TYPE);
+		}
+		return recipies;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Product> getProducts() {
+		if (products == null) {
+			products = new EObjectWithInverseResolvingEList.ManyInverse<Product>(Product.class, this, PoletPackage.MEAL_TYPE__PRODUCTS, PoletPackage.PRODUCT__SUTIBLE_FOR);
+		}
+		return products;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PoletPackage.MEAL_TYPE__RECIPIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRecipies()).basicAdd(otherEnd, msgs);
+			case PoletPackage.MEAL_TYPE__PRODUCTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProducts()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PoletPackage.MEAL_TYPE__RECIPIES:
+				return ((InternalEList<?>)getRecipies()).basicRemove(otherEnd, msgs);
+			case PoletPackage.MEAL_TYPE__PRODUCTS:
+				return ((InternalEList<?>)getProducts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -94,8 +181,12 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PoletPackage.MEAL_TYPE__MEAL_TYPES:
-				return getMealTypes();
+			case PoletPackage.MEAL_TYPE__NAME:
+				return getName();
+			case PoletPackage.MEAL_TYPE__RECIPIES:
+				return getRecipies();
+			case PoletPackage.MEAL_TYPE__PRODUCTS:
+				return getProducts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -105,11 +196,20 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PoletPackage.MEAL_TYPE__MEAL_TYPES:
-				setMealTypes((String)newValue);
+			case PoletPackage.MEAL_TYPE__NAME:
+				setName((String)newValue);
+				return;
+			case PoletPackage.MEAL_TYPE__RECIPIES:
+				getRecipies().clear();
+				getRecipies().addAll((Collection<? extends Recipe>)newValue);
+				return;
+			case PoletPackage.MEAL_TYPE__PRODUCTS:
+				getProducts().clear();
+				getProducts().addAll((Collection<? extends Product>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +223,14 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PoletPackage.MEAL_TYPE__MEAL_TYPES:
-				setMealTypes(MEAL_TYPES_EDEFAULT);
+			case PoletPackage.MEAL_TYPE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case PoletPackage.MEAL_TYPE__RECIPIES:
+				getRecipies().clear();
+				return;
+			case PoletPackage.MEAL_TYPE__PRODUCTS:
+				getProducts().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +244,12 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PoletPackage.MEAL_TYPE__MEAL_TYPES:
-				return MEAL_TYPES_EDEFAULT == null ? mealTypes != null : !MEAL_TYPES_EDEFAULT.equals(mealTypes);
+			case PoletPackage.MEAL_TYPE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case PoletPackage.MEAL_TYPE__RECIPIES:
+				return recipies != null && !recipies.isEmpty();
+			case PoletPackage.MEAL_TYPE__PRODUCTS:
+				return products != null && !products.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -154,8 +264,8 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (mealTypes: ");
-		result.append(mealTypes);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -190,11 +190,13 @@ public interface Product extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Sutible For</b></em>' reference list.
 	 * The list contents are of type {@link polet.MealType}.
+	 * It is bidirectional and its opposite is '{@link polet.MealType#getProducts <em>Products</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sutible For</em>' reference list.
 	 * @see polet.PoletPackage#getProduct_SutibleFor()
-	 * @model
+	 * @see polet.MealType#getProducts
+	 * @model opposite="products"
 	 * @generated
 	 */
 	EList<MealType> getSutibleFor();

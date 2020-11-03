@@ -19,7 +19,7 @@ import polet.PoletFactory;
 import polet.PoletPackage;
 import polet.Product;
 import polet.ProductType;
-import polet.Recepie;
+import polet.Recipe;
 import polet.Region;
 import polet.util.PoletValidator;
 
@@ -91,7 +91,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass recepieEClass = null;
+	private EClass recipeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -535,7 +535,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMealType_MealTypes() {
+	public EAttribute getMealType_Name() {
 		return (EAttribute)mealTypeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -544,8 +544,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRecepie() {
-		return recepieEClass;
+	public EReference getMealType_Recipies() {
+		return (EReference)mealTypeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -553,8 +553,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRecepie_Name() {
-		return (EAttribute)recepieEClass.getEStructuralFeatures().get(0);
+	public EReference getMealType_Products() {
+		return (EReference)mealTypeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -562,8 +562,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRecepie_RecepieId() {
-		return (EAttribute)recepieEClass.getEStructuralFeatures().get(1);
+	public EClass getRecipe() {
+		return recipeEClass;
 	}
 
 	/**
@@ -571,8 +571,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRecepie_MealType() {
-		return (EReference)recepieEClass.getEStructuralFeatures().get(2);
+	public EAttribute getRecipe_Name() {
+		return (EAttribute)recipeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -580,8 +580,26 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRecepie_Link() {
-		return (EAttribute)recepieEClass.getEStructuralFeatures().get(3);
+	public EAttribute getRecipe_RecepieId() {
+		return (EAttribute)recipeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRecipe_MealType() {
+		return (EReference)recipeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRecipe_Link() {
+		return (EAttribute)recipeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -668,13 +686,15 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		createEReference(kronePerAlcoholEClass, KRONE_PER_ALCOHOL__PRODUCTS);
 
 		mealTypeEClass = createEClass(MEAL_TYPE);
-		createEAttribute(mealTypeEClass, MEAL_TYPE__MEAL_TYPES);
+		createEAttribute(mealTypeEClass, MEAL_TYPE__NAME);
+		createEReference(mealTypeEClass, MEAL_TYPE__RECIPIES);
+		createEReference(mealTypeEClass, MEAL_TYPE__PRODUCTS);
 
-		recepieEClass = createEClass(RECEPIE);
-		createEAttribute(recepieEClass, RECEPIE__NAME);
-		createEAttribute(recepieEClass, RECEPIE__RECEPIE_ID);
-		createEReference(recepieEClass, RECEPIE__MEAL_TYPE);
-		createEAttribute(recepieEClass, RECEPIE__LINK);
+		recipeEClass = createEClass(RECIPE);
+		createEAttribute(recipeEClass, RECIPE__NAME);
+		createEAttribute(recipeEClass, RECIPE__RECEPIE_ID);
+		createEReference(recipeEClass, RECIPE__MEAL_TYPE);
+		createEAttribute(recipeEClass, RECIPE__LINK);
 
 		// Create data types
 		mealTypesEDataType = createEDataType(MEAL_TYPES);
@@ -716,7 +736,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		initEReference(getCategories_ProductTypes(), this.getProductType(), null, "productTypes", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCategories_KronePerVolumes(), this.getKronePerVolume(), null, "kronePerVolumes", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCategories_AlcoholPerKrones(), this.getKronePerAlcohol(), null, "alcoholPerKrones", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCategories_Recepies(), this.getRecepie(), null, "recepies", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCategories_Recepies(), this.getRecipe(), null, "recepies", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCategories_MealTypes(), this.getMealType(), null, "mealTypes", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(productEClass, Product.class, "Product", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -729,7 +749,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		initEAttribute(getProduct_Price(), ecorePackage.getEFloat(), "price", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProduct_AlcoholContent(), ecorePackage.getEFloat(), "alcoholContent", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProduct_Volume(), ecorePackage.getEFloat(), "Volume", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_SutibleFor(), this.getMealType(), null, "sutibleFor", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProduct_SutibleFor(), this.getMealType(), this.getMealType_Products(), "sutibleFor", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(countryEClass, Country.class, "Country", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCountry_CountryId(), ecorePackage.getEString(), "countryId", null, 0, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -757,13 +777,15 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		initEReference(getKronePerAlcohol_Products(), this.getProduct(), this.getProduct_AlcoholPerKrone(), "products", null, 0, -1, KronePerAlcohol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mealTypeEClass, MealType.class, "MealType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMealType_MealTypes(), this.getMealTypes(), "mealTypes", null, 0, 1, MealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMealType_Name(), this.getMealTypes(), "name", null, 0, 1, MealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMealType_Recipies(), this.getRecipe(), this.getRecipe_MealType(), "recipies", null, 0, -1, MealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMealType_Products(), this.getProduct(), this.getProduct_SutibleFor(), "products", null, 0, -1, MealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(recepieEClass, Recepie.class, "Recepie", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRecepie_Name(), ecorePackage.getEString(), "name", null, 0, 1, Recepie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRecepie_RecepieId(), ecorePackage.getEString(), "recepieId", null, 0, 1, Recepie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRecepie_MealType(), this.getMealType(), null, "mealType", null, 0, 1, Recepie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRecepie_Link(), ecorePackage.getEString(), "link", null, 0, 1, Recepie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(recipeEClass, Recipe.class, "Recipe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRecipe_Name(), ecorePackage.getEString(), "name", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecipe_RecepieId(), ecorePackage.getEString(), "recepieId", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRecipe_MealType(), this.getMealType(), this.getMealType_Recipies(), "mealType", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecipe_Link(), ecorePackage.getEString(), "link", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(mealTypesEDataType, String.class, "MealTypes", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

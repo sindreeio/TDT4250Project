@@ -7,32 +7,39 @@
     xsi:schemaLocation="platform:/plugin/TDT4250Project.polet/model/polet.ecore polet.ecore">
   <Products
       productId="6"
-      name="Øl"
-      region="5"
-      productType="2"
-      kronePerVolume="//@kronePerVolumes.0"
-      alcoholPerKrone="//@alcoholPerKrones.0"
+      name="Frydenlund"
+      region="2"
+      productType="3"
+      kronePerVolume="1.0"
+      alcoholPerKrone="2.0"
+      price="40.0"
+      alcoholContent="3.0"
+      Volume="0.5"
       sutibleFor="//@mealTypes.0"/>
   <countries
-      countryId="3"
-      name="Norge">
+      countryId="1"
+      name="Norway">
     <regions
-        regionId="5"
+        regionId="2"
         name="Oslo"/>
   </countries>
   <productTypes
-      productTypeId="2"
-      name="Drikke"
+      productTypeId="3"
+      name="Øl"
       products="6"/>
   <kronePerVolumes
+      derivedNumber="1.0"
       products="6"/>
   <alcoholPerKrones
+      derivedNumber="2.0"
       products="6"/>
   <recepies
       name="FaarIKaal"
-      recepieId="1"
+      recepieId="5"
       mealType="//@mealTypes.0"
       link="www"/>
   <mealTypes
-      mealTypes="Lamb"/>
+      name="Lamb"
+      recipies="5"
+      products="6"/>
 </polet:Categories>

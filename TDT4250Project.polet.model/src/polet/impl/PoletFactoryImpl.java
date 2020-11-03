@@ -65,7 +65,7 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 			case PoletPackage.KRONE_PER_VOLUME: return createKronePerVolume();
 			case PoletPackage.KRONE_PER_ALCOHOL: return createKronePerAlcohol();
 			case PoletPackage.MEAL_TYPE: return createMealType();
-			case PoletPackage.RECEPIE: return createRecepie();
+			case PoletPackage.RECIPE: return createRecipe();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -186,9 +186,9 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Recepie createRecepie() {
-		RecepieImpl recepie = new RecepieImpl();
-		return recepie;
+	public Recipe createRecipe() {
+		RecipeImpl recipe = new RecipeImpl();
+		return recipe;
 	}
 
 	/**

@@ -3,6 +3,7 @@
 package polet.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -12,25 +13,25 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import polet.MealType;
 import polet.PoletPackage;
-import polet.Recepie;
+import polet.Recipe;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Recepie</b></em>'.
+ * An implementation of the model object '<em><b>Recipe</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link polet.impl.RecepieImpl#getName <em>Name</em>}</li>
- *   <li>{@link polet.impl.RecepieImpl#getRecepieId <em>Recepie Id</em>}</li>
- *   <li>{@link polet.impl.RecepieImpl#getMealType <em>Meal Type</em>}</li>
- *   <li>{@link polet.impl.RecepieImpl#getLink <em>Link</em>}</li>
+ *   <li>{@link polet.impl.RecipeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link polet.impl.RecipeImpl#getRecepieId <em>Recepie Id</em>}</li>
+ *   <li>{@link polet.impl.RecipeImpl#getMealType <em>Meal Type</em>}</li>
+ *   <li>{@link polet.impl.RecipeImpl#getLink <em>Link</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie {
+public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -106,7 +107,7 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RecepieImpl() {
+	protected RecipeImpl() {
 		super();
 	}
 
@@ -117,7 +118,7 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PoletPackage.Literals.RECEPIE;
+		return PoletPackage.Literals.RECIPE;
 	}
 
 	/**
@@ -138,7 +139,7 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.RECEPIE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.RECIPE__NAME, oldName, name));
 	}
 
 	/**
@@ -159,7 +160,7 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 		String oldRecepieId = recepieId;
 		recepieId = newRecepieId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.RECEPIE__RECEPIE_ID, oldRecepieId, recepieId));
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.RECIPE__RECEPIE_ID, oldRecepieId, recepieId));
 	}
 
 	/**
@@ -173,7 +174,7 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 			mealType = (MealType)eResolveProxy(oldMealType);
 			if (mealType != oldMealType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PoletPackage.RECEPIE__MEAL_TYPE, oldMealType, mealType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PoletPackage.RECIPE__MEAL_TYPE, oldMealType, mealType));
 			}
 		}
 		return mealType;
@@ -193,11 +194,33 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMealType(MealType newMealType) {
+	public NotificationChain basicSetMealType(MealType newMealType, NotificationChain msgs) {
 		MealType oldMealType = mealType;
 		mealType = newMealType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.RECEPIE__MEAL_TYPE, oldMealType, mealType));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PoletPackage.RECIPE__MEAL_TYPE, oldMealType, newMealType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMealType(MealType newMealType) {
+		if (newMealType != mealType) {
+			NotificationChain msgs = null;
+			if (mealType != null)
+				msgs = ((InternalEObject)mealType).eInverseRemove(this, PoletPackage.MEAL_TYPE__RECIPIES, MealType.class, msgs);
+			if (newMealType != null)
+				msgs = ((InternalEObject)newMealType).eInverseAdd(this, PoletPackage.MEAL_TYPE__RECIPIES, MealType.class, msgs);
+			msgs = basicSetMealType(newMealType, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.RECIPE__MEAL_TYPE, newMealType, newMealType));
 	}
 
 	/**
@@ -218,7 +241,37 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 		String oldLink = link;
 		link = newLink;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.RECEPIE__LINK, oldLink, link));
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.RECIPE__LINK, oldLink, link));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PoletPackage.RECIPE__MEAL_TYPE:
+				if (mealType != null)
+					msgs = ((InternalEObject)mealType).eInverseRemove(this, PoletPackage.MEAL_TYPE__RECIPIES, MealType.class, msgs);
+				return basicSetMealType((MealType)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PoletPackage.RECIPE__MEAL_TYPE:
+				return basicSetMealType(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -229,14 +282,14 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PoletPackage.RECEPIE__NAME:
+			case PoletPackage.RECIPE__NAME:
 				return getName();
-			case PoletPackage.RECEPIE__RECEPIE_ID:
+			case PoletPackage.RECIPE__RECEPIE_ID:
 				return getRecepieId();
-			case PoletPackage.RECEPIE__MEAL_TYPE:
+			case PoletPackage.RECIPE__MEAL_TYPE:
 				if (resolve) return getMealType();
 				return basicGetMealType();
-			case PoletPackage.RECEPIE__LINK:
+			case PoletPackage.RECIPE__LINK:
 				return getLink();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -250,16 +303,16 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PoletPackage.RECEPIE__NAME:
+			case PoletPackage.RECIPE__NAME:
 				setName((String)newValue);
 				return;
-			case PoletPackage.RECEPIE__RECEPIE_ID:
+			case PoletPackage.RECIPE__RECEPIE_ID:
 				setRecepieId((String)newValue);
 				return;
-			case PoletPackage.RECEPIE__MEAL_TYPE:
+			case PoletPackage.RECIPE__MEAL_TYPE:
 				setMealType((MealType)newValue);
 				return;
-			case PoletPackage.RECEPIE__LINK:
+			case PoletPackage.RECIPE__LINK:
 				setLink((String)newValue);
 				return;
 		}
@@ -274,16 +327,16 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PoletPackage.RECEPIE__NAME:
+			case PoletPackage.RECIPE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case PoletPackage.RECEPIE__RECEPIE_ID:
+			case PoletPackage.RECIPE__RECEPIE_ID:
 				setRecepieId(RECEPIE_ID_EDEFAULT);
 				return;
-			case PoletPackage.RECEPIE__MEAL_TYPE:
+			case PoletPackage.RECIPE__MEAL_TYPE:
 				setMealType((MealType)null);
 				return;
-			case PoletPackage.RECEPIE__LINK:
+			case PoletPackage.RECIPE__LINK:
 				setLink(LINK_EDEFAULT);
 				return;
 		}
@@ -298,13 +351,13 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PoletPackage.RECEPIE__NAME:
+			case PoletPackage.RECIPE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case PoletPackage.RECEPIE__RECEPIE_ID:
+			case PoletPackage.RECIPE__RECEPIE_ID:
 				return RECEPIE_ID_EDEFAULT == null ? recepieId != null : !RECEPIE_ID_EDEFAULT.equals(recepieId);
-			case PoletPackage.RECEPIE__MEAL_TYPE:
+			case PoletPackage.RECIPE__MEAL_TYPE:
 				return mealType != null;
-			case PoletPackage.RECEPIE__LINK:
+			case PoletPackage.RECIPE__LINK:
 				return LINK_EDEFAULT == null ? link != null : !LINK_EDEFAULT.equals(link);
 		}
 		return super.eIsSet(featureID);
@@ -330,4 +383,4 @@ public class RecepieImpl extends MinimalEObjectImpl.Container implements Recepie
 		return result.toString();
 	}
 
-} //RecepieImpl
+} //RecipeImpl

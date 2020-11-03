@@ -91,7 +91,7 @@ public interface Categories extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Recepies</b></em>' containment reference list.
-	 * The list contents are of type {@link polet.Recepie}.
+	 * The list contents are of type {@link polet.Recipe}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recepies</em>' containment reference list.
@@ -99,7 +99,7 @@ public interface Categories extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Recepie> getRecepies();
+	EList<Recipe> getRecepies();
 
 	/**
 	 * Returns the value of the '<em><b>Meal Types</b></em>' containment reference list.

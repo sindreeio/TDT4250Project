@@ -6,38 +6,38 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Recepie</b></em>'.
+ * A representation of the model object '<em><b>Recipe</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link polet.Recepie#getName <em>Name</em>}</li>
- *   <li>{@link polet.Recepie#getRecepieId <em>Recepie Id</em>}</li>
- *   <li>{@link polet.Recepie#getMealType <em>Meal Type</em>}</li>
- *   <li>{@link polet.Recepie#getLink <em>Link</em>}</li>
+ *   <li>{@link polet.Recipe#getName <em>Name</em>}</li>
+ *   <li>{@link polet.Recipe#getRecepieId <em>Recepie Id</em>}</li>
+ *   <li>{@link polet.Recipe#getMealType <em>Meal Type</em>}</li>
+ *   <li>{@link polet.Recipe#getLink <em>Link</em>}</li>
  * </ul>
  *
- * @see polet.PoletPackage#getRecepie()
+ * @see polet.PoletPackage#getRecipe()
  * @model
  * @generated
  */
-public interface Recepie extends EObject {
+public interface Recipe extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see polet.PoletPackage#getRecepie_Name()
+	 * @see polet.PoletPackage#getRecipe_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link polet.Recepie#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link polet.Recipe#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -52,14 +52,14 @@ public interface Recepie extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recepie Id</em>' attribute.
 	 * @see #setRecepieId(String)
-	 * @see polet.PoletPackage#getRecepie_RecepieId()
+	 * @see polet.PoletPackage#getRecipe_RecepieId()
 	 * @model id="true"
 	 * @generated
 	 */
 	String getRecepieId();
 
 	/**
-	 * Sets the value of the '{@link polet.Recepie#getRecepieId <em>Recepie Id</em>}' attribute.
+	 * Sets the value of the '{@link polet.Recipe#getRecepieId <em>Recepie Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Recepie Id</em>' attribute.
@@ -70,18 +70,20 @@ public interface Recepie extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Meal Type</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link polet.MealType#getRecipies <em>Recipies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Meal Type</em>' reference.
 	 * @see #setMealType(MealType)
-	 * @see polet.PoletPackage#getRecepie_MealType()
-	 * @model
+	 * @see polet.PoletPackage#getRecipe_MealType()
+	 * @see polet.MealType#getRecipies
+	 * @model opposite="recipies"
 	 * @generated
 	 */
 	MealType getMealType();
 
 	/**
-	 * Sets the value of the '{@link polet.Recepie#getMealType <em>Meal Type</em>}' reference.
+	 * Sets the value of the '{@link polet.Recipe#getMealType <em>Meal Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Meal Type</em>' reference.
@@ -96,14 +98,14 @@ public interface Recepie extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Link</em>' attribute.
 	 * @see #setLink(String)
-	 * @see polet.PoletPackage#getRecepie_Link()
+	 * @see polet.PoletPackage#getRecipe_Link()
 	 * @model
 	 * @generated
 	 */
 	String getLink();
 
 	/**
-	 * Sets the value of the '{@link polet.Recepie#getLink <em>Link</em>}' attribute.
+	 * Sets the value of the '{@link polet.Recipe#getLink <em>Link</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Link</em>' attribute.
@@ -112,4 +114,4 @@ public interface Recepie extends EObject {
 	 */
 	void setLink(String value);
 
-} // Recepie
+} // Recipe

@@ -102,8 +102,8 @@ public class PoletValidator extends EObjectValidator {
 				return validateKronePerAlcohol((KronePerAlcohol)value, diagnostics, context);
 			case PoletPackage.MEAL_TYPE:
 				return validateMealType((MealType)value, diagnostics, context);
-			case PoletPackage.RECEPIE:
-				return validateRecepie((Recepie)value, diagnostics, context);
+			case PoletPackage.RECIPE:
+				return validateRecipe((Recipe)value, diagnostics, context);
 			case PoletPackage.MEAL_TYPES:
 				return validateMealTypes((String)value, diagnostics, context);
 			default:
@@ -188,8 +188,8 @@ public class PoletValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRecepie(Recepie recepie, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(recepie, diagnostics, context);
+	public boolean validateRecipe(Recipe recipe, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(recipe, diagnostics, context);
 	}
 
 	/**
