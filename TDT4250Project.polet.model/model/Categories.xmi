@@ -6,29 +6,40 @@
     xmlns:polet="platform:/plugin/TDT4250Project.polet/model/polet.ecore"
     xsi:schemaLocation="platform:/plugin/TDT4250Project.polet/model/polet.ecore polet.ecore">
   <Products
-      productId="123"
-      name="siufhiu"
-      region="1234567"
-      productType="324"
-      alcoholContent="798798.0"
-      Volume="123.0"
+      productId="6"
+      name="Frydenlund"
+      region="2"
+      productType="3"
+      kronePerVolume="1.0"
+      alcoholPerKrone="2.0"
+      price="40.0"
+      alcoholContent="3.0"
+      Volume="0.5"
       sutibleFor="//@mealTypes.0"/>
   <countries
-      countryId="12445"
-      name="njksdaf">
+      countryId="1"
+      name="Norway">
     <regions
-        regionId="1234567"
-        name="asd"/>
+        regionId="2"
+        name="Oslo"/>
   </countries>
   <productTypes
-      productTypeId="324"
-      name="ji"
-      products="123"/>
+      productTypeId="3"
+      name="Øl"
+      products="6"/>
+  <kronePerVolumes
+      derivedNumber="1.0"
+      products="6"/>
+  <alcoholPerKrones
+      derivedNumber="2.0"
+      products="6"/>
   <recepies
-      name="Fack off"
-      recepieId="8776865654"
+      name="FaarIKaal"
+      recepieId="5"
       mealType="//@mealTypes.0"
-      link="a.no"/>
+      link="www"/>
   <mealTypes
-      mealTypes="Light meat"/>
+      name="Lamb"
+      recipies="5"
+      products="6"/>
 </polet:Categories>

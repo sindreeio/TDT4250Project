@@ -114,9 +114,9 @@ public class PoletSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PoletPackage.RECEPIE: {
-				Recepie recepie = (Recepie)theEObject;
-				T result = caseRecepie(recepie);
+			case PoletPackage.RECIPE: {
+				Recipe recipe = (Recipe)theEObject;
+				T result = caseRecipe(recipe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -245,17 +245,17 @@ public class PoletSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Recepie</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Recipe</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Recepie</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Recipe</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRecepie(Recepie object) {
+	public T caseRecipe(Recipe object) {
 		return null;
 	}
 

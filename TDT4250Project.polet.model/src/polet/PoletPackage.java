@@ -552,13 +552,31 @@ public interface PoletPackage extends EPackage {
 	int MEAL_TYPE = 7;
 
 	/**
-	 * The feature id for the '<em><b>Meal Types</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEAL_TYPE__MEAL_TYPES = 0;
+	int MEAL_TYPE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Recipies</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEAL_TYPE__RECIPIES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Products</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEAL_TYPE__PRODUCTS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Meal Type</em>' class.
@@ -567,7 +585,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEAL_TYPE_FEATURE_COUNT = 1;
+	int MEAL_TYPE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Meal Type</em>' class.
@@ -579,14 +597,14 @@ public interface PoletPackage extends EPackage {
 	int MEAL_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link polet.impl.RecepieImpl <em>Recepie</em>}' class.
+	 * The meta object id for the '{@link polet.impl.RecipeImpl <em>Recipe</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see polet.impl.RecepieImpl
-	 * @see polet.impl.PoletPackageImpl#getRecepie()
+	 * @see polet.impl.RecipeImpl
+	 * @see polet.impl.PoletPackageImpl#getRecipe()
 	 * @generated
 	 */
-	int RECEPIE = 8;
+	int RECIPE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -595,7 +613,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECEPIE__NAME = 0;
+	int RECIPE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Recepie Id</b></em>' attribute.
@@ -604,7 +622,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECEPIE__RECEPIE_ID = 1;
+	int RECIPE__RECEPIE_ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Meal Type</b></em>' reference.
@@ -613,7 +631,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECEPIE__MEAL_TYPE = 2;
+	int RECIPE__MEAL_TYPE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Link</b></em>' attribute.
@@ -622,25 +640,25 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECEPIE__LINK = 3;
+	int RECIPE__LINK = 3;
 
 	/**
-	 * The number of structural features of the '<em>Recepie</em>' class.
+	 * The number of structural features of the '<em>Recipe</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECEPIE_FEATURE_COUNT = 4;
+	int RECIPE_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>Recepie</em>' class.
+	 * The number of operations of the '<em>Recipe</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECEPIE_OPERATION_COUNT = 0;
+	int RECIPE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '<em>Meal Types</em>' data type.
@@ -1085,69 +1103,91 @@ public interface PoletPackage extends EPackage {
 	EClass getMealType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.MealType#getMealTypes <em>Meal Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Meal Types</em>'.
-	 * @see polet.MealType#getMealTypes()
-	 * @see #getMealType()
-	 * @generated
-	 */
-	EAttribute getMealType_MealTypes();
-
-	/**
-	 * Returns the meta object for class '{@link polet.Recepie <em>Recepie</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Recepie</em>'.
-	 * @see polet.Recepie
-	 * @generated
-	 */
-	EClass getRecepie();
-
-	/**
-	 * Returns the meta object for the attribute '{@link polet.Recepie#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link polet.MealType#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see polet.Recepie#getName()
-	 * @see #getRecepie()
+	 * @see polet.MealType#getName()
+	 * @see #getMealType()
 	 * @generated
 	 */
-	EAttribute getRecepie_Name();
+	EAttribute getMealType_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.Recepie#getRecepieId <em>Recepie Id</em>}'.
+	 * Returns the meta object for the reference list '{@link polet.MealType#getRecipies <em>Recipies</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Recipies</em>'.
+	 * @see polet.MealType#getRecipies()
+	 * @see #getMealType()
+	 * @generated
+	 */
+	EReference getMealType_Recipies();
+
+	/**
+	 * Returns the meta object for the reference list '{@link polet.MealType#getProducts <em>Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Products</em>'.
+	 * @see polet.MealType#getProducts()
+	 * @see #getMealType()
+	 * @generated
+	 */
+	EReference getMealType_Products();
+
+	/**
+	 * Returns the meta object for class '{@link polet.Recipe <em>Recipe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Recipe</em>'.
+	 * @see polet.Recipe
+	 * @generated
+	 */
+	EClass getRecipe();
+
+	/**
+	 * Returns the meta object for the attribute '{@link polet.Recipe#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see polet.Recipe#getName()
+	 * @see #getRecipe()
+	 * @generated
+	 */
+	EAttribute getRecipe_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link polet.Recipe#getRecepieId <em>Recepie Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Recepie Id</em>'.
-	 * @see polet.Recepie#getRecepieId()
-	 * @see #getRecepie()
+	 * @see polet.Recipe#getRecepieId()
+	 * @see #getRecipe()
 	 * @generated
 	 */
-	EAttribute getRecepie_RecepieId();
+	EAttribute getRecipe_RecepieId();
 
 	/**
-	 * Returns the meta object for the reference '{@link polet.Recepie#getMealType <em>Meal Type</em>}'.
+	 * Returns the meta object for the reference '{@link polet.Recipe#getMealType <em>Meal Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Meal Type</em>'.
-	 * @see polet.Recepie#getMealType()
-	 * @see #getRecepie()
+	 * @see polet.Recipe#getMealType()
+	 * @see #getRecipe()
 	 * @generated
 	 */
-	EReference getRecepie_MealType();
+	EReference getRecipe_MealType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.Recepie#getLink <em>Link</em>}'.
+	 * Returns the meta object for the attribute '{@link polet.Recipe#getLink <em>Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Link</em>'.
-	 * @see polet.Recepie#getLink()
-	 * @see #getRecepie()
+	 * @see polet.Recipe#getLink()
+	 * @see #getRecipe()
 	 * @generated
 	 */
-	EAttribute getRecepie_Link();
+	EAttribute getRecipe_Link();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Meal Types</em>}'.
@@ -1521,22 +1561,38 @@ public interface PoletPackage extends EPackage {
 		EClass MEAL_TYPE = eINSTANCE.getMealType();
 
 		/**
-		 * The meta object literal for the '<em><b>Meal Types</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEAL_TYPE__MEAL_TYPES = eINSTANCE.getMealType_MealTypes();
+		EAttribute MEAL_TYPE__NAME = eINSTANCE.getMealType_Name();
 
 		/**
-		 * The meta object literal for the '{@link polet.impl.RecepieImpl <em>Recepie</em>}' class.
+		 * The meta object literal for the '<em><b>Recipies</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see polet.impl.RecepieImpl
-		 * @see polet.impl.PoletPackageImpl#getRecepie()
 		 * @generated
 		 */
-		EClass RECEPIE = eINSTANCE.getRecepie();
+		EReference MEAL_TYPE__RECIPIES = eINSTANCE.getMealType_Recipies();
+
+		/**
+		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEAL_TYPE__PRODUCTS = eINSTANCE.getMealType_Products();
+
+		/**
+		 * The meta object literal for the '{@link polet.impl.RecipeImpl <em>Recipe</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see polet.impl.RecipeImpl
+		 * @see polet.impl.PoletPackageImpl#getRecipe()
+		 * @generated
+		 */
+		EClass RECIPE = eINSTANCE.getRecipe();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1544,7 +1600,7 @@ public interface PoletPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RECEPIE__NAME = eINSTANCE.getRecepie_Name();
+		EAttribute RECIPE__NAME = eINSTANCE.getRecipe_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Recepie Id</b></em>' attribute feature.
@@ -1552,7 +1608,7 @@ public interface PoletPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RECEPIE__RECEPIE_ID = eINSTANCE.getRecepie_RecepieId();
+		EAttribute RECIPE__RECEPIE_ID = eINSTANCE.getRecipe_RecepieId();
 
 		/**
 		 * The meta object literal for the '<em><b>Meal Type</b></em>' reference feature.
@@ -1560,7 +1616,7 @@ public interface PoletPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RECEPIE__MEAL_TYPE = eINSTANCE.getRecepie_MealType();
+		EReference RECIPE__MEAL_TYPE = eINSTANCE.getRecipe_MealType();
 
 		/**
 		 * The meta object literal for the '<em><b>Link</b></em>' attribute feature.
@@ -1568,7 +1624,7 @@ public interface PoletPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RECEPIE__LINK = eINSTANCE.getRecepie_Link();
+		EAttribute RECIPE__LINK = eINSTANCE.getRecipe_Link();
 
 		/**
 		 * The meta object literal for the '<em>Meal Types</em>' data type.

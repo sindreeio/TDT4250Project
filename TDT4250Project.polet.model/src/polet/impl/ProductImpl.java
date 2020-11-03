@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import polet.KronePerAlcohol;
 import polet.KronePerVolume;
 import polet.MealType;
@@ -423,7 +424,7 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 */
 	public EList<MealType> getSutibleFor() {
 		if (sutibleFor == null) {
-			sutibleFor = new EObjectResolvingEList<MealType>(MealType.class, this, PoletPackage.PRODUCT__SUTIBLE_FOR);
+			sutibleFor = new EObjectWithInverseResolvingEList.ManyInverse<MealType>(MealType.class, this, PoletPackage.PRODUCT__SUTIBLE_FOR, PoletPackage.MEAL_TYPE__PRODUCTS);
 		}
 		return sutibleFor;
 	}
@@ -553,6 +554,7 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -568,6 +570,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 				if (alcoholPerKrone != null)
 					msgs = ((InternalEObject)alcoholPerKrone).eInverseRemove(this, PoletPackage.KRONE_PER_ALCOHOL__PRODUCTS, KronePerAlcohol.class, msgs);
 				return basicSetAlcoholPerKrone((KronePerAlcohol)otherEnd, msgs);
+			case PoletPackage.PRODUCT__SUTIBLE_FOR:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSutibleFor()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -586,6 +590,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 				return basicSetKronePerVolume(null, msgs);
 			case PoletPackage.PRODUCT__ALCOHOL_PER_KRONE:
 				return basicSetAlcoholPerKrone(null, msgs);
+			case PoletPackage.PRODUCT__SUTIBLE_FOR:
+				return ((InternalEList<?>)getSutibleFor()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

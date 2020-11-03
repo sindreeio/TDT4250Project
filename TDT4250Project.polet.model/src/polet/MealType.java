@@ -2,6 +2,7 @@
  */
 package polet;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,7 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link polet.MealType#getMealTypes <em>Meal Types</em>}</li>
+ *   <li>{@link polet.MealType#getName <em>Name</em>}</li>
+ *   <li>{@link polet.MealType#getRecipies <em>Recipies</em>}</li>
+ *   <li>{@link polet.MealType#getProducts <em>Products</em>}</li>
  * </ul>
  *
  * @see polet.PoletPackage#getMealType()
@@ -22,25 +25,53 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface MealType extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Meal Types</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Meal Types</em>' attribute.
-	 * @see #setMealTypes(String)
-	 * @see polet.PoletPackage#getMealType_MealTypes()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see polet.PoletPackage#getMealType_Name()
 	 * @model dataType="polet.MealTypes"
 	 * @generated
 	 */
-	String getMealTypes();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link polet.MealType#getMealTypes <em>Meal Types</em>}' attribute.
+	 * Sets the value of the '{@link polet.MealType#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Meal Types</em>' attribute.
-	 * @see #getMealTypes()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setMealTypes(String value);
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Recipies</b></em>' reference list.
+	 * The list contents are of type {@link polet.Recipe}.
+	 * It is bidirectional and its opposite is '{@link polet.Recipe#getMealType <em>Meal Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Recipies</em>' reference list.
+	 * @see polet.PoletPackage#getMealType_Recipies()
+	 * @see polet.Recipe#getMealType
+	 * @model opposite="mealType"
+	 * @generated
+	 */
+	EList<Recipe> getRecipies();
+
+	/**
+	 * Returns the value of the '<em><b>Products</b></em>' reference list.
+	 * The list contents are of type {@link polet.Product}.
+	 * It is bidirectional and its opposite is '{@link polet.Product#getSutibleFor <em>Sutible For</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Products</em>' reference list.
+	 * @see polet.PoletPackage#getMealType_Products()
+	 * @see polet.Product#getSutibleFor
+	 * @model opposite="sutibleFor"
+	 * @generated
+	 */
+	EList<Product> getProducts();
 
 } // MealType

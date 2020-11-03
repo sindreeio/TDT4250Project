@@ -94,13 +94,13 @@ public interface PoletFactory extends EFactory {
 	MealType createMealType();
 
 	/**
-	 * Returns a new object of class '<em>Recepie</em>'.
+	 * Returns a new object of class '<em>Recipe</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Recepie</em>'.
+	 * @return a new object of class '<em>Recipe</em>'.
 	 * @generated
 	 */
-	Recepie createRecepie();
+	Recipe createRecipe();
 
 	/**
 	 * Returns the package supported by this factory.

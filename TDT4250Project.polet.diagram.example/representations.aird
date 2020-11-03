@@ -1,6 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_P3ihoBhREeurxfUgcNzSGg" selectedViews="_-TP5kBhSEeurxfUgcNzSGg" version="14.3.1.202003261200">
-  <ownedViews xmi:type="viewpoint:DView" uid="_-TP5kBhSEeurxfUgcNzSGg">
-    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']"/>
-  </ownedViews>
-</viewpoint:DAnalysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:polet="platform:/plugin/TDT4250Project.polet/model/polet.ecore" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description platform:/plugin/TDT4250Project.polet/model/polet.ecore platform:/resource/TDT4250Project.polet.model/model/polet.ecore http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_8EHTABkXEeurxfUgcNzSGg" selectedViews="_PGneIBkZEeurxfUgcNzSGg" version="14.3.1.202003261200">
+    <semanticResources>Categories.xmi</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_PGneIBkZEeurxfUgcNzSGg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_bxK2ER23EeuDHJlCunGvsg" name="new PoletDiagram" repPath="#_bxHLsB23EeuDHJlCunGvsg" changeId="4b5ee6dc-535d-4ae0-9e9a-0afa939cea9a">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']"/>
+        <target xmi:type="polet:Categories" href="Categories.xmi#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_bxHLsB23EeuDHJlCunGvsg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_bxTY8B23EeuDHJlCunGvsg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_bxTY8R23EeuDHJlCunGvsg" type="Sirius" element="_bxHLsB23EeuDHJlCunGvsg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_bxp-QB23EeuDHJlCunGvsg" type="2001" element="_bxV1MB23EeuDHJlCunGvsg">
+          <children xmi:type="notation:Node" xmi:id="_bxwE4B23EeuDHJlCunGvsg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_bxwE4R23EeuDHJlCunGvsg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bx1kcB23EeuDHJlCunGvsg" type="3004" element="_bxbUwB23EeuDHJlCunGvsg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_bx1kcR23EeuDHJlCunGvsg" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bx1kch23EeuDHJlCunGvsg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_bxp-QR23EeuDHJlCunGvsg" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bxp-Qh23EeuDHJlCunGvsg" x="152" y="136" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_bxx6EB23EeuDHJlCunGvsg" type="2001" element="_bxeYEB23EeuDHJlCunGvsg">
+          <children xmi:type="notation:Node" xmi:id="_bxx6Ex23EeuDHJlCunGvsg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_bxx6FB23EeuDHJlCunGvsg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bx2LgB23EeuDHJlCunGvsg" type="3004" element="_bxeYER23EeuDHJlCunGvsg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_bx2LgR23EeuDHJlCunGvsg" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bx2Lgh23EeuDHJlCunGvsg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_bxx6ER23EeuDHJlCunGvsg" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bxx6Eh23EeuDHJlCunGvsg" x="72" y="107" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_bxzIMB23EeuDHJlCunGvsg" type="2002" element="_bxe_IR23EeuDHJlCunGvsg">
+          <children xmi:type="notation:Node" xmi:id="_bx0WUB23EeuDHJlCunGvsg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_bx09YB23EeuDHJlCunGvsg" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_bx2ykB23EeuDHJlCunGvsg" type="3007" element="_bxg0UB23EeuDHJlCunGvsg">
+              <children xmi:type="notation:Node" xmi:id="_bx3ZoB23EeuDHJlCunGvsg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_bx3ZoR23EeuDHJlCunGvsg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_bx4AsB23EeuDHJlCunGvsg" type="3004" element="_bxhbYB23EeuDHJlCunGvsg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_bx4AsR23EeuDHJlCunGvsg" fontName=".AppleSystemUIFont"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bx4Ash23EeuDHJlCunGvsg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_bx2ykR23EeuDHJlCunGvsg" fontColor="4376022" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bx2ykh23EeuDHJlCunGvsg" x="31" y="30" width="30" height="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_bx09YR23EeuDHJlCunGvsg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_bx09Yh23EeuDHJlCunGvsg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_bxzIMR23EeuDHJlCunGvsg" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bxzIMh23EeuDHJlCunGvsg" x="252" y="56"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_WjpRMB3LEeuDHJlCunGvsg" type="2001" element="_WjdD8R3LEeuDHJlCunGvsg">
+          <children xmi:type="notation:Node" xmi:id="_WjqfUB3LEeuDHJlCunGvsg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_WjqfUR3LEeuDHJlCunGvsg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WjrGYB3LEeuDHJlCunGvsg" type="3004" element="_WjdrAB3LEeuDHJlCunGvsg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_WjrGYR3LEeuDHJlCunGvsg" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WjrGYh3LEeuDHJlCunGvsg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_WjpRMR3LEeuDHJlCunGvsg" fontColor="14140633" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WjpRMh3LEeuDHJlCunGvsg" x="144" y="248" width="152" height="73"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ada_IB3LEeuDHJlCunGvsg" type="2001" element="_adTDUB3LEeuDHJlCunGvsg">
+          <children xmi:type="notation:Node" xmi:id="_adbmMB3LEeuDHJlCunGvsg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_adbmMR3LEeuDHJlCunGvsg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_adc0UB3LEeuDHJlCunGvsg" type="3004" element="_adTqYB3LEeuDHJlCunGvsg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_adc0UR3LEeuDHJlCunGvsg" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_adc0Uh3LEeuDHJlCunGvsg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ada_IR3LEeuDHJlCunGvsg" fontColor="5237244" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ada_Ih3LEeuDHJlCunGvsg" x="324" y="165" width="65" height="77"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_bxTY8h23EeuDHJlCunGvsg"/>
+        <edges xmi:type="notation:Edge" xmi:id="_bx6c8B23EeuDHJlCunGvsg" visible="false" type="4001" element="_bxipgB23EeuDHJlCunGvsg" source="_bxp-QB23EeuDHJlCunGvsg" target="_bx2ykB23EeuDHJlCunGvsg">
+          <children xmi:type="notation:Node" xmi:id="_bx7rEB23EeuDHJlCunGvsg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bx7rER23EeuDHJlCunGvsg" x="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bx8SIB23EeuDHJlCunGvsg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bx8SIR23EeuDHJlCunGvsg" x="10" y="-2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bx8SIh23EeuDHJlCunGvsg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bx8SIx23EeuDHJlCunGvsg" x="9" y="-2"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_bx6c8R23EeuDHJlCunGvsg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_bx6c8h23EeuDHJlCunGvsg" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bx6c8x23EeuDHJlCunGvsg" points="[15, -5, -121, 39]$[121, -40, -15, 4]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_byJGcB23EeuDHJlCunGvsg" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_byJGcR23EeuDHJlCunGvsg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_WjrtcB3LEeuDHJlCunGvsg" type="4001" element="_WjfgMR3LEeuDHJlCunGvsg" source="_bxp-QB23EeuDHJlCunGvsg" target="_bx2ykB23EeuDHJlCunGvsg">
+          <children xmi:type="notation:Node" xmi:id="_WjsUgB3LEeuDHJlCunGvsg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WjsUgR3LEeuDHJlCunGvsg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WjsUgh3LEeuDHJlCunGvsg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WjsUgx3LEeuDHJlCunGvsg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WjsUhB3LEeuDHJlCunGvsg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WjsUhR3LEeuDHJlCunGvsg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_WjrtcR3LEeuDHJlCunGvsg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Wjrtch3LEeuDHJlCunGvsg" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Wjrtcx3LEeuDHJlCunGvsg" points="[15, -6, -116, 44]$[116, -45, -15, 5]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Wjs7kB3LEeuDHJlCunGvsg" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Wjs7kR3LEeuDHJlCunGvsg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Wjs7kh3LEeuDHJlCunGvsg" type="4001" element="_WjguUh3LEeuDHJlCunGvsg" source="_bxx6EB23EeuDHJlCunGvsg" target="_WjpRMB3LEeuDHJlCunGvsg">
+          <children xmi:type="notation:Node" xmi:id="_Wjs7lh3LEeuDHJlCunGvsg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wjs7lx3LEeuDHJlCunGvsg" x="8" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WjtioB3LEeuDHJlCunGvsg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WjtioR3LEeuDHJlCunGvsg" x="-12" y="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Wjtioh3LEeuDHJlCunGvsg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wjtiox3LEeuDHJlCunGvsg" x="-8" y="-2"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Wjs7kx3LEeuDHJlCunGvsg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Wjs7lB3LEeuDHJlCunGvsg" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Wjs7lR3LEeuDHJlCunGvsg" points="[15, 27, -76, -138]$[76, 139, -15, -26]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WjtipB3LEeuDHJlCunGvsg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WjtipR3LEeuDHJlCunGvsg" id="(0.09868421052631579,0.410958904109589)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Wjtiph3LEeuDHJlCunGvsg" type="4001" element="_Wjh8cB3LEeuDHJlCunGvsg" source="_bxp-QB23EeuDHJlCunGvsg" target="_WjpRMB3LEeuDHJlCunGvsg">
+          <children xmi:type="notation:Node" xmi:id="_WjuJsh3LEeuDHJlCunGvsg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WjuJsx3LEeuDHJlCunGvsg" x="8" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WjuJtB3LEeuDHJlCunGvsg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WjuJtR3LEeuDHJlCunGvsg" x="-11" y="-7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WjuJth3LEeuDHJlCunGvsg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WjuJtx3LEeuDHJlCunGvsg" x="-10" y="-7"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Wjtipx3LEeuDHJlCunGvsg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_WjuJsB3LEeuDHJlCunGvsg" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WjuJsR3LEeuDHJlCunGvsg" points="[2, 30, -9, -108]$[8, 112, -3, -26]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WjuwwB3LEeuDHJlCunGvsg" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WjuwwR3LEeuDHJlCunGvsg" id="(0.09868421052631579,0.410958904109589)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_bxj3oB23EeuDHJlCunGvsg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_bxj3oR23EeuDHJlCunGvsg"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_bxV1MB23EeuDHJlCunGvsg" name="Øl" outgoingEdges="_bxipgB23EeuDHJlCunGvsg _WjfgMR3LEeuDHJlCunGvsg _Wjh8cB3LEeuDHJlCunGvsg" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="polet:Product" href="Categories.xmi#6"/>
+      <semanticElements xmi:type="polet:Product" href="Categories.xmi#6"/>
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_bxbUwB23EeuDHJlCunGvsg" labelSize="12" showIcon="false" labelPosition="node" shape="triangle" color="253,206,137">
+        <description xmi:type="style:BundledImageDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_bxeYEB23EeuDHJlCunGvsg" name="FaarIKaal" outgoingEdges="_WjguUh3LEeuDHJlCunGvsg" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="polet:Recepie" href="Categories.xmi#1"/>
+      <semanticElements xmi:type="polet:Recepie" href="Categories.xmi#1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_bxeYER23EeuDHJlCunGvsg" labelSize="12" showIcon="false" labelColor="252,233,79" labelPosition="node">
+        <description xmi:type="style:BundledImageDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='RecepieNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='RecepieNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_adTDUB3LEeuDHJlCunGvsg" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="polet:Recepie" href="Categories.xmi#//@recepies.1"/>
+      <semanticElements xmi:type="polet:Recepie" href="Categories.xmi#//@recepies.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_adTqYB3LEeuDHJlCunGvsg" labelSize="12" showIcon="false" labelColor="252,233,79" labelPosition="node">
+        <description xmi:type="style:BundledImageDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='RecepieNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='RecepieNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_bxe_IR23EeuDHJlCunGvsg" name="Norge">
+      <target xmi:type="polet:Country" href="Categories.xmi#3"/>
+      <semanticElements xmi:type="polet:Country" href="Categories.xmi#3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_bxfmMB23EeuDHJlCunGvsg" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_bxg0UB23EeuDHJlCunGvsg" name="Oslo" incomingEdges="_bxipgB23EeuDHJlCunGvsg _WjfgMR3LEeuDHJlCunGvsg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="polet:Region" href="Categories.xmi#5"/>
+        <semanticElements xmi:type="polet:Region" href="Categories.xmi#5"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_bxhbYB23EeuDHJlCunGvsg" labelSize="12" showIcon="false" labelColor="214,197,66" labelPosition="node" shape="dot">
+          <description xmi:type="style:BundledImageDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']/@subNodeMappings[name='RegionNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']/@subNodeMappings[name='RegionNode']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_bxipgB23EeuDHJlCunGvsg" visible="false" sourceNode="_bxV1MB23EeuDHJlCunGvsg" targetNode="_bxg0UB23EeuDHJlCunGvsg">
+      <target xmi:type="polet:Product" href="Categories.xmi#6"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_bxipgR23EeuDHJlCunGvsg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_bxipgh23EeuDHJlCunGvsg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_WjdD8R3LEeuDHJlCunGvsg" name="Lamb" incomingEdges="_WjguUh3LEeuDHJlCunGvsg _Wjh8cB3LEeuDHJlCunGvsg" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="polet:MealType" href="Categories.xmi#//@mealTypes.0"/>
+      <semanticElements xmi:type="polet:MealType" href="Categories.xmi#//@mealTypes.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_WjdrAB3LEeuDHJlCunGvsg" labelSize="12" labelColor="217,196,215" labelPosition="node" color="239,41,41">
+        <description xmi:type="style:BundledImageDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='mealTypeNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='mealTypeNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_WjfgMR3LEeuDHJlCunGvsg" sourceNode="_bxV1MB23EeuDHJlCunGvsg" targetNode="_bxg0UB23EeuDHJlCunGvsg">
+      <target xmi:type="polet:Product" href="Categories.xmi#6"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_WjgHQB3LEeuDHJlCunGvsg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='productToRegion']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_WjgHQR3LEeuDHJlCunGvsg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='productToRegion']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_WjguUh3LEeuDHJlCunGvsg" sourceNode="_bxeYEB23EeuDHJlCunGvsg" targetNode="_WjdD8R3LEeuDHJlCunGvsg">
+      <target xmi:type="polet:Recepie" href="Categories.xmi#1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_WjhVYB3LEeuDHJlCunGvsg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='recepieToMealTypeEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_WjhVYR3LEeuDHJlCunGvsg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='recepieToMealTypeEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Wjh8cB3LEeuDHJlCunGvsg" sourceNode="_bxV1MB23EeuDHJlCunGvsg" targetNode="_WjdD8R3LEeuDHJlCunGvsg">
+      <target xmi:type="polet:Product" href="Categories.xmi#6"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Wjh8cR3LEeuDHJlCunGvsg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='sutibleFor']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Wjh8ch3LEeuDHJlCunGvsg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='sutibleFor']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_bxIZ0B23EeuDHJlCunGvsg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/TDT4250Project.polet.diagram/description/diagram.odesign#//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer"/>
+    <target xmi:type="polet:Categories" href="Categories.xmi#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

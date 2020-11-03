@@ -100,8 +100,8 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 				return createMealTypeAdapter();
 			}
 			@Override
-			public Adapter caseRecepie(Recepie object) {
-				return createRecepieAdapter();
+			public Adapter caseRecipe(Recipe object) {
+				return createRecipeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -236,16 +236,16 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link polet.Recepie <em>Recepie</em>}'.
+	 * Creates a new adapter for an object of class '{@link polet.Recipe <em>Recipe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see polet.Recepie
+	 * @see polet.Recipe
 	 * @generated
 	 */
-	public Adapter createRecepieAdapter() {
+	public Adapter createRecipeAdapter() {
 		return null;
 	}
 

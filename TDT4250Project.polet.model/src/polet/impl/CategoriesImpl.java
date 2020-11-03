@@ -23,7 +23,7 @@ import polet.MealType;
 import polet.PoletPackage;
 import polet.Product;
 import polet.ProductType;
-import polet.Recepie;
+import polet.Recipe;
 
 /**
  * <!-- begin-user-doc -->
@@ -103,7 +103,7 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Recepie> recepies;
+	protected EList<Recipe> recepies;
 
 	/**
 	 * The cached value of the '{@link #getMealTypes() <em>Meal Types</em>}' containment reference list.
@@ -199,9 +199,9 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Recepie> getRecepies() {
+	public EList<Recipe> getRecepies() {
 		if (recepies == null) {
-			recepies = new EObjectContainmentEList<Recepie>(Recepie.class, this, PoletPackage.CATEGORIES__RECEPIES);
+			recepies = new EObjectContainmentEList<Recipe>(Recipe.class, this, PoletPackage.CATEGORIES__RECEPIES);
 		}
 		return recepies;
 	}
@@ -301,7 +301,7 @@ public class CategoriesImpl extends MinimalEObjectImpl.Container implements Cate
 				return;
 			case PoletPackage.CATEGORIES__RECEPIES:
 				getRecepies().clear();
-				getRecepies().addAll((Collection<? extends Recepie>)newValue);
+				getRecepies().addAll((Collection<? extends Recipe>)newValue);
 				return;
 			case PoletPackage.CATEGORIES__MEAL_TYPES:
 				getMealTypes().clear();
