@@ -82,7 +82,7 @@ local.properties
 .mtj.tmp/
 
 # Data files from Json
-.json
+*.json
 
 # Ignore a Constants.java file
 Constants.java
