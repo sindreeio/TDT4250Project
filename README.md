@@ -1,5 +1,9 @@
 # TDT4250Project
 
+![](https://img.shields.io/badge/Editor-Eclipse-informational?style=flat&logo=eclipse-ide&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Code-Json-informational?style=flat&logo=json&logoColor=white&color=2bbc8a)
+
 **Table of Contents**
 
 [TOCM]
@@ -154,3 +158,6 @@ public static void main(String[] args) {
                 ├── PoletSwitch.java
                 └── PoletValidator.java
 ```
+
+### LICENSE
+MIT
