@@ -1,5 +1,11 @@
 # TDT4250Project
 
+**Table of Contents**
+
+[TOCM]
+
+[TOC]
+
 ### JSON data structure
 
 ```json
