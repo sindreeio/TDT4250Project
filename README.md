@@ -6,6 +6,18 @@
 
 [TOC]
 
+### Java exmaple:
+`Press here` for someething.
+
+Java:
+```java
+public static void main(String[] args) {
+    Data d = new Data;
+    d.someFunction();
+    System.out.println("Github");
+}
+```
+
 ### JSON data structure
 
 ```json
