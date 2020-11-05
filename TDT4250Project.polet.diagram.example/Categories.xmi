@@ -5,70 +5,56 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:polet="platform:/plugin/TDT4250Project.polet/model/polet.ecore"
     xsi:schemaLocation="platform:/plugin/TDT4250Project.polet/model/polet.ecore ../TDT4250Project.polet.model/model/polet.ecore">
-  <Products
-      productId="6"
-      name="Frydenlund"
-      region="2"
-      productType="3"
-      kronePerVolume="1.0"
-      alcoholPerKrone="2.0"
-      price="40.0"
-      alcoholContent="3.0"
-      Volume="0.5"
-      sutibleFor="//@mealTypes.0 //@mealTypes.1"/>
-  <Products
-      productId="87284326792714398"
-      name="Rødvin"
-      region="2"
-      productType="109875894289725"
-      alcoholPerKrone="2.0"
-      sutibleFor="//@mealTypes.1"/>
-  <Products
-      name="Ikke frydenlund"
-      productType="3"
-      sutibleFor="//@mealTypes.0"/>
   <countries
-      countryId="1"
-      name="Norway">
+      countryId="4787457854327"
+      name="Norge">
     <regions
-        regionId="2"
-        name="Oslo"/>
+        regionId="1"
+        name="Oslo">
+      <products
+          products="784783 800987214"
+          productType="789054"/>
+    </regions>
   </countries>
   <productTypes
-      productTypeId="3"
+      productTypeId="8247217490"
       name="Øl"
-      products="6 //@Products.2"/>
+      productTypeInMealType="//@mealTypes.0/@products.0">
+    <products
+        productId="784783"
+        name="Frydenlund"
+        MealTypes="//@mealTypes.0/@products.0"
+        region="//@countries.0/@regions.0/@products.0"/>
+  </productTypes>
   <productTypes
-      productTypeId="109875894289725"
+      productTypeId="789054"
       name="Vin"
-      products="87284326792714398"/>
-  <kronePerVolumes
-      derivedNumber="1.0"
-      products="6"/>
-  <alcoholPerKrones
-      derivedNumber="2.0"
-      products="6 87284326792714398"/>
-  <recepies
-      name="FaarIKaal"
-      recepieId="5"
-      mealType="//@mealTypes.0"
-      link="www"/>
-  <recepies
-      name="Torsk"
-      recepieId="8736258"
-      mealType="//@mealTypes.1"
-      link="nkgfjdah.no"/>
-  <recepies
-      name="AJ"
-      recepieId="784362798432"
-      mealType="//@mealTypes.1"
-      link="jjhhgjhghjk.com"/>
+      productTypeInMealType="//@mealTypes.1/@products.0"
+      productTypeInRegion="//@countries.0/@regions.0/@products.0">
+    <products
+        productId="800987214"
+        name="Rødvin"
+        MealTypes="//@mealTypes.1/@products.0"
+        region="//@countries.0/@regions.0/@products.0"/>
+  </productTypes>
   <mealTypes
-      name="Lamb"
-      recipies="5"
-      products="6 //@Products.2"/>
+      name="Lyst kjøtt">
+    <recipies
+        name="Kylling"
+        recepieId="8275094325"
+        link="a.no"/>
+    <products
+        products="784783"
+        productType="8247217490"/>
+  </mealTypes>
   <mealTypes
-      name="Fish"
-      recipies="8736258 784362798432"
-      products="6 87284326792714398"/>
+      name="Storfe">
+    <recipies
+        name="Biff er hellig ass"
+        recepieId="7888888678264927"
+        link="k.ii"/>
+    <products
+        products="800987214"
+        productType="789054"/>
+  </mealTypes>
 </polet:Categories>
