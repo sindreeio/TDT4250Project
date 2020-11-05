@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import polet.MealType;
 import polet.PoletPackage;
 import polet.Recipe;
@@ -71,16 +72,6 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	 * @ordered
 	 */
 	protected String recepieId = RECEPIE_ID_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getMealType() <em>Meal Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMealType()
-	 * @generated
-	 * @ordered
-	 */
-	protected MealType mealType;
 
 	/**
 	 * The default value of the '{@link #getLink() <em>Link</em>}' attribute.
@@ -169,24 +160,8 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	 * @generated
 	 */
 	public MealType getMealType() {
-		if (mealType != null && mealType.eIsProxy()) {
-			InternalEObject oldMealType = (InternalEObject)mealType;
-			mealType = (MealType)eResolveProxy(oldMealType);
-			if (mealType != oldMealType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PoletPackage.RECIPE__MEAL_TYPE, oldMealType, mealType));
-			}
-		}
-		return mealType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MealType basicGetMealType() {
-		return mealType;
+		if (eContainerFeatureID() != PoletPackage.RECIPE__MEAL_TYPE) return null;
+		return (MealType)eInternalContainer();
 	}
 
 	/**
@@ -195,12 +170,7 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	 * @generated
 	 */
 	public NotificationChain basicSetMealType(MealType newMealType, NotificationChain msgs) {
-		MealType oldMealType = mealType;
-		mealType = newMealType;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PoletPackage.RECIPE__MEAL_TYPE, oldMealType, newMealType);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
+		msgs = eBasicSetContainer((InternalEObject)newMealType, PoletPackage.RECIPE__MEAL_TYPE, msgs);
 		return msgs;
 	}
 
@@ -210,10 +180,12 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	 * @generated
 	 */
 	public void setMealType(MealType newMealType) {
-		if (newMealType != mealType) {
+		if (newMealType != eInternalContainer() || (eContainerFeatureID() != PoletPackage.RECIPE__MEAL_TYPE && newMealType != null)) {
+			if (EcoreUtil.isAncestor(this, newMealType))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
-			if (mealType != null)
-				msgs = ((InternalEObject)mealType).eInverseRemove(this, PoletPackage.MEAL_TYPE__RECIPIES, MealType.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			if (newMealType != null)
 				msgs = ((InternalEObject)newMealType).eInverseAdd(this, PoletPackage.MEAL_TYPE__RECIPIES, MealType.class, msgs);
 			msgs = basicSetMealType(newMealType, msgs);
@@ -253,8 +225,8 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PoletPackage.RECIPE__MEAL_TYPE:
-				if (mealType != null)
-					msgs = ((InternalEObject)mealType).eInverseRemove(this, PoletPackage.MEAL_TYPE__RECIPIES, MealType.class, msgs);
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetMealType((MealType)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -280,6 +252,20 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case PoletPackage.RECIPE__MEAL_TYPE:
+				return eInternalContainer().eInverseRemove(this, PoletPackage.MEAL_TYPE__RECIPIES, MealType.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PoletPackage.RECIPE__NAME:
@@ -287,8 +273,7 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 			case PoletPackage.RECIPE__RECEPIE_ID:
 				return getRecepieId();
 			case PoletPackage.RECIPE__MEAL_TYPE:
-				if (resolve) return getMealType();
-				return basicGetMealType();
+				return getMealType();
 			case PoletPackage.RECIPE__LINK:
 				return getLink();
 		}
@@ -356,7 +341,7 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 			case PoletPackage.RECIPE__RECEPIE_ID:
 				return RECEPIE_ID_EDEFAULT == null ? recepieId != null : !RECEPIE_ID_EDEFAULT.equals(recepieId);
 			case PoletPackage.RECIPE__MEAL_TYPE:
-				return mealType != null;
+				return getMealType() != null;
 			case PoletPackage.RECIPE__LINK:
 				return LINK_EDEFAULT == null ? link != null : !LINK_EDEFAULT.equals(link);
 		}

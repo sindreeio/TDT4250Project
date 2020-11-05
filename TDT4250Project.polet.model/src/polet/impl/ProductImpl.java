@@ -13,14 +13,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import polet.KronePerAlcohol;
-import polet.KronePerVolume;
-import polet.MealType;
 import polet.PoletPackage;
 import polet.Product;
+import polet.ProductOfTypeInMealType;
+import polet.ProductOfTypeInRegion;
 import polet.ProductType;
-import polet.Region;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,14 +31,14 @@ import polet.Region;
  * <ul>
  *   <li>{@link polet.impl.ProductImpl#getProductId <em>Product Id</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getName <em>Name</em>}</li>
- *   <li>{@link polet.impl.ProductImpl#getRegion <em>Region</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getProductType <em>Product Type</em>}</li>
- *   <li>{@link polet.impl.ProductImpl#getKronePerVolume <em>Krone Per Volume</em>}</li>
- *   <li>{@link polet.impl.ProductImpl#getAlcoholPerKrone <em>Alcohol Per Krone</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getAlcoholContent <em>Alcohol Content</em>}</li>
  *   <li>{@link polet.impl.ProductImpl#getVolume <em>Volume</em>}</li>
- *   <li>{@link polet.impl.ProductImpl#getSutibleFor <em>Sutible For</em>}</li>
+ *   <li>{@link polet.impl.ProductImpl#getMealTypes <em>Meal Types</em>}</li>
+ *   <li>{@link polet.impl.ProductImpl#getRegion <em>Region</em>}</li>
+ *   <li>{@link polet.impl.ProductImpl#getPricePerAlcohol <em>Price Per Alcohol</em>}</li>
+ *   <li>{@link polet.impl.ProductImpl#getPricePerVolume <em>Price Per Volume</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,46 +83,6 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getRegion() <em>Region</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRegion()
-	 * @generated
-	 * @ordered
-	 */
-	protected Region region;
-
-	/**
-	 * The cached value of the '{@link #getProductType() <em>Product Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProductType()
-	 * @generated
-	 * @ordered
-	 */
-	protected ProductType productType;
-
-	/**
-	 * The cached value of the '{@link #getKronePerVolume() <em>Krone Per Volume</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getKronePerVolume()
-	 * @generated
-	 * @ordered
-	 */
-	protected KronePerVolume kronePerVolume;
-
-	/**
-	 * The cached value of the '{@link #getAlcoholPerKrone() <em>Alcohol Per Krone</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAlcoholPerKrone()
-	 * @generated
-	 * @ordered
-	 */
-	protected KronePerAlcohol alcoholPerKrone;
 
 	/**
 	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
@@ -186,14 +145,64 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	protected float volume = VOLUME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSutibleFor() <em>Sutible For</em>}' reference list.
+	 * The cached value of the '{@link #getMealTypes() <em>Meal Types</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSutibleFor()
+	 * @see #getMealTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MealType> sutibleFor;
+	protected EList<ProductOfTypeInMealType> mealTypes;
+
+	/**
+	 * The cached value of the '{@link #getRegion() <em>Region</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRegion()
+	 * @generated
+	 * @ordered
+	 */
+	protected ProductOfTypeInRegion region;
+
+	/**
+	 * The default value of the '{@link #getPricePerAlcohol() <em>Price Per Alcohol</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPricePerAlcohol()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float PRICE_PER_ALCOHOL_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getPricePerAlcohol() <em>Price Per Alcohol</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPricePerAlcohol()
+	 * @generated
+	 * @ordered
+	 */
+	protected float pricePerAlcohol = PRICE_PER_ALCOHOL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPricePerVolume() <em>Price Per Volume</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPricePerVolume()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float PRICE_PER_VOLUME_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getPricePerVolume() <em>Price Per Volume</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPricePerVolume()
+	 * @generated
+	 * @ordered
+	 */
+	protected float pricePerVolume = PRICE_PER_VOLUME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -282,10 +291,10 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Region getRegion() {
+	public ProductOfTypeInRegion getRegion() {
 		if (region != null && region.eIsProxy()) {
 			InternalEObject oldRegion = (InternalEObject)region;
-			region = (Region)eResolveProxy(oldRegion);
+			region = (ProductOfTypeInRegion)eResolveProxy(oldRegion);
 			if (region != oldRegion) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PoletPackage.PRODUCT__REGION, oldRegion, region));
@@ -299,7 +308,7 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Region basicGetRegion() {
+	public ProductOfTypeInRegion basicGetRegion() {
 		return region;
 	}
 
@@ -308,11 +317,75 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRegion(Region newRegion) {
-		Region oldRegion = region;
+	public NotificationChain basicSetRegion(ProductOfTypeInRegion newRegion, NotificationChain msgs) {
+		ProductOfTypeInRegion oldRegion = region;
 		region = newRegion;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__REGION, oldRegion, newRegion);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRegion(ProductOfTypeInRegion newRegion) {
+		if (newRegion != region) {
+			NotificationChain msgs = null;
+			if (region != null)
+				msgs = ((InternalEObject)region).eInverseRemove(this, PoletPackage.PRODUCT_OF_TYPE_IN_REGION__PRODUCTS, ProductOfTypeInRegion.class, msgs);
+			if (newRegion != null)
+				msgs = ((InternalEObject)newRegion).eInverseAdd(this, PoletPackage.PRODUCT_OF_TYPE_IN_REGION__PRODUCTS, ProductOfTypeInRegion.class, msgs);
+			msgs = basicSetRegion(newRegion, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__REGION, newRegion, newRegion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public float getPricePerAlcohol() {
+		return pricePerAlcohol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPricePerAlcohol(float newPricePerAlcohol) {
+		float oldPricePerAlcohol = pricePerAlcohol;
+		pricePerAlcohol = newPricePerAlcohol;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__REGION, oldRegion, region));
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__PRICE_PER_ALCOHOL, oldPricePerAlcohol, pricePerAlcohol));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public float getPricePerVolume() {
+		return pricePerVolume;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPricePerVolume(float newPricePerVolume) {
+		float oldPricePerVolume = pricePerVolume;
+		pricePerVolume = newPricePerVolume;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__PRICE_PER_VOLUME, oldPricePerVolume, pricePerVolume));
 	}
 
 	/**
@@ -342,24 +415,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * @generated
 	 */
 	public ProductType getProductType() {
-		if (productType != null && productType.eIsProxy()) {
-			InternalEObject oldProductType = (InternalEObject)productType;
-			productType = (ProductType)eResolveProxy(oldProductType);
-			if (productType != oldProductType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PoletPackage.PRODUCT__PRODUCT_TYPE, oldProductType, productType));
-			}
-		}
-		return productType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ProductType basicGetProductType() {
-		return productType;
+		if (eContainerFeatureID() != PoletPackage.PRODUCT__PRODUCT_TYPE) return null;
+		return (ProductType)eInternalContainer();
 	}
 
 	/**
@@ -368,12 +425,7 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * @generated
 	 */
 	public NotificationChain basicSetProductType(ProductType newProductType, NotificationChain msgs) {
-		ProductType oldProductType = productType;
-		productType = newProductType;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__PRODUCT_TYPE, oldProductType, newProductType);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
+		msgs = eBasicSetContainer((InternalEObject)newProductType, PoletPackage.PRODUCT__PRODUCT_TYPE, msgs);
 		return msgs;
 	}
 
@@ -383,10 +435,12 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * @generated
 	 */
 	public void setProductType(ProductType newProductType) {
-		if (newProductType != productType) {
+		if (newProductType != eInternalContainer() || (eContainerFeatureID() != PoletPackage.PRODUCT__PRODUCT_TYPE && newProductType != null)) {
+			if (EcoreUtil.isAncestor(this, newProductType))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
-			if (productType != null)
-				msgs = ((InternalEObject)productType).eInverseRemove(this, PoletPackage.PRODUCT_TYPE__PRODUCTS, ProductType.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			if (newProductType != null)
 				msgs = ((InternalEObject)newProductType).eInverseAdd(this, PoletPackage.PRODUCT_TYPE__PRODUCTS, ProductType.class, msgs);
 			msgs = basicSetProductType(newProductType, msgs);
@@ -422,131 +476,11 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MealType> getSutibleFor() {
-		if (sutibleFor == null) {
-			sutibleFor = new EObjectWithInverseResolvingEList.ManyInverse<MealType>(MealType.class, this, PoletPackage.PRODUCT__SUTIBLE_FOR, PoletPackage.MEAL_TYPE__PRODUCTS);
+	public EList<ProductOfTypeInMealType> getMealTypes() {
+		if (mealTypes == null) {
+			mealTypes = new EObjectWithInverseResolvingEList.ManyInverse<ProductOfTypeInMealType>(ProductOfTypeInMealType.class, this, PoletPackage.PRODUCT__MEAL_TYPES, PoletPackage.PRODUCT_OF_TYPE_IN_MEAL_TYPE__PRODUCTS);
 		}
-		return sutibleFor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public KronePerAlcohol getAlcoholPerKrone() {
-		if (alcoholPerKrone != null && alcoholPerKrone.eIsProxy()) {
-			InternalEObject oldAlcoholPerKrone = (InternalEObject)alcoholPerKrone;
-			alcoholPerKrone = (KronePerAlcohol)eResolveProxy(oldAlcoholPerKrone);
-			if (alcoholPerKrone != oldAlcoholPerKrone) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PoletPackage.PRODUCT__ALCOHOL_PER_KRONE, oldAlcoholPerKrone, alcoholPerKrone));
-			}
-		}
-		return alcoholPerKrone;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public KronePerAlcohol basicGetAlcoholPerKrone() {
-		return alcoholPerKrone;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetAlcoholPerKrone(KronePerAlcohol newAlcoholPerKrone, NotificationChain msgs) {
-		KronePerAlcohol oldAlcoholPerKrone = alcoholPerKrone;
-		alcoholPerKrone = newAlcoholPerKrone;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__ALCOHOL_PER_KRONE, oldAlcoholPerKrone, newAlcoholPerKrone);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAlcoholPerKrone(KronePerAlcohol newAlcoholPerKrone) {
-		if (newAlcoholPerKrone != alcoholPerKrone) {
-			NotificationChain msgs = null;
-			if (alcoholPerKrone != null)
-				msgs = ((InternalEObject)alcoholPerKrone).eInverseRemove(this, PoletPackage.KRONE_PER_ALCOHOL__PRODUCTS, KronePerAlcohol.class, msgs);
-			if (newAlcoholPerKrone != null)
-				msgs = ((InternalEObject)newAlcoholPerKrone).eInverseAdd(this, PoletPackage.KRONE_PER_ALCOHOL__PRODUCTS, KronePerAlcohol.class, msgs);
-			msgs = basicSetAlcoholPerKrone(newAlcoholPerKrone, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__ALCOHOL_PER_KRONE, newAlcoholPerKrone, newAlcoholPerKrone));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public KronePerVolume getKronePerVolume() {
-		if (kronePerVolume != null && kronePerVolume.eIsProxy()) {
-			InternalEObject oldKronePerVolume = (InternalEObject)kronePerVolume;
-			kronePerVolume = (KronePerVolume)eResolveProxy(oldKronePerVolume);
-			if (kronePerVolume != oldKronePerVolume) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PoletPackage.PRODUCT__KRONE_PER_VOLUME, oldKronePerVolume, kronePerVolume));
-			}
-		}
-		return kronePerVolume;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public KronePerVolume basicGetKronePerVolume() {
-		return kronePerVolume;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetKronePerVolume(KronePerVolume newKronePerVolume, NotificationChain msgs) {
-		KronePerVolume oldKronePerVolume = kronePerVolume;
-		kronePerVolume = newKronePerVolume;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__KRONE_PER_VOLUME, oldKronePerVolume, newKronePerVolume);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setKronePerVolume(KronePerVolume newKronePerVolume) {
-		if (newKronePerVolume != kronePerVolume) {
-			NotificationChain msgs = null;
-			if (kronePerVolume != null)
-				msgs = ((InternalEObject)kronePerVolume).eInverseRemove(this, PoletPackage.KRONE_PER_VOLUME__PRODUCTS, KronePerVolume.class, msgs);
-			if (newKronePerVolume != null)
-				msgs = ((InternalEObject)newKronePerVolume).eInverseAdd(this, PoletPackage.KRONE_PER_VOLUME__PRODUCTS, KronePerVolume.class, msgs);
-			msgs = basicSetKronePerVolume(newKronePerVolume, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PoletPackage.PRODUCT__KRONE_PER_VOLUME, newKronePerVolume, newKronePerVolume));
+		return mealTypes;
 	}
 
 	/**
@@ -559,19 +493,15 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
-				if (productType != null)
-					msgs = ((InternalEObject)productType).eInverseRemove(this, PoletPackage.PRODUCT_TYPE__PRODUCTS, ProductType.class, msgs);
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetProductType((ProductType)otherEnd, msgs);
-			case PoletPackage.PRODUCT__KRONE_PER_VOLUME:
-				if (kronePerVolume != null)
-					msgs = ((InternalEObject)kronePerVolume).eInverseRemove(this, PoletPackage.KRONE_PER_VOLUME__PRODUCTS, KronePerVolume.class, msgs);
-				return basicSetKronePerVolume((KronePerVolume)otherEnd, msgs);
-			case PoletPackage.PRODUCT__ALCOHOL_PER_KRONE:
-				if (alcoholPerKrone != null)
-					msgs = ((InternalEObject)alcoholPerKrone).eInverseRemove(this, PoletPackage.KRONE_PER_ALCOHOL__PRODUCTS, KronePerAlcohol.class, msgs);
-				return basicSetAlcoholPerKrone((KronePerAlcohol)otherEnd, msgs);
-			case PoletPackage.PRODUCT__SUTIBLE_FOR:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSutibleFor()).basicAdd(otherEnd, msgs);
+			case PoletPackage.PRODUCT__MEAL_TYPES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMealTypes()).basicAdd(otherEnd, msgs);
+			case PoletPackage.PRODUCT__REGION:
+				if (region != null)
+					msgs = ((InternalEObject)region).eInverseRemove(this, PoletPackage.PRODUCT_OF_TYPE_IN_REGION__PRODUCTS, ProductOfTypeInRegion.class, msgs);
+				return basicSetRegion((ProductOfTypeInRegion)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -586,14 +516,26 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 		switch (featureID) {
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
 				return basicSetProductType(null, msgs);
-			case PoletPackage.PRODUCT__KRONE_PER_VOLUME:
-				return basicSetKronePerVolume(null, msgs);
-			case PoletPackage.PRODUCT__ALCOHOL_PER_KRONE:
-				return basicSetAlcoholPerKrone(null, msgs);
-			case PoletPackage.PRODUCT__SUTIBLE_FOR:
-				return ((InternalEList<?>)getSutibleFor()).basicRemove(otherEnd, msgs);
+			case PoletPackage.PRODUCT__MEAL_TYPES:
+				return ((InternalEList<?>)getMealTypes()).basicRemove(otherEnd, msgs);
+			case PoletPackage.PRODUCT__REGION:
+				return basicSetRegion(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case PoletPackage.PRODUCT__PRODUCT_TYPE:
+				return eInternalContainer().eInverseRemove(this, PoletPackage.PRODUCT_TYPE__PRODUCTS, ProductType.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -608,26 +550,23 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 				return getProductId();
 			case PoletPackage.PRODUCT__NAME:
 				return getName();
-			case PoletPackage.PRODUCT__REGION:
-				if (resolve) return getRegion();
-				return basicGetRegion();
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
-				if (resolve) return getProductType();
-				return basicGetProductType();
-			case PoletPackage.PRODUCT__KRONE_PER_VOLUME:
-				if (resolve) return getKronePerVolume();
-				return basicGetKronePerVolume();
-			case PoletPackage.PRODUCT__ALCOHOL_PER_KRONE:
-				if (resolve) return getAlcoholPerKrone();
-				return basicGetAlcoholPerKrone();
+				return getProductType();
 			case PoletPackage.PRODUCT__PRICE:
 				return getPrice();
 			case PoletPackage.PRODUCT__ALCOHOL_CONTENT:
 				return getAlcoholContent();
 			case PoletPackage.PRODUCT__VOLUME:
 				return getVolume();
-			case PoletPackage.PRODUCT__SUTIBLE_FOR:
-				return getSutibleFor();
+			case PoletPackage.PRODUCT__MEAL_TYPES:
+				return getMealTypes();
+			case PoletPackage.PRODUCT__REGION:
+				if (resolve) return getRegion();
+				return basicGetRegion();
+			case PoletPackage.PRODUCT__PRICE_PER_ALCOHOL:
+				return getPricePerAlcohol();
+			case PoletPackage.PRODUCT__PRICE_PER_VOLUME:
+				return getPricePerVolume();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -647,17 +586,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 			case PoletPackage.PRODUCT__NAME:
 				setName((String)newValue);
 				return;
-			case PoletPackage.PRODUCT__REGION:
-				setRegion((Region)newValue);
-				return;
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
 				setProductType((ProductType)newValue);
-				return;
-			case PoletPackage.PRODUCT__KRONE_PER_VOLUME:
-				setKronePerVolume((KronePerVolume)newValue);
-				return;
-			case PoletPackage.PRODUCT__ALCOHOL_PER_KRONE:
-				setAlcoholPerKrone((KronePerAlcohol)newValue);
 				return;
 			case PoletPackage.PRODUCT__PRICE:
 				setPrice((Float)newValue);
@@ -668,9 +598,18 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 			case PoletPackage.PRODUCT__VOLUME:
 				setVolume((Float)newValue);
 				return;
-			case PoletPackage.PRODUCT__SUTIBLE_FOR:
-				getSutibleFor().clear();
-				getSutibleFor().addAll((Collection<? extends MealType>)newValue);
+			case PoletPackage.PRODUCT__MEAL_TYPES:
+				getMealTypes().clear();
+				getMealTypes().addAll((Collection<? extends ProductOfTypeInMealType>)newValue);
+				return;
+			case PoletPackage.PRODUCT__REGION:
+				setRegion((ProductOfTypeInRegion)newValue);
+				return;
+			case PoletPackage.PRODUCT__PRICE_PER_ALCOHOL:
+				setPricePerAlcohol((Float)newValue);
+				return;
+			case PoletPackage.PRODUCT__PRICE_PER_VOLUME:
+				setPricePerVolume((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -690,17 +629,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 			case PoletPackage.PRODUCT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case PoletPackage.PRODUCT__REGION:
-				setRegion((Region)null);
-				return;
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
 				setProductType((ProductType)null);
-				return;
-			case PoletPackage.PRODUCT__KRONE_PER_VOLUME:
-				setKronePerVolume((KronePerVolume)null);
-				return;
-			case PoletPackage.PRODUCT__ALCOHOL_PER_KRONE:
-				setAlcoholPerKrone((KronePerAlcohol)null);
 				return;
 			case PoletPackage.PRODUCT__PRICE:
 				setPrice(PRICE_EDEFAULT);
@@ -711,8 +641,17 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 			case PoletPackage.PRODUCT__VOLUME:
 				setVolume(VOLUME_EDEFAULT);
 				return;
-			case PoletPackage.PRODUCT__SUTIBLE_FOR:
-				getSutibleFor().clear();
+			case PoletPackage.PRODUCT__MEAL_TYPES:
+				getMealTypes().clear();
+				return;
+			case PoletPackage.PRODUCT__REGION:
+				setRegion((ProductOfTypeInRegion)null);
+				return;
+			case PoletPackage.PRODUCT__PRICE_PER_ALCOHOL:
+				setPricePerAlcohol(PRICE_PER_ALCOHOL_EDEFAULT);
+				return;
+			case PoletPackage.PRODUCT__PRICE_PER_VOLUME:
+				setPricePerVolume(PRICE_PER_VOLUME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -730,22 +669,22 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 				return PRODUCT_ID_EDEFAULT == null ? productId != null : !PRODUCT_ID_EDEFAULT.equals(productId);
 			case PoletPackage.PRODUCT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case PoletPackage.PRODUCT__REGION:
-				return region != null;
 			case PoletPackage.PRODUCT__PRODUCT_TYPE:
-				return productType != null;
-			case PoletPackage.PRODUCT__KRONE_PER_VOLUME:
-				return kronePerVolume != null;
-			case PoletPackage.PRODUCT__ALCOHOL_PER_KRONE:
-				return alcoholPerKrone != null;
+				return getProductType() != null;
 			case PoletPackage.PRODUCT__PRICE:
 				return price != PRICE_EDEFAULT;
 			case PoletPackage.PRODUCT__ALCOHOL_CONTENT:
 				return alcoholContent != ALCOHOL_CONTENT_EDEFAULT;
 			case PoletPackage.PRODUCT__VOLUME:
 				return volume != VOLUME_EDEFAULT;
-			case PoletPackage.PRODUCT__SUTIBLE_FOR:
-				return sutibleFor != null && !sutibleFor.isEmpty();
+			case PoletPackage.PRODUCT__MEAL_TYPES:
+				return mealTypes != null && !mealTypes.isEmpty();
+			case PoletPackage.PRODUCT__REGION:
+				return region != null;
+			case PoletPackage.PRODUCT__PRICE_PER_ALCOHOL:
+				return pricePerAlcohol != PRICE_PER_ALCOHOL_EDEFAULT;
+			case PoletPackage.PRODUCT__PRICE_PER_VOLUME:
+				return pricePerVolume != PRICE_PER_VOLUME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -770,6 +709,10 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 		result.append(alcoholContent);
 		result.append(", Volume: ");
 		result.append(volume);
+		result.append(", pricePerAlcohol: ");
+		result.append(pricePerAlcohol);
+		result.append(", pricePerVolume: ");
+		result.append(pricePerVolume);
 		result.append(')');
 		return result.toString();
 	}

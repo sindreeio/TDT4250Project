@@ -69,24 +69,24 @@ public interface Recipe extends EObject {
 	void setRecepieId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Meal Type</b></em>' reference.
+	 * Returns the value of the '<em><b>Meal Type</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link polet.MealType#getRecipies <em>Recipies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Meal Type</em>' reference.
+	 * @return the value of the '<em>Meal Type</em>' container reference.
 	 * @see #setMealType(MealType)
 	 * @see polet.PoletPackage#getRecipe_MealType()
 	 * @see polet.MealType#getRecipies
-	 * @model opposite="recipies"
+	 * @model opposite="recipies" transient="false"
 	 * @generated
 	 */
 	MealType getMealType();
 
 	/**
-	 * Sets the value of the '{@link polet.Recipe#getMealType <em>Meal Type</em>}' reference.
+	 * Sets the value of the '{@link polet.Recipe#getMealType <em>Meal Type</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Meal Type</em>' reference.
+	 * @param value the new value of the '<em>Meal Type</em>' container reference.
 	 * @see #getMealType()
 	 * @generated
 	 */

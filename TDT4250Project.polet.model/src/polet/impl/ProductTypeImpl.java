@@ -15,13 +15,15 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import polet.PoletPackage;
 import polet.Product;
+import polet.ProductOfTypeInMealType;
+import polet.ProductOfTypeInRegion;
 import polet.ProductType;
-import polet.Region;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,8 +35,9 @@ import polet.Region;
  * <ul>
  *   <li>{@link polet.impl.ProductTypeImpl#getProductTypeId <em>Product Type Id</em>}</li>
  *   <li>{@link polet.impl.ProductTypeImpl#getName <em>Name</em>}</li>
- *   <li>{@link polet.impl.ProductTypeImpl#getProducedIn <em>Produced In</em>}</li>
  *   <li>{@link polet.impl.ProductTypeImpl#getProducts <em>Products</em>}</li>
+ *   <li>{@link polet.impl.ProductTypeImpl#getProductTypeInMealType <em>Product Type In Meal Type</em>}</li>
+ *   <li>{@link polet.impl.ProductTypeImpl#getProductTypeInRegion <em>Product Type In Region</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,17 +84,7 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProducedIn() <em>Produced In</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProducedIn()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Region> producedIn;
-
-	/**
-	 * The cached value of the '{@link #getProducts() <em>Products</em>}' reference list.
+	 * The cached value of the '{@link #getProducts() <em>Products</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProducts()
@@ -99,6 +92,26 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 	 * @ordered
 	 */
 	protected EList<Product> products;
+
+	/**
+	 * The cached value of the '{@link #getProductTypeInMealType() <em>Product Type In Meal Type</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProductTypeInMealType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ProductOfTypeInMealType> productTypeInMealType;
+
+	/**
+	 * The cached value of the '{@link #getProductTypeInRegion() <em>Product Type In Region</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProductTypeInRegion()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ProductOfTypeInRegion> productTypeInRegion;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,11 +179,11 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Region> getProducedIn() {
-		if (producedIn == null) {
-			producedIn = new EObjectWithInverseResolvingEList.ManyInverse<Region>(Region.class, this, PoletPackage.PRODUCT_TYPE__PRODUCED_IN, PoletPackage.REGION__PRODUCES);
+	public EList<Product> getProducts() {
+		if (products == null) {
+			products = new EObjectContainmentWithInverseEList<Product>(Product.class, this, PoletPackage.PRODUCT_TYPE__PRODUCTS, PoletPackage.PRODUCT__PRODUCT_TYPE);
 		}
-		return producedIn;
+		return products;
 	}
 
 	/**
@@ -178,11 +191,23 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Product> getProducts() {
-		if (products == null) {
-			products = new EObjectWithInverseResolvingEList<Product>(Product.class, this, PoletPackage.PRODUCT_TYPE__PRODUCTS, PoletPackage.PRODUCT__PRODUCT_TYPE);
+	public EList<ProductOfTypeInMealType> getProductTypeInMealType() {
+		if (productTypeInMealType == null) {
+			productTypeInMealType = new EObjectWithInverseResolvingEList<ProductOfTypeInMealType>(ProductOfTypeInMealType.class, this, PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE, PoletPackage.PRODUCT_OF_TYPE_IN_MEAL_TYPE__PRODUCT_TYPE);
 		}
-		return products;
+		return productTypeInMealType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ProductOfTypeInRegion> getProductTypeInRegion() {
+		if (productTypeInRegion == null) {
+			productTypeInRegion = new EObjectWithInverseResolvingEList<ProductOfTypeInRegion>(ProductOfTypeInRegion.class, this, PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION, PoletPackage.PRODUCT_OF_TYPE_IN_REGION__PRODUCT_TYPE);
+		}
+		return productTypeInRegion;
 	}
 
 	/**
@@ -194,10 +219,12 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProducedIn()).basicAdd(otherEnd, msgs);
 			case PoletPackage.PRODUCT_TYPE__PRODUCTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProducts()).basicAdd(otherEnd, msgs);
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProductTypeInMealType()).basicAdd(otherEnd, msgs);
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProductTypeInRegion()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -210,10 +237,12 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
-				return ((InternalEList<?>)getProducedIn()).basicRemove(otherEnd, msgs);
 			case PoletPackage.PRODUCT_TYPE__PRODUCTS:
 				return ((InternalEList<?>)getProducts()).basicRemove(otherEnd, msgs);
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE:
+				return ((InternalEList<?>)getProductTypeInMealType()).basicRemove(otherEnd, msgs);
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION:
+				return ((InternalEList<?>)getProductTypeInRegion()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -230,10 +259,12 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 				return getProductTypeId();
 			case PoletPackage.PRODUCT_TYPE__NAME:
 				return getName();
-			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
-				return getProducedIn();
 			case PoletPackage.PRODUCT_TYPE__PRODUCTS:
 				return getProducts();
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE:
+				return getProductTypeInMealType();
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION:
+				return getProductTypeInRegion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -253,13 +284,17 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 			case PoletPackage.PRODUCT_TYPE__NAME:
 				setName((String)newValue);
 				return;
-			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
-				getProducedIn().clear();
-				getProducedIn().addAll((Collection<? extends Region>)newValue);
-				return;
 			case PoletPackage.PRODUCT_TYPE__PRODUCTS:
 				getProducts().clear();
 				getProducts().addAll((Collection<? extends Product>)newValue);
+				return;
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE:
+				getProductTypeInMealType().clear();
+				getProductTypeInMealType().addAll((Collection<? extends ProductOfTypeInMealType>)newValue);
+				return;
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION:
+				getProductTypeInRegion().clear();
+				getProductTypeInRegion().addAll((Collection<? extends ProductOfTypeInRegion>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -279,11 +314,14 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 			case PoletPackage.PRODUCT_TYPE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
-				getProducedIn().clear();
-				return;
 			case PoletPackage.PRODUCT_TYPE__PRODUCTS:
 				getProducts().clear();
+				return;
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE:
+				getProductTypeInMealType().clear();
+				return;
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION:
+				getProductTypeInRegion().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -301,10 +339,12 @@ public class ProductTypeImpl extends MinimalEObjectImpl.Container implements Pro
 				return PRODUCT_TYPE_ID_EDEFAULT == null ? productTypeId != null : !PRODUCT_TYPE_ID_EDEFAULT.equals(productTypeId);
 			case PoletPackage.PRODUCT_TYPE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case PoletPackage.PRODUCT_TYPE__PRODUCED_IN:
-				return producedIn != null && !producedIn.isEmpty();
 			case PoletPackage.PRODUCT_TYPE__PRODUCTS:
 				return products != null && !products.isEmpty();
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE:
+				return productTypeInMealType != null && !productTypeInMealType.isEmpty();
+			case PoletPackage.PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION:
+				return productTypeInRegion != null && !productTypeInRegion.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

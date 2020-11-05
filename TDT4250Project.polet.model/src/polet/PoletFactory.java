@@ -67,24 +67,6 @@ public interface PoletFactory extends EFactory {
 	ProductType createProductType();
 
 	/**
-	 * Returns a new object of class '<em>Krone Per Volume</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Krone Per Volume</em>'.
-	 * @generated
-	 */
-	KronePerVolume createKronePerVolume();
-
-	/**
-	 * Returns a new object of class '<em>Krone Per Alcohol</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Krone Per Alcohol</em>'.
-	 * @generated
-	 */
-	KronePerAlcohol createKronePerAlcohol();
-
-	/**
 	 * Returns a new object of class '<em>Meal Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,6 +83,24 @@ public interface PoletFactory extends EFactory {
 	 * @generated
 	 */
 	Recipe createRecipe();
+
+	/**
+	 * Returns a new object of class '<em>Product Of Type In Meal Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Product Of Type In Meal Type</em>'.
+	 * @generated
+	 */
+	ProductOfTypeInMealType createProductOfTypeInMealType();
+
+	/**
+	 * Returns a new object of class '<em>Product Of Type In Region</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Product Of Type In Region</em>'.
+	 * @generated
+	 */
+	ProductOfTypeInRegion createProductOfTypeInRegion();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link polet.Region#getRegionId <em>Region Id</em>}</li>
  *   <li>{@link polet.Region#getName <em>Name</em>}</li>
  *   <li>{@link polet.Region#getCountry <em>Country</em>}</li>
- *   <li>{@link polet.Region#getProduces <em>Produces</em>}</li>
+ *   <li>{@link polet.Region#getProducts <em>Products</em>}</li>
  * </ul>
  *
  * @see polet.PoletPackage#getRegion()
@@ -96,17 +96,17 @@ public interface Region extends EObject {
 	void setCountry(Country value);
 
 	/**
-	 * Returns the value of the '<em><b>Produces</b></em>' reference list.
-	 * The list contents are of type {@link polet.ProductType}.
-	 * It is bidirectional and its opposite is '{@link polet.ProductType#getProducedIn <em>Produced In</em>}'.
+	 * Returns the value of the '<em><b>Products</b></em>' containment reference list.
+	 * The list contents are of type {@link polet.ProductOfTypeInRegion}.
+	 * It is bidirectional and its opposite is '{@link polet.ProductOfTypeInRegion#getRegion <em>Region</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Produces</em>' reference list.
-	 * @see polet.PoletPackage#getRegion_Produces()
-	 * @see polet.ProductType#getProducedIn
-	 * @model opposite="producedIn"
+	 * @return the value of the '<em>Products</em>' containment reference list.
+	 * @see polet.PoletPackage#getRegion_Products()
+	 * @see polet.ProductOfTypeInRegion#getRegion
+	 * @model opposite="region" containment="true"
 	 * @generated
 	 */
-	EList<ProductType> getProduces();
+	EList<ProductOfTypeInRegion> getProducts();
 
 } // Region

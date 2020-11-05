@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import polet.Categories;
 import polet.Country;
-import polet.KronePerAlcohol;
-import polet.KronePerVolume;
 import polet.MealType;
 import polet.PoletFactory;
 import polet.PoletPackage;
 import polet.Product;
+import polet.ProductOfTypeInMealType;
+import polet.ProductOfTypeInRegion;
 import polet.ProductType;
 import polet.Recipe;
 import polet.Region;
@@ -70,20 +70,6 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass kronePerVolumeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass kronePerAlcoholEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass mealTypeEClass = null;
 
 	/**
@@ -92,6 +78,20 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * @generated
 	 */
 	private EClass recipeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass productOfTypeInMealTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass productOfTypeInRegionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,7 +184,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCategories_Products() {
+	public EReference getCategories_Countries() {
 		return (EReference)categoriesEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -193,7 +193,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCategories_Countries() {
+	public EReference getCategories_ProductTypes() {
 		return (EReference)categoriesEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -202,44 +202,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCategories_ProductTypes() {
-		return (EReference)categoriesEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCategories_KronePerVolumes() {
-		return (EReference)categoriesEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCategories_AlcoholPerKrones() {
-		return (EReference)categoriesEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCategories_Recepies() {
-		return (EReference)categoriesEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getCategories_MealTypes() {
-		return (EReference)categoriesEClass.getEStructuralFeatures().get(6);
+		return (EReference)categoriesEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -266,7 +230,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * @generated
 	 */
 	public EAttribute getProduct_AlcoholContent() {
-		return (EAttribute)productEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)productEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -284,7 +248,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * @generated
 	 */
 	public EReference getProduct_Region() {
-		return (EReference)productEClass.getEStructuralFeatures().get(2);
+		return (EReference)productEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -292,25 +256,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getProduct_Price() {
-		return (EAttribute)productEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProduct_ProductType() {
-		return (EReference)productEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getProduct_Volume() {
+	public EAttribute getProduct_PricePerAlcohol() {
 		return (EAttribute)productEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -319,8 +265,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProduct_SutibleFor() {
-		return (EReference)productEClass.getEStructuralFeatures().get(9);
+	public EAttribute getProduct_PricePerVolume() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -328,8 +274,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProduct_AlcoholPerKrone() {
-		return (EReference)productEClass.getEStructuralFeatures().get(5);
+	public EAttribute getProduct_Price() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -337,8 +283,26 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProduct_KronePerVolume() {
-		return (EReference)productEClass.getEStructuralFeatures().get(4);
+	public EReference getProduct_ProductType() {
+		return (EReference)productEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProduct_Volume() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProduct_MealTypes() {
+		return (EReference)productEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -418,7 +382,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRegion_Produces() {
+	public EReference getRegion_Products() {
 		return (EReference)regionEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -454,7 +418,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProductType_ProducedIn() {
+	public EReference getProductType_Products() {
 		return (EReference)productTypeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -463,7 +427,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProductType_Products() {
+	public EReference getProductType_ProductTypeInMealType() {
 		return (EReference)productTypeEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -472,53 +436,8 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getKronePerVolume() {
-		return kronePerVolumeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKronePerVolume_DerivedNumber() {
-		return (EAttribute)kronePerVolumeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKronePerVolume_Products() {
-		return (EReference)kronePerVolumeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getKronePerAlcohol() {
-		return kronePerAlcoholEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getKronePerAlcohol_DerivedNumber() {
-		return (EAttribute)kronePerAlcoholEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKronePerAlcohol_Products() {
-		return (EReference)kronePerAlcoholEClass.getEStructuralFeatures().get(1);
+	public EReference getProductType_ProductTypeInRegion() {
+		return (EReference)productTypeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -607,6 +526,78 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getProductOfTypeInMealType() {
+		return productOfTypeInMealTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProductOfTypeInMealType_MealType() {
+		return (EReference)productOfTypeInMealTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProductOfTypeInMealType_Products() {
+		return (EReference)productOfTypeInMealTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProductOfTypeInMealType_ProductType() {
+		return (EReference)productOfTypeInMealTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProductOfTypeInRegion() {
+		return productOfTypeInRegionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProductOfTypeInRegion_Products() {
+		return (EReference)productOfTypeInRegionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProductOfTypeInRegion_ProductType() {
+		return (EReference)productOfTypeInRegionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProductOfTypeInRegion_Region() {
+		return (EReference)productOfTypeInRegionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getMealTypes() {
 		return mealTypesEDataType;
 	}
@@ -640,25 +631,21 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 
 		// Create classes and their features
 		categoriesEClass = createEClass(CATEGORIES);
-		createEReference(categoriesEClass, CATEGORIES__PRODUCTS);
 		createEReference(categoriesEClass, CATEGORIES__COUNTRIES);
 		createEReference(categoriesEClass, CATEGORIES__PRODUCT_TYPES);
-		createEReference(categoriesEClass, CATEGORIES__KRONE_PER_VOLUMES);
-		createEReference(categoriesEClass, CATEGORIES__ALCOHOL_PER_KRONES);
-		createEReference(categoriesEClass, CATEGORIES__RECEPIES);
 		createEReference(categoriesEClass, CATEGORIES__MEAL_TYPES);
 
 		productEClass = createEClass(PRODUCT);
 		createEAttribute(productEClass, PRODUCT__PRODUCT_ID);
 		createEAttribute(productEClass, PRODUCT__NAME);
-		createEReference(productEClass, PRODUCT__REGION);
 		createEReference(productEClass, PRODUCT__PRODUCT_TYPE);
-		createEReference(productEClass, PRODUCT__KRONE_PER_VOLUME);
-		createEReference(productEClass, PRODUCT__ALCOHOL_PER_KRONE);
 		createEAttribute(productEClass, PRODUCT__PRICE);
 		createEAttribute(productEClass, PRODUCT__ALCOHOL_CONTENT);
 		createEAttribute(productEClass, PRODUCT__VOLUME);
-		createEReference(productEClass, PRODUCT__SUTIBLE_FOR);
+		createEReference(productEClass, PRODUCT__MEAL_TYPES);
+		createEReference(productEClass, PRODUCT__REGION);
+		createEAttribute(productEClass, PRODUCT__PRICE_PER_ALCOHOL);
+		createEAttribute(productEClass, PRODUCT__PRICE_PER_VOLUME);
 
 		countryEClass = createEClass(COUNTRY);
 		createEAttribute(countryEClass, COUNTRY__COUNTRY_ID);
@@ -669,21 +656,14 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		createEAttribute(regionEClass, REGION__REGION_ID);
 		createEAttribute(regionEClass, REGION__NAME);
 		createEReference(regionEClass, REGION__COUNTRY);
-		createEReference(regionEClass, REGION__PRODUCES);
+		createEReference(regionEClass, REGION__PRODUCTS);
 
 		productTypeEClass = createEClass(PRODUCT_TYPE);
 		createEAttribute(productTypeEClass, PRODUCT_TYPE__PRODUCT_TYPE_ID);
 		createEAttribute(productTypeEClass, PRODUCT_TYPE__NAME);
-		createEReference(productTypeEClass, PRODUCT_TYPE__PRODUCED_IN);
 		createEReference(productTypeEClass, PRODUCT_TYPE__PRODUCTS);
-
-		kronePerVolumeEClass = createEClass(KRONE_PER_VOLUME);
-		createEAttribute(kronePerVolumeEClass, KRONE_PER_VOLUME__DERIVED_NUMBER);
-		createEReference(kronePerVolumeEClass, KRONE_PER_VOLUME__PRODUCTS);
-
-		kronePerAlcoholEClass = createEClass(KRONE_PER_ALCOHOL);
-		createEAttribute(kronePerAlcoholEClass, KRONE_PER_ALCOHOL__DERIVED_NUMBER);
-		createEReference(kronePerAlcoholEClass, KRONE_PER_ALCOHOL__PRODUCTS);
+		createEReference(productTypeEClass, PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE);
+		createEReference(productTypeEClass, PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION);
 
 		mealTypeEClass = createEClass(MEAL_TYPE);
 		createEAttribute(mealTypeEClass, MEAL_TYPE__NAME);
@@ -695,6 +675,16 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		createEAttribute(recipeEClass, RECIPE__RECEPIE_ID);
 		createEReference(recipeEClass, RECIPE__MEAL_TYPE);
 		createEAttribute(recipeEClass, RECIPE__LINK);
+
+		productOfTypeInMealTypeEClass = createEClass(PRODUCT_OF_TYPE_IN_MEAL_TYPE);
+		createEReference(productOfTypeInMealTypeEClass, PRODUCT_OF_TYPE_IN_MEAL_TYPE__MEAL_TYPE);
+		createEReference(productOfTypeInMealTypeEClass, PRODUCT_OF_TYPE_IN_MEAL_TYPE__PRODUCTS);
+		createEReference(productOfTypeInMealTypeEClass, PRODUCT_OF_TYPE_IN_MEAL_TYPE__PRODUCT_TYPE);
+
+		productOfTypeInRegionEClass = createEClass(PRODUCT_OF_TYPE_IN_REGION);
+		createEReference(productOfTypeInRegionEClass, PRODUCT_OF_TYPE_IN_REGION__PRODUCTS);
+		createEReference(productOfTypeInRegionEClass, PRODUCT_OF_TYPE_IN_REGION__PRODUCT_TYPE);
+		createEReference(productOfTypeInRegionEClass, PRODUCT_OF_TYPE_IN_REGION__REGION);
 
 		// Create data types
 		mealTypesEDataType = createEDataType(MEAL_TYPES);
@@ -731,25 +721,21 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(categoriesEClass, Categories.class, "Categories", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCategories_Products(), this.getProduct(), null, "Products", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCategories_Countries(), this.getCountry(), null, "countries", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCategories_ProductTypes(), this.getProductType(), null, "productTypes", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCategories_KronePerVolumes(), this.getKronePerVolume(), null, "kronePerVolumes", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCategories_AlcoholPerKrones(), this.getKronePerAlcohol(), null, "alcoholPerKrones", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCategories_Recepies(), this.getRecipe(), null, "recepies", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCategories_MealTypes(), this.getMealType(), null, "mealTypes", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(productEClass, Product.class, "Product", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProduct_ProductId(), ecorePackage.getEString(), "productId", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProduct_Name(), ecorePackage.getEString(), "name", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_Region(), this.getRegion(), null, "region", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_ProductType(), this.getProductType(), this.getProductType_Products(), "productType", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_KronePerVolume(), this.getKronePerVolume(), this.getKronePerVolume_Products(), "kronePerVolume", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_AlcoholPerKrone(), this.getKronePerAlcohol(), this.getKronePerAlcohol_Products(), "alcoholPerKrone", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProduct_ProductType(), this.getProductType(), this.getProductType_Products(), "productType", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProduct_Price(), ecorePackage.getEFloat(), "price", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProduct_AlcoholContent(), ecorePackage.getEFloat(), "alcoholContent", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProduct_Volume(), ecorePackage.getEFloat(), "Volume", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProduct_SutibleFor(), this.getMealType(), this.getMealType_Products(), "sutibleFor", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProduct_MealTypes(), this.getProductOfTypeInMealType(), this.getProductOfTypeInMealType_Products(), "MealTypes", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProduct_Region(), this.getProductOfTypeInRegion(), this.getProductOfTypeInRegion_Products(), "region", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduct_PricePerAlcohol(), ecorePackage.getEFloat(), "pricePerAlcohol", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduct_PricePerVolume(), ecorePackage.getEFloat(), "pricePerVolume", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(countryEClass, Country.class, "Country", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCountry_CountryId(), ecorePackage.getEString(), "countryId", null, 0, 1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -760,32 +746,35 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		initEAttribute(getRegion_RegionId(), ecorePackage.getEString(), "regionId", "", 0, 1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRegion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRegion_Country(), this.getCountry(), this.getCountry_Regions(), "country", null, 0, 1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRegion_Produces(), this.getProductType(), this.getProductType_ProducedIn(), "produces", null, 0, -1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRegion_Products(), this.getProductOfTypeInRegion(), this.getProductOfTypeInRegion_Region(), "products", null, 0, -1, Region.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(productTypeEClass, ProductType.class, "ProductType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProductType_ProductTypeId(), ecorePackage.getEString(), "productTypeId", null, 0, 1, ProductType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProductType_Name(), ecorePackage.getEString(), "name", null, 0, 1, ProductType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProductType_ProducedIn(), this.getRegion(), this.getRegion_Produces(), "producedIn", null, 0, -1, ProductType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProductType_Products(), this.getProduct(), this.getProduct_ProductType(), "products", null, 0, -1, ProductType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(kronePerVolumeEClass, KronePerVolume.class, "KronePerVolume", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getKronePerVolume_DerivedNumber(), ecorePackage.getEFloat(), "derivedNumber", null, 0, 1, KronePerVolume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getKronePerVolume_Products(), this.getProduct(), this.getProduct_KronePerVolume(), "products", null, 0, -1, KronePerVolume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(kronePerAlcoholEClass, KronePerAlcohol.class, "KronePerAlcohol", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getKronePerAlcohol_DerivedNumber(), ecorePackage.getEFloat(), "derivedNumber", null, 0, 1, KronePerAlcohol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getKronePerAlcohol_Products(), this.getProduct(), this.getProduct_AlcoholPerKrone(), "products", null, 0, -1, KronePerAlcohol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProductType_Products(), this.getProduct(), this.getProduct_ProductType(), "products", null, 0, -1, ProductType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProductType_ProductTypeInMealType(), this.getProductOfTypeInMealType(), this.getProductOfTypeInMealType_ProductType(), "productTypeInMealType", null, 0, -1, ProductType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProductType_ProductTypeInRegion(), this.getProductOfTypeInRegion(), this.getProductOfTypeInRegion_ProductType(), "productTypeInRegion", null, 0, -1, ProductType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mealTypeEClass, MealType.class, "MealType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMealType_Name(), this.getMealTypes(), "name", null, 0, 1, MealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMealType_Recipies(), this.getRecipe(), this.getRecipe_MealType(), "recipies", null, 0, -1, MealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMealType_Products(), this.getProduct(), this.getProduct_SutibleFor(), "products", null, 0, -1, MealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMealType_Recipies(), this.getRecipe(), this.getRecipe_MealType(), "recipies", null, 0, -1, MealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMealType_Products(), this.getProductOfTypeInMealType(), this.getProductOfTypeInMealType_MealType(), "products", null, 0, -1, MealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(recipeEClass, Recipe.class, "Recipe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRecipe_Name(), ecorePackage.getEString(), "name", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRecipe_RecepieId(), ecorePackage.getEString(), "recepieId", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRecipe_MealType(), this.getMealType(), this.getMealType_Recipies(), "mealType", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRecipe_MealType(), this.getMealType(), this.getMealType_Recipies(), "mealType", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRecipe_Link(), ecorePackage.getEString(), "link", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(productOfTypeInMealTypeEClass, ProductOfTypeInMealType.class, "ProductOfTypeInMealType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProductOfTypeInMealType_MealType(), this.getMealType(), this.getMealType_Products(), "mealType", null, 0, 1, ProductOfTypeInMealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProductOfTypeInMealType_Products(), this.getProduct(), this.getProduct_MealTypes(), "products", null, 0, -1, ProductOfTypeInMealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProductOfTypeInMealType_ProductType(), this.getProductType(), this.getProductType_ProductTypeInMealType(), "productType", null, 0, 1, ProductOfTypeInMealType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(productOfTypeInRegionEClass, ProductOfTypeInRegion.class, "ProductOfTypeInRegion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProductOfTypeInRegion_Products(), this.getProduct(), this.getProduct_Region(), "products", null, 0, -1, ProductOfTypeInRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProductOfTypeInRegion_ProductType(), this.getProductType(), this.getProductType_ProductTypeInRegion(), "productType", null, 0, 1, ProductOfTypeInRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProductOfTypeInRegion_Region(), this.getRegion(), this.getRegion_Products(), "region", null, 0, 1, ProductOfTypeInRegion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(mealTypesEDataType, String.class, "MealTypes", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -810,7 +799,7 @@ public class PoletPackageImpl extends EPackageImpl implements PoletPackage {
 		  (mealTypesEDataType,
 		   source,
 		   new String[] {
-			   "enumeration", "Fish Light%20meat Pork Beef Dessert Cheese Vegetables Lamb Shellfish Wild Apertif"
+			   "enumeration", "Ost Skalldyr Storvilt Lyst%20kj\u00f8tt Sm\u00e5vilt%20og%20fugl Dessert,%20kake,%20frukt Svinekj\u00f8tt Fisk Storfe Aperitiff/avec Gr\u00f8nnsaker Lam%20og%20sau"
 		   });
 	}
 

@@ -47,31 +47,31 @@ public interface MealType extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Recipies</b></em>' reference list.
+	 * Returns the value of the '<em><b>Recipies</b></em>' containment reference list.
 	 * The list contents are of type {@link polet.Recipe}.
 	 * It is bidirectional and its opposite is '{@link polet.Recipe#getMealType <em>Meal Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Recipies</em>' reference list.
+	 * @return the value of the '<em>Recipies</em>' containment reference list.
 	 * @see polet.PoletPackage#getMealType_Recipies()
 	 * @see polet.Recipe#getMealType
-	 * @model opposite="mealType"
+	 * @model opposite="mealType" containment="true"
 	 * @generated
 	 */
 	EList<Recipe> getRecipies();
 
 	/**
-	 * Returns the value of the '<em><b>Products</b></em>' reference list.
-	 * The list contents are of type {@link polet.Product}.
-	 * It is bidirectional and its opposite is '{@link polet.Product#getSutibleFor <em>Sutible For</em>}'.
+	 * Returns the value of the '<em><b>Products</b></em>' containment reference list.
+	 * The list contents are of type {@link polet.ProductOfTypeInMealType}.
+	 * It is bidirectional and its opposite is '{@link polet.ProductOfTypeInMealType#getMealType <em>Meal Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Products</em>' reference list.
+	 * @return the value of the '<em>Products</em>' containment reference list.
 	 * @see polet.PoletPackage#getMealType_Products()
-	 * @see polet.Product#getSutibleFor
-	 * @model opposite="sutibleFor"
+	 * @see polet.ProductOfTypeInMealType#getMealType
+	 * @model opposite="mealType" containment="true"
 	 * @generated
 	 */
-	EList<Product> getProducts();
+	EList<ProductOfTypeInMealType> getProducts();
 
 } // MealType

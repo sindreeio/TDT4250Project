@@ -96,18 +96,6 @@ public class PoletSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PoletPackage.KRONE_PER_VOLUME: {
-				KronePerVolume kronePerVolume = (KronePerVolume)theEObject;
-				T result = caseKronePerVolume(kronePerVolume);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PoletPackage.KRONE_PER_ALCOHOL: {
-				KronePerAlcohol kronePerAlcohol = (KronePerAlcohol)theEObject;
-				T result = caseKronePerAlcohol(kronePerAlcohol);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case PoletPackage.MEAL_TYPE: {
 				MealType mealType = (MealType)theEObject;
 				T result = caseMealType(mealType);
@@ -117,6 +105,18 @@ public class PoletSwitch<T> extends Switch<T> {
 			case PoletPackage.RECIPE: {
 				Recipe recipe = (Recipe)theEObject;
 				T result = caseRecipe(recipe);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PoletPackage.PRODUCT_OF_TYPE_IN_MEAL_TYPE: {
+				ProductOfTypeInMealType productOfTypeInMealType = (ProductOfTypeInMealType)theEObject;
+				T result = caseProductOfTypeInMealType(productOfTypeInMealType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PoletPackage.PRODUCT_OF_TYPE_IN_REGION: {
+				ProductOfTypeInRegion productOfTypeInRegion = (ProductOfTypeInRegion)theEObject;
+				T result = caseProductOfTypeInRegion(productOfTypeInRegion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -200,36 +200,6 @@ public class PoletSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Krone Per Volume</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Krone Per Volume</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseKronePerVolume(KronePerVolume object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Krone Per Alcohol</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Krone Per Alcohol</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseKronePerAlcohol(KronePerAlcohol object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Meal Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -256,6 +226,36 @@ public class PoletSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRecipe(Recipe object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Product Of Type In Meal Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Product Of Type In Meal Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProductOfTypeInMealType(ProductOfTypeInMealType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Product Of Type In Region</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Product Of Type In Region</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProductOfTypeInRegion(ProductOfTypeInRegion object) {
 		return null;
 	}
 

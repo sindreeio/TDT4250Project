@@ -96,14 +96,14 @@ public class PoletValidator extends EObjectValidator {
 				return validateRegion((Region)value, diagnostics, context);
 			case PoletPackage.PRODUCT_TYPE:
 				return validateProductType((ProductType)value, diagnostics, context);
-			case PoletPackage.KRONE_PER_VOLUME:
-				return validateKronePerVolume((KronePerVolume)value, diagnostics, context);
-			case PoletPackage.KRONE_PER_ALCOHOL:
-				return validateKronePerAlcohol((KronePerAlcohol)value, diagnostics, context);
 			case PoletPackage.MEAL_TYPE:
 				return validateMealType((MealType)value, diagnostics, context);
 			case PoletPackage.RECIPE:
 				return validateRecipe((Recipe)value, diagnostics, context);
+			case PoletPackage.PRODUCT_OF_TYPE_IN_MEAL_TYPE:
+				return validateProductOfTypeInMealType((ProductOfTypeInMealType)value, diagnostics, context);
+			case PoletPackage.PRODUCT_OF_TYPE_IN_REGION:
+				return validateProductOfTypeInRegion((ProductOfTypeInRegion)value, diagnostics, context);
 			case PoletPackage.MEAL_TYPES:
 				return validateMealTypes((String)value, diagnostics, context);
 			default:
@@ -161,24 +161,6 @@ public class PoletValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateKronePerVolume(KronePerVolume kronePerVolume, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(kronePerVolume, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateKronePerAlcohol(KronePerAlcohol kronePerAlcohol, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(kronePerAlcohol, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateMealType(MealType mealType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(mealType, diagnostics, context);
 	}
@@ -190,6 +172,24 @@ public class PoletValidator extends EObjectValidator {
 	 */
 	public boolean validateRecipe(Recipe recipe, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(recipe, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateProductOfTypeInMealType(ProductOfTypeInMealType productOfTypeInMealType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(productOfTypeInMealType, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateProductOfTypeInRegion(ProductOfTypeInRegion productOfTypeInRegion, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(productOfTypeInRegion, diagnostics, context);
 	}
 
 	/**
@@ -211,17 +211,18 @@ public class PoletValidator extends EObjectValidator {
 	public static final Collection<Object> MEAL_TYPES__ENUMERATION__VALUES =
 		wrapEnumerationValues
 			(new Object[] {
-				 "Fish",
-				 "Light meat",
-				 "Pork",
-				 "Beef",
-				 "Dessert",
-				 "Cheese",
-				 "Vegetables",
-				 "Lamb",
-				 "Shellfish",
-				 "Wild",
-				 "Apertif"
+				 "Ost",
+				 "Skalldyr",
+				 "Storvilt",
+				 "Lyst kj\u00f8tt",
+				 "Sm\u00e5vilt og fugl",
+				 "Dessert, kake, frukt",
+				 "Svinekj\u00f8tt",
+				 "Fisk",
+				 "Storfe",
+				 "Aperitiff/avec",
+				 "Gr\u00f8nnsaker",
+				 "Lam og sau"
 			 });
 
 	/**

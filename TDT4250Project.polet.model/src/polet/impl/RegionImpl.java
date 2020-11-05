@@ -15,13 +15,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import polet.Country;
 import polet.PoletPackage;
-import polet.ProductType;
+import polet.ProductOfTypeInRegion;
 import polet.Region;
 
 /**
@@ -35,7 +35,7 @@ import polet.Region;
  *   <li>{@link polet.impl.RegionImpl#getRegionId <em>Region Id</em>}</li>
  *   <li>{@link polet.impl.RegionImpl#getName <em>Name</em>}</li>
  *   <li>{@link polet.impl.RegionImpl#getCountry <em>Country</em>}</li>
- *   <li>{@link polet.impl.RegionImpl#getProduces <em>Produces</em>}</li>
+ *   <li>{@link polet.impl.RegionImpl#getProducts <em>Products</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,14 +82,14 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProduces() <em>Produces</em>}' reference list.
+	 * The cached value of the '{@link #getProducts() <em>Products</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProduces()
+	 * @see #getProducts()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ProductType> produces;
+	protected EList<ProductOfTypeInRegion> products;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,11 +198,11 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ProductType> getProduces() {
-		if (produces == null) {
-			produces = new EObjectWithInverseResolvingEList.ManyInverse<ProductType>(ProductType.class, this, PoletPackage.REGION__PRODUCES, PoletPackage.PRODUCT_TYPE__PRODUCED_IN);
+	public EList<ProductOfTypeInRegion> getProducts() {
+		if (products == null) {
+			products = new EObjectContainmentWithInverseEList<ProductOfTypeInRegion>(ProductOfTypeInRegion.class, this, PoletPackage.REGION__PRODUCTS, PoletPackage.PRODUCT_OF_TYPE_IN_REGION__REGION);
 		}
-		return produces;
+		return products;
 	}
 
 	/**
@@ -218,8 +218,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetCountry((Country)otherEnd, msgs);
-			case PoletPackage.REGION__PRODUCES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProduces()).basicAdd(otherEnd, msgs);
+			case PoletPackage.REGION__PRODUCTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProducts()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -234,8 +234,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 		switch (featureID) {
 			case PoletPackage.REGION__COUNTRY:
 				return basicSetCountry(null, msgs);
-			case PoletPackage.REGION__PRODUCES:
-				return ((InternalEList<?>)getProduces()).basicRemove(otherEnd, msgs);
+			case PoletPackage.REGION__PRODUCTS:
+				return ((InternalEList<?>)getProducts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -268,8 +268,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 				return getName();
 			case PoletPackage.REGION__COUNTRY:
 				return getCountry();
-			case PoletPackage.REGION__PRODUCES:
-				return getProduces();
+			case PoletPackage.REGION__PRODUCTS:
+				return getProducts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -292,9 +292,9 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 			case PoletPackage.REGION__COUNTRY:
 				setCountry((Country)newValue);
 				return;
-			case PoletPackage.REGION__PRODUCES:
-				getProduces().clear();
-				getProduces().addAll((Collection<? extends ProductType>)newValue);
+			case PoletPackage.REGION__PRODUCTS:
+				getProducts().clear();
+				getProducts().addAll((Collection<? extends ProductOfTypeInRegion>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -317,8 +317,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 			case PoletPackage.REGION__COUNTRY:
 				setCountry((Country)null);
 				return;
-			case PoletPackage.REGION__PRODUCES:
-				getProduces().clear();
+			case PoletPackage.REGION__PRODUCTS:
+				getProducts().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -338,8 +338,8 @@ public class RegionImpl extends MinimalEObjectImpl.Container implements Region {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PoletPackage.REGION__COUNTRY:
 				return getCountry() != null;
-			case PoletPackage.REGION__PRODUCES:
-				return produces != null && !produces.isEmpty();
+			case PoletPackage.REGION__PRODUCTS:
+				return products != null && !products.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

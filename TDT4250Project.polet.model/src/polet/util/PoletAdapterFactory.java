@@ -88,20 +88,20 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 				return createProductTypeAdapter();
 			}
 			@Override
-			public Adapter caseKronePerVolume(KronePerVolume object) {
-				return createKronePerVolumeAdapter();
-			}
-			@Override
-			public Adapter caseKronePerAlcohol(KronePerAlcohol object) {
-				return createKronePerAlcoholAdapter();
-			}
-			@Override
 			public Adapter caseMealType(MealType object) {
 				return createMealTypeAdapter();
 			}
 			@Override
 			public Adapter caseRecipe(Recipe object) {
 				return createRecipeAdapter();
+			}
+			@Override
+			public Adapter caseProductOfTypeInMealType(ProductOfTypeInMealType object) {
+				return createProductOfTypeInMealTypeAdapter();
+			}
+			@Override
+			public Adapter caseProductOfTypeInRegion(ProductOfTypeInRegion object) {
+				return createProductOfTypeInRegionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -194,34 +194,6 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link polet.KronePerVolume <em>Krone Per Volume</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see polet.KronePerVolume
-	 * @generated
-	 */
-	public Adapter createKronePerVolumeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link polet.KronePerAlcohol <em>Krone Per Alcohol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see polet.KronePerAlcohol
-	 * @generated
-	 */
-	public Adapter createKronePerAlcoholAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link polet.MealType <em>Meal Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -246,6 +218,34 @@ public class PoletAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRecipeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link polet.ProductOfTypeInMealType <em>Product Of Type In Meal Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see polet.ProductOfTypeInMealType
+	 * @generated
+	 */
+	public Adapter createProductOfTypeInMealTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link polet.ProductOfTypeInRegion <em>Product Of Type In Region</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see polet.ProductOfTypeInRegion
+	 * @generated
+	 */
+	public Adapter createProductOfTypeInRegionAdapter() {
 		return null;
 	}
 

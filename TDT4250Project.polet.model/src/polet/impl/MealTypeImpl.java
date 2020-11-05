@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import polet.MealType;
 import polet.PoletPackage;
-import polet.Product;
+import polet.ProductOfTypeInMealType;
 import polet.Recipe;
 
 /**
@@ -57,7 +57,7 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRecipies() <em>Recipies</em>}' reference list.
+	 * The cached value of the '{@link #getRecipies() <em>Recipies</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRecipies()
@@ -67,14 +67,14 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	protected EList<Recipe> recipies;
 
 	/**
-	 * The cached value of the '{@link #getProducts() <em>Products</em>}' reference list.
+	 * The cached value of the '{@link #getProducts() <em>Products</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProducts()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Product> products;
+	protected EList<ProductOfTypeInMealType> products;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,7 +123,7 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	 */
 	public EList<Recipe> getRecipies() {
 		if (recipies == null) {
-			recipies = new EObjectWithInverseResolvingEList<Recipe>(Recipe.class, this, PoletPackage.MEAL_TYPE__RECIPIES, PoletPackage.RECIPE__MEAL_TYPE);
+			recipies = new EObjectContainmentWithInverseEList<Recipe>(Recipe.class, this, PoletPackage.MEAL_TYPE__RECIPIES, PoletPackage.RECIPE__MEAL_TYPE);
 		}
 		return recipies;
 	}
@@ -133,9 +133,9 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Product> getProducts() {
+	public EList<ProductOfTypeInMealType> getProducts() {
 		if (products == null) {
-			products = new EObjectWithInverseResolvingEList.ManyInverse<Product>(Product.class, this, PoletPackage.MEAL_TYPE__PRODUCTS, PoletPackage.PRODUCT__SUTIBLE_FOR);
+			products = new EObjectContainmentWithInverseEList<ProductOfTypeInMealType>(ProductOfTypeInMealType.class, this, PoletPackage.MEAL_TYPE__PRODUCTS, PoletPackage.PRODUCT_OF_TYPE_IN_MEAL_TYPE__MEAL_TYPE);
 		}
 		return products;
 	}
@@ -209,7 +209,7 @@ public class MealTypeImpl extends MinimalEObjectImpl.Container implements MealTy
 				return;
 			case PoletPackage.MEAL_TYPE__PRODUCTS:
 				getProducts().clear();
-				getProducts().addAll((Collection<? extends Product>)newValue);
+				getProducts().addAll((Collection<? extends ProductOfTypeInMealType>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

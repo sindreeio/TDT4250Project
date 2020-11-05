@@ -62,10 +62,10 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 			case PoletPackage.COUNTRY: return createCountry();
 			case PoletPackage.REGION: return createRegion();
 			case PoletPackage.PRODUCT_TYPE: return createProductType();
-			case PoletPackage.KRONE_PER_VOLUME: return createKronePerVolume();
-			case PoletPackage.KRONE_PER_ALCOHOL: return createKronePerAlcohol();
 			case PoletPackage.MEAL_TYPE: return createMealType();
 			case PoletPackage.RECIPE: return createRecipe();
+			case PoletPackage.PRODUCT_OF_TYPE_IN_MEAL_TYPE: return createProductOfTypeInMealType();
+			case PoletPackage.PRODUCT_OF_TYPE_IN_REGION: return createProductOfTypeInRegion();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -156,26 +156,6 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KronePerVolume createKronePerVolume() {
-		KronePerVolumeImpl kronePerVolume = new KronePerVolumeImpl();
-		return kronePerVolume;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public KronePerAlcohol createKronePerAlcohol() {
-		KronePerAlcoholImpl kronePerAlcohol = new KronePerAlcoholImpl();
-		return kronePerAlcohol;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MealType createMealType() {
 		MealTypeImpl mealType = new MealTypeImpl();
 		return mealType;
@@ -189,6 +169,26 @@ public class PoletFactoryImpl extends EFactoryImpl implements PoletFactory {
 	public Recipe createRecipe() {
 		RecipeImpl recipe = new RecipeImpl();
 		return recipe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProductOfTypeInMealType createProductOfTypeInMealType() {
+		ProductOfTypeInMealTypeImpl productOfTypeInMealType = new ProductOfTypeInMealTypeImpl();
+		return productOfTypeInMealType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProductOfTypeInRegion createProductOfTypeInRegion() {
+		ProductOfTypeInRegionImpl productOfTypeInRegion = new ProductOfTypeInRegionImpl();
+		return productOfTypeInRegion;
 	}
 
 	/**

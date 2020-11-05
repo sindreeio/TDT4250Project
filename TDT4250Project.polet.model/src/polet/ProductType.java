@@ -17,8 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link polet.ProductType#getProductTypeId <em>Product Type Id</em>}</li>
  *   <li>{@link polet.ProductType#getName <em>Name</em>}</li>
- *   <li>{@link polet.ProductType#getProducedIn <em>Produced In</em>}</li>
  *   <li>{@link polet.ProductType#getProducts <em>Products</em>}</li>
+ *   <li>{@link polet.ProductType#getProductTypeInMealType <em>Product Type In Meal Type</em>}</li>
+ *   <li>{@link polet.ProductType#getProductTypeInRegion <em>Product Type In Region</em>}</li>
  * </ul>
  *
  * @see polet.PoletPackage#getProductType()
@@ -71,31 +72,45 @@ public interface ProductType extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Produced In</b></em>' reference list.
-	 * The list contents are of type {@link polet.Region}.
-	 * It is bidirectional and its opposite is '{@link polet.Region#getProduces <em>Produces</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Produced In</em>' reference list.
-	 * @see polet.PoletPackage#getProductType_ProducedIn()
-	 * @see polet.Region#getProduces
-	 * @model opposite="produces"
-	 * @generated
-	 */
-	EList<Region> getProducedIn();
-
-	/**
-	 * Returns the value of the '<em><b>Products</b></em>' reference list.
+	 * Returns the value of the '<em><b>Products</b></em>' containment reference list.
 	 * The list contents are of type {@link polet.Product}.
 	 * It is bidirectional and its opposite is '{@link polet.Product#getProductType <em>Product Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Products</em>' reference list.
+	 * @return the value of the '<em>Products</em>' containment reference list.
 	 * @see polet.PoletPackage#getProductType_Products()
 	 * @see polet.Product#getProductType
-	 * @model opposite="productType"
+	 * @model opposite="productType" containment="true"
 	 * @generated
 	 */
 	EList<Product> getProducts();
+
+	/**
+	 * Returns the value of the '<em><b>Product Type In Meal Type</b></em>' reference list.
+	 * The list contents are of type {@link polet.ProductOfTypeInMealType}.
+	 * It is bidirectional and its opposite is '{@link polet.ProductOfTypeInMealType#getProductType <em>Product Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Product Type In Meal Type</em>' reference list.
+	 * @see polet.PoletPackage#getProductType_ProductTypeInMealType()
+	 * @see polet.ProductOfTypeInMealType#getProductType
+	 * @model opposite="productType"
+	 * @generated
+	 */
+	EList<ProductOfTypeInMealType> getProductTypeInMealType();
+
+	/**
+	 * Returns the value of the '<em><b>Product Type In Region</b></em>' reference list.
+	 * The list contents are of type {@link polet.ProductOfTypeInRegion}.
+	 * It is bidirectional and its opposite is '{@link polet.ProductOfTypeInRegion#getProductType <em>Product Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Product Type In Region</em>' reference list.
+	 * @see polet.PoletPackage#getProductType_ProductTypeInRegion()
+	 * @see polet.ProductOfTypeInRegion#getProductType
+	 * @model opposite="productType"
+	 * @generated
+	 */
+	EList<ProductOfTypeInRegion> getProductTypeInRegion();
 
 } // ProductType

@@ -3,18 +3,10 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="polet" nsURI="platform:/plugin/TDT4250Project.polet/model/polet.ecore"
     nsPrefix="polet">
   <eClassifiers xsi:type="ecore:EClass" name="Categories">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Products" upperBound="-1"
-        eType="#//Product" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="countries" upperBound="-1"
         eType="#//Country" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="productTypes" upperBound="-1"
         eType="#//ProductType" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kronePerVolumes" upperBound="-1"
-        eType="#//KronePerVolume" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="alcoholPerKrones" upperBound="-1"
-        eType="#//KronePerAlcohol" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="recepies" upperBound="-1"
-        eType="#//Recipe" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mealTypes" upperBound="-1"
         eType="#//MealType" containment="true"/>
   </eClassifiers>
@@ -22,18 +14,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="productId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="region" eType="#//Region"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="productType" eType="#//ProductType"
         eOpposite="#//ProductType/products"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kronePerVolume" eType="#//KronePerVolume"
-        eOpposite="#//KronePerVolume/products"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="alcoholPerKrone" eType="#//KronePerAlcohol"
-        eOpposite="#//KronePerAlcohol/products"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alcoholContent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Volume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sutibleFor" upperBound="-1"
-        eType="#//MealType" eOpposite="#//MealType/products"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MealTypes" upperBound="-1"
+        eType="#//ProductOfTypeInMealType" eOpposite="#//ProductOfTypeInMealType/products"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="region" eType="#//ProductOfTypeInRegion"
+        eOpposite="#//ProductOfTypeInRegion/products"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pricePerAlcohol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pricePerVolume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Country">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -50,40 +43,30 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="country" eType="#//Country"
         eOpposite="#//Country/regions"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="produces" upperBound="-1"
-        eType="#//ProductType" eOpposite="#//ProductType/producedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
+        eType="#//ProductOfTypeInRegion" containment="true" eOpposite="#//ProductOfTypeInRegion/region"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProductType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="productTypeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="producedIn" upperBound="-1"
-        eType="#//Region" eOpposite="#//Region/produces"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
-        eType="#//Product" eOpposite="#//Product/productType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KronePerVolume">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        derived="true" iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
-        eType="#//Product" eOpposite="#//Product/kronePerVolume"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KronePerAlcohol">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="derivedNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        derived="true" iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
-        eType="#//Product" eOpposite="#//Product/alcoholPerKrone"/>
+        eType="#//Product" containment="true" eOpposite="#//Product/productType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="productTypeInMealType"
+        upperBound="-1" eType="#//ProductOfTypeInMealType" eOpposite="#//ProductOfTypeInMealType/productType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="productTypeInRegion" upperBound="-1"
+        eType="#//ProductOfTypeInRegion" eOpposite="#//ProductOfTypeInRegion/productType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MealType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//MealTypes"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="recipies" upperBound="-1"
-        eType="#//Recipe" eOpposite="#//Recipe/mealType"/>
+        eType="#//Recipe" containment="true" eOpposite="#//Recipe/mealType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
-        eType="#//Product" eOpposite="#//Product/sutibleFor"/>
+        eType="#//ProductOfTypeInMealType" containment="true" eOpposite="#//ProductOfTypeInMealType/mealType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="MealTypes" instanceClassName="java.lang.String">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="enumeration" value="Fish Light%20meat Pork Beef Dessert Cheese Vegetables Lamb Shellfish Wild Apertif"/>
+      <details key="enumeration" value="Ost Skalldyr Storvilt Lyst%20kjøtt Småvilt%20og%20fugl Dessert,%20kake,%20frukt Svinekjøtt Fisk Storfe Aperitiff/avec Grønnsaker Lam%20og%20sau"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Recipe">
@@ -93,5 +76,21 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="mealType" eType="#//MealType"
         eOpposite="#//MealType/recipies"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProductOfTypeInMealType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mealType" eType="#//MealType"
+        eOpposite="#//MealType/products"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
+        eType="#//Product" eOpposite="#//Product/MealTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="productType" eType="#//ProductType"
+        eOpposite="#//ProductType/productTypeInMealType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProductOfTypeInRegion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
+        eType="#//Product" eOpposite="#//Product/region"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="productType" eType="#//ProductType"
+        eOpposite="#//ProductType/productTypeInRegion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="region" eType="#//Region"
+        eOpposite="#//Region/products"/>
   </eClassifiers>
 </ecore:EPackage>

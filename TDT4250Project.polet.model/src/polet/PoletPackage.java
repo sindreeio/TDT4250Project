@@ -68,22 +68,13 @@ public interface PoletPackage extends EPackage {
 	int CATEGORIES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Products</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIES__PRODUCTS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Countries</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIES__COUNTRIES = 1;
+	int CATEGORIES__COUNTRIES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Product Types</b></em>' containment reference list.
@@ -92,34 +83,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIES__PRODUCT_TYPES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Krone Per Volumes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIES__KRONE_PER_VOLUMES = 3;
-
-	/**
-	 * The feature id for the '<em><b>Alcohol Per Krones</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIES__ALCOHOL_PER_KRONES = 4;
-
-	/**
-	 * The feature id for the '<em><b>Recepies</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIES__RECEPIES = 5;
+	int CATEGORIES__PRODUCT_TYPES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Meal Types</b></em>' containment reference list.
@@ -128,7 +92,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIES__MEAL_TYPES = 6;
+	int CATEGORIES__MEAL_TYPES = 2;
 
 	/**
 	 * The number of structural features of the '<em>Categories</em>' class.
@@ -137,7 +101,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CATEGORIES_FEATURE_COUNT = 7;
+	int CATEGORIES_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Categories</em>' class.
@@ -177,40 +141,13 @@ public interface PoletPackage extends EPackage {
 	int PRODUCT__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Region</b></em>' reference.
+	 * The feature id for the '<em><b>Product Type</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__REGION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Product Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCT__PRODUCT_TYPE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Krone Per Volume</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCT__KRONE_PER_VOLUME = 4;
-
-	/**
-	 * The feature id for the '<em><b>Alcohol Per Krone</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCT__ALCOHOL_PER_KRONE = 5;
+	int PRODUCT__PRODUCT_TYPE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Price</b></em>' attribute.
@@ -219,7 +156,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__PRICE = 6;
+	int PRODUCT__PRICE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Alcohol Content</b></em>' attribute.
@@ -228,7 +165,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__ALCOHOL_CONTENT = 7;
+	int PRODUCT__ALCOHOL_CONTENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Volume</b></em>' attribute.
@@ -237,16 +174,43 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__VOLUME = 8;
+	int PRODUCT__VOLUME = 5;
 
 	/**
-	 * The feature id for the '<em><b>Sutible For</b></em>' reference list.
+	 * The feature id for the '<em><b>Meal Types</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__SUTIBLE_FOR = 9;
+	int PRODUCT__MEAL_TYPES = 6;
+
+	/**
+	 * The feature id for the '<em><b>Region</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__REGION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Price Per Alcohol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__PRICE_PER_ALCOHOL = 8;
+
+	/**
+	 * The feature id for the '<em><b>Price Per Volume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__PRICE_PER_VOLUME = 9;
 
 	/**
 	 * The number of structural features of the '<em>Product</em>' class.
@@ -359,13 +323,13 @@ public interface PoletPackage extends EPackage {
 	int REGION__COUNTRY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Produces</b></em>' reference list.
+	 * The feature id for the '<em><b>Products</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGION__PRODUCES = 3;
+	int REGION__PRODUCTS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Region</em>' class.
@@ -414,22 +378,31 @@ public interface PoletPackage extends EPackage {
 	int PRODUCT_TYPE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Produced In</b></em>' reference list.
+	 * The feature id for the '<em><b>Products</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_TYPE__PRODUCED_IN = 2;
+	int PRODUCT_TYPE__PRODUCTS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Products</b></em>' reference list.
+	 * The feature id for the '<em><b>Product Type In Meal Type</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_TYPE__PRODUCTS = 3;
+	int PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Product Type In Region</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION = 4;
 
 	/**
 	 * The number of structural features of the '<em>Product Type</em>' class.
@@ -438,7 +411,7 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_TYPE_FEATURE_COUNT = 4;
+	int PRODUCT_TYPE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Product Type</em>' class.
@@ -450,98 +423,6 @@ public interface PoletPackage extends EPackage {
 	int PRODUCT_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link polet.impl.KronePerVolumeImpl <em>Krone Per Volume</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see polet.impl.KronePerVolumeImpl
-	 * @see polet.impl.PoletPackageImpl#getKronePerVolume()
-	 * @generated
-	 */
-	int KRONE_PER_VOLUME = 5;
-
-	/**
-	 * The feature id for the '<em><b>Derived Number</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KRONE_PER_VOLUME__DERIVED_NUMBER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Products</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KRONE_PER_VOLUME__PRODUCTS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Krone Per Volume</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KRONE_PER_VOLUME_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Krone Per Volume</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KRONE_PER_VOLUME_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link polet.impl.KronePerAlcoholImpl <em>Krone Per Alcohol</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see polet.impl.KronePerAlcoholImpl
-	 * @see polet.impl.PoletPackageImpl#getKronePerAlcohol()
-	 * @generated
-	 */
-	int KRONE_PER_ALCOHOL = 6;
-
-	/**
-	 * The feature id for the '<em><b>Derived Number</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KRONE_PER_ALCOHOL__DERIVED_NUMBER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Products</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KRONE_PER_ALCOHOL__PRODUCTS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Krone Per Alcohol</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KRONE_PER_ALCOHOL_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Krone Per Alcohol</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KRONE_PER_ALCOHOL_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link polet.impl.MealTypeImpl <em>Meal Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -549,7 +430,7 @@ public interface PoletPackage extends EPackage {
 	 * @see polet.impl.PoletPackageImpl#getMealType()
 	 * @generated
 	 */
-	int MEAL_TYPE = 7;
+	int MEAL_TYPE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -561,7 +442,7 @@ public interface PoletPackage extends EPackage {
 	int MEAL_TYPE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Recipies</b></em>' reference list.
+	 * The feature id for the '<em><b>Recipies</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -570,7 +451,7 @@ public interface PoletPackage extends EPackage {
 	int MEAL_TYPE__RECIPIES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Products</b></em>' reference list.
+	 * The feature id for the '<em><b>Products</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -604,7 +485,7 @@ public interface PoletPackage extends EPackage {
 	 * @see polet.impl.PoletPackageImpl#getRecipe()
 	 * @generated
 	 */
-	int RECIPE = 8;
+	int RECIPE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -625,7 +506,7 @@ public interface PoletPackage extends EPackage {
 	int RECIPE__RECEPIE_ID = 1;
 
 	/**
-	 * The feature id for the '<em><b>Meal Type</b></em>' reference.
+	 * The feature id for the '<em><b>Meal Type</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -661,6 +542,116 @@ public interface PoletPackage extends EPackage {
 	int RECIPE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link polet.impl.ProductOfTypeInMealTypeImpl <em>Product Of Type In Meal Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see polet.impl.ProductOfTypeInMealTypeImpl
+	 * @see polet.impl.PoletPackageImpl#getProductOfTypeInMealType()
+	 * @generated
+	 */
+	int PRODUCT_OF_TYPE_IN_MEAL_TYPE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Meal Type</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_MEAL_TYPE__MEAL_TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Products</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_MEAL_TYPE__PRODUCTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Product Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_MEAL_TYPE__PRODUCT_TYPE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Product Of Type In Meal Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_MEAL_TYPE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Product Of Type In Meal Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_MEAL_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link polet.impl.ProductOfTypeInRegionImpl <em>Product Of Type In Region</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see polet.impl.ProductOfTypeInRegionImpl
+	 * @see polet.impl.PoletPackageImpl#getProductOfTypeInRegion()
+	 * @generated
+	 */
+	int PRODUCT_OF_TYPE_IN_REGION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Products</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_REGION__PRODUCTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Product Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_REGION__PRODUCT_TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Region</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_REGION__REGION = 2;
+
+	/**
+	 * The number of structural features of the '<em>Product Of Type In Region</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_REGION_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Product Of Type In Region</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT_OF_TYPE_IN_REGION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '<em>Meal Types</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -679,17 +670,6 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCategories();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link polet.Categories#getProducts <em>Products</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Products</em>'.
-	 * @see polet.Categories#getProducts()
-	 * @see #getCategories()
-	 * @generated
-	 */
-	EReference getCategories_Products();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link polet.Categories#getCountries <em>Countries</em>}'.
@@ -712,39 +692,6 @@ public interface PoletPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCategories_ProductTypes();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link polet.Categories#getKronePerVolumes <em>Krone Per Volumes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Krone Per Volumes</em>'.
-	 * @see polet.Categories#getKronePerVolumes()
-	 * @see #getCategories()
-	 * @generated
-	 */
-	EReference getCategories_KronePerVolumes();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link polet.Categories#getAlcoholPerKrones <em>Alcohol Per Krones</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Alcohol Per Krones</em>'.
-	 * @see polet.Categories#getAlcoholPerKrones()
-	 * @see #getCategories()
-	 * @generated
-	 */
-	EReference getCategories_AlcoholPerKrones();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link polet.Categories#getRecepies <em>Recepies</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Recepies</em>'.
-	 * @see polet.Categories#getRecepies()
-	 * @see #getCategories()
-	 * @generated
-	 */
-	EReference getCategories_Recepies();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link polet.Categories#getMealTypes <em>Meal Types</em>}'.
@@ -812,6 +759,28 @@ public interface PoletPackage extends EPackage {
 	EReference getProduct_Region();
 
 	/**
+	 * Returns the meta object for the attribute '{@link polet.Product#getPricePerAlcohol <em>Price Per Alcohol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Price Per Alcohol</em>'.
+	 * @see polet.Product#getPricePerAlcohol()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EAttribute getProduct_PricePerAlcohol();
+
+	/**
+	 * Returns the meta object for the attribute '{@link polet.Product#getPricePerVolume <em>Price Per Volume</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Price Per Volume</em>'.
+	 * @see polet.Product#getPricePerVolume()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EAttribute getProduct_PricePerVolume();
+
+	/**
 	 * Returns the meta object for the attribute '{@link polet.Product#getPrice <em>Price</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -823,10 +792,10 @@ public interface PoletPackage extends EPackage {
 	EAttribute getProduct_Price();
 
 	/**
-	 * Returns the meta object for the reference '{@link polet.Product#getProductType <em>Product Type</em>}'.
+	 * Returns the meta object for the container reference '{@link polet.Product#getProductType <em>Product Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Product Type</em>'.
+	 * @return the meta object for the container reference '<em>Product Type</em>'.
 	 * @see polet.Product#getProductType()
 	 * @see #getProduct()
 	 * @generated
@@ -845,37 +814,15 @@ public interface PoletPackage extends EPackage {
 	EAttribute getProduct_Volume();
 
 	/**
-	 * Returns the meta object for the reference list '{@link polet.Product#getSutibleFor <em>Sutible For</em>}'.
+	 * Returns the meta object for the reference list '{@link polet.Product#getMealTypes <em>Meal Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Sutible For</em>'.
-	 * @see polet.Product#getSutibleFor()
+	 * @return the meta object for the reference list '<em>Meal Types</em>'.
+	 * @see polet.Product#getMealTypes()
 	 * @see #getProduct()
 	 * @generated
 	 */
-	EReference getProduct_SutibleFor();
-
-	/**
-	 * Returns the meta object for the reference '{@link polet.Product#getAlcoholPerKrone <em>Alcohol Per Krone</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Alcohol Per Krone</em>'.
-	 * @see polet.Product#getAlcoholPerKrone()
-	 * @see #getProduct()
-	 * @generated
-	 */
-	EReference getProduct_AlcoholPerKrone();
-
-	/**
-	 * Returns the meta object for the reference '{@link polet.Product#getKronePerVolume <em>Krone Per Volume</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Krone Per Volume</em>'.
-	 * @see polet.Product#getKronePerVolume()
-	 * @see #getProduct()
-	 * @generated
-	 */
-	EReference getProduct_KronePerVolume();
+	EReference getProduct_MealTypes();
 
 	/**
 	 * Returns the meta object for class '{@link polet.Country <em>Country</em>}'.
@@ -964,15 +911,15 @@ public interface PoletPackage extends EPackage {
 	EReference getRegion_Country();
 
 	/**
-	 * Returns the meta object for the reference list '{@link polet.Region#getProduces <em>Produces</em>}'.
+	 * Returns the meta object for the containment reference list '{@link polet.Region#getProducts <em>Products</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Produces</em>'.
-	 * @see polet.Region#getProduces()
+	 * @return the meta object for the containment reference list '<em>Products</em>'.
+	 * @see polet.Region#getProducts()
 	 * @see #getRegion()
 	 * @generated
 	 */
-	EReference getRegion_Produces();
+	EReference getRegion_Products();
 
 	/**
 	 * Returns the meta object for class '{@link polet.ProductType <em>Product Type</em>}'.
@@ -1007,21 +954,10 @@ public interface PoletPackage extends EPackage {
 	EAttribute getProductType_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link polet.ProductType#getProducedIn <em>Produced In</em>}'.
+	 * Returns the meta object for the containment reference list '{@link polet.ProductType#getProducts <em>Products</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Produced In</em>'.
-	 * @see polet.ProductType#getProducedIn()
-	 * @see #getProductType()
-	 * @generated
-	 */
-	EReference getProductType_ProducedIn();
-
-	/**
-	 * Returns the meta object for the reference list '{@link polet.ProductType#getProducts <em>Products</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Products</em>'.
+	 * @return the meta object for the containment reference list '<em>Products</em>'.
 	 * @see polet.ProductType#getProducts()
 	 * @see #getProductType()
 	 * @generated
@@ -1029,68 +965,26 @@ public interface PoletPackage extends EPackage {
 	EReference getProductType_Products();
 
 	/**
-	 * Returns the meta object for class '{@link polet.KronePerVolume <em>Krone Per Volume</em>}'.
+	 * Returns the meta object for the reference list '{@link polet.ProductType#getProductTypeInMealType <em>Product Type In Meal Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Krone Per Volume</em>'.
-	 * @see polet.KronePerVolume
+	 * @return the meta object for the reference list '<em>Product Type In Meal Type</em>'.
+	 * @see polet.ProductType#getProductTypeInMealType()
+	 * @see #getProductType()
 	 * @generated
 	 */
-	EClass getKronePerVolume();
+	EReference getProductType_ProductTypeInMealType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link polet.KronePerVolume#getDerivedNumber <em>Derived Number</em>}'.
+	 * Returns the meta object for the reference list '{@link polet.ProductType#getProductTypeInRegion <em>Product Type In Region</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Derived Number</em>'.
-	 * @see polet.KronePerVolume#getDerivedNumber()
-	 * @see #getKronePerVolume()
+	 * @return the meta object for the reference list '<em>Product Type In Region</em>'.
+	 * @see polet.ProductType#getProductTypeInRegion()
+	 * @see #getProductType()
 	 * @generated
 	 */
-	EAttribute getKronePerVolume_DerivedNumber();
-
-	/**
-	 * Returns the meta object for the reference list '{@link polet.KronePerVolume#getProducts <em>Products</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Products</em>'.
-	 * @see polet.KronePerVolume#getProducts()
-	 * @see #getKronePerVolume()
-	 * @generated
-	 */
-	EReference getKronePerVolume_Products();
-
-	/**
-	 * Returns the meta object for class '{@link polet.KronePerAlcohol <em>Krone Per Alcohol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Krone Per Alcohol</em>'.
-	 * @see polet.KronePerAlcohol
-	 * @generated
-	 */
-	EClass getKronePerAlcohol();
-
-	/**
-	 * Returns the meta object for the attribute '{@link polet.KronePerAlcohol#getDerivedNumber <em>Derived Number</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Derived Number</em>'.
-	 * @see polet.KronePerAlcohol#getDerivedNumber()
-	 * @see #getKronePerAlcohol()
-	 * @generated
-	 */
-	EAttribute getKronePerAlcohol_DerivedNumber();
-
-	/**
-	 * Returns the meta object for the reference list '{@link polet.KronePerAlcohol#getProducts <em>Products</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Products</em>'.
-	 * @see polet.KronePerAlcohol#getProducts()
-	 * @see #getKronePerAlcohol()
-	 * @generated
-	 */
-	EReference getKronePerAlcohol_Products();
+	EReference getProductType_ProductTypeInRegion();
 
 	/**
 	 * Returns the meta object for class '{@link polet.MealType <em>Meal Type</em>}'.
@@ -1114,10 +1008,10 @@ public interface PoletPackage extends EPackage {
 	EAttribute getMealType_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link polet.MealType#getRecipies <em>Recipies</em>}'.
+	 * Returns the meta object for the containment reference list '{@link polet.MealType#getRecipies <em>Recipies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Recipies</em>'.
+	 * @return the meta object for the containment reference list '<em>Recipies</em>'.
 	 * @see polet.MealType#getRecipies()
 	 * @see #getMealType()
 	 * @generated
@@ -1125,10 +1019,10 @@ public interface PoletPackage extends EPackage {
 	EReference getMealType_Recipies();
 
 	/**
-	 * Returns the meta object for the reference list '{@link polet.MealType#getProducts <em>Products</em>}'.
+	 * Returns the meta object for the containment reference list '{@link polet.MealType#getProducts <em>Products</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Products</em>'.
+	 * @return the meta object for the containment reference list '<em>Products</em>'.
 	 * @see polet.MealType#getProducts()
 	 * @see #getMealType()
 	 * @generated
@@ -1168,10 +1062,10 @@ public interface PoletPackage extends EPackage {
 	EAttribute getRecipe_RecepieId();
 
 	/**
-	 * Returns the meta object for the reference '{@link polet.Recipe#getMealType <em>Meal Type</em>}'.
+	 * Returns the meta object for the container reference '{@link polet.Recipe#getMealType <em>Meal Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Meal Type</em>'.
+	 * @return the meta object for the container reference '<em>Meal Type</em>'.
 	 * @see polet.Recipe#getMealType()
 	 * @see #getRecipe()
 	 * @generated
@@ -1190,13 +1084,99 @@ public interface PoletPackage extends EPackage {
 	EAttribute getRecipe_Link();
 
 	/**
+	 * Returns the meta object for class '{@link polet.ProductOfTypeInMealType <em>Product Of Type In Meal Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Product Of Type In Meal Type</em>'.
+	 * @see polet.ProductOfTypeInMealType
+	 * @generated
+	 */
+	EClass getProductOfTypeInMealType();
+
+	/**
+	 * Returns the meta object for the container reference '{@link polet.ProductOfTypeInMealType#getMealType <em>Meal Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Meal Type</em>'.
+	 * @see polet.ProductOfTypeInMealType#getMealType()
+	 * @see #getProductOfTypeInMealType()
+	 * @generated
+	 */
+	EReference getProductOfTypeInMealType_MealType();
+
+	/**
+	 * Returns the meta object for the reference list '{@link polet.ProductOfTypeInMealType#getProducts <em>Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Products</em>'.
+	 * @see polet.ProductOfTypeInMealType#getProducts()
+	 * @see #getProductOfTypeInMealType()
+	 * @generated
+	 */
+	EReference getProductOfTypeInMealType_Products();
+
+	/**
+	 * Returns the meta object for the reference '{@link polet.ProductOfTypeInMealType#getProductType <em>Product Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Product Type</em>'.
+	 * @see polet.ProductOfTypeInMealType#getProductType()
+	 * @see #getProductOfTypeInMealType()
+	 * @generated
+	 */
+	EReference getProductOfTypeInMealType_ProductType();
+
+	/**
+	 * Returns the meta object for class '{@link polet.ProductOfTypeInRegion <em>Product Of Type In Region</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Product Of Type In Region</em>'.
+	 * @see polet.ProductOfTypeInRegion
+	 * @generated
+	 */
+	EClass getProductOfTypeInRegion();
+
+	/**
+	 * Returns the meta object for the reference list '{@link polet.ProductOfTypeInRegion#getProducts <em>Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Products</em>'.
+	 * @see polet.ProductOfTypeInRegion#getProducts()
+	 * @see #getProductOfTypeInRegion()
+	 * @generated
+	 */
+	EReference getProductOfTypeInRegion_Products();
+
+	/**
+	 * Returns the meta object for the reference '{@link polet.ProductOfTypeInRegion#getProductType <em>Product Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Product Type</em>'.
+	 * @see polet.ProductOfTypeInRegion#getProductType()
+	 * @see #getProductOfTypeInRegion()
+	 * @generated
+	 */
+	EReference getProductOfTypeInRegion_ProductType();
+
+	/**
+	 * Returns the meta object for the container reference '{@link polet.ProductOfTypeInRegion#getRegion <em>Region</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Region</em>'.
+	 * @see polet.ProductOfTypeInRegion#getRegion()
+	 * @see #getProductOfTypeInRegion()
+	 * @generated
+	 */
+	EReference getProductOfTypeInRegion_Region();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Meal Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Meal Types</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="enumeration='Fish Light%20meat Pork Beef Dessert Cheese Vegetables Lamb Shellfish Wild Apertif'"
+	 *        extendedMetaData="enumeration='Ost Skalldyr Storvilt Lyst%20kj\370tt Sm\345vilt%20og%20fugl Dessert,%20kake,%20frukt Svinekj\370tt Fisk Storfe Aperitiff/avec Gr\370nnsaker Lam%20og%20sau'"
 	 * @generated
 	 */
 	EDataType getMealTypes();
@@ -1235,14 +1215,6 @@ public interface PoletPackage extends EPackage {
 		EClass CATEGORIES = eINSTANCE.getCategories();
 
 		/**
-		 * The meta object literal for the '<em><b>Products</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CATEGORIES__PRODUCTS = eINSTANCE.getCategories_Products();
-
-		/**
 		 * The meta object literal for the '<em><b>Countries</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1257,30 +1229,6 @@ public interface PoletPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CATEGORIES__PRODUCT_TYPES = eINSTANCE.getCategories_ProductTypes();
-
-		/**
-		 * The meta object literal for the '<em><b>Krone Per Volumes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CATEGORIES__KRONE_PER_VOLUMES = eINSTANCE.getCategories_KronePerVolumes();
-
-		/**
-		 * The meta object literal for the '<em><b>Alcohol Per Krones</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CATEGORIES__ALCOHOL_PER_KRONES = eINSTANCE.getCategories_AlcoholPerKrones();
-
-		/**
-		 * The meta object literal for the '<em><b>Recepies</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CATEGORIES__RECEPIES = eINSTANCE.getCategories_Recepies();
 
 		/**
 		 * The meta object literal for the '<em><b>Meal Types</b></em>' containment reference list feature.
@@ -1333,6 +1281,22 @@ public interface PoletPackage extends EPackage {
 		EReference PRODUCT__REGION = eINSTANCE.getProduct_Region();
 
 		/**
+		 * The meta object literal for the '<em><b>Price Per Alcohol</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUCT__PRICE_PER_ALCOHOL = eINSTANCE.getProduct_PricePerAlcohol();
+
+		/**
+		 * The meta object literal for the '<em><b>Price Per Volume</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUCT__PRICE_PER_VOLUME = eINSTANCE.getProduct_PricePerVolume();
+
+		/**
 		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1341,7 +1305,7 @@ public interface PoletPackage extends EPackage {
 		EAttribute PRODUCT__PRICE = eINSTANCE.getProduct_Price();
 
 		/**
-		 * The meta object literal for the '<em><b>Product Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Product Type</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1357,28 +1321,12 @@ public interface PoletPackage extends EPackage {
 		EAttribute PRODUCT__VOLUME = eINSTANCE.getProduct_Volume();
 
 		/**
-		 * The meta object literal for the '<em><b>Sutible For</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Meal Types</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRODUCT__SUTIBLE_FOR = eINSTANCE.getProduct_SutibleFor();
-
-		/**
-		 * The meta object literal for the '<em><b>Alcohol Per Krone</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRODUCT__ALCOHOL_PER_KRONE = eINSTANCE.getProduct_AlcoholPerKrone();
-
-		/**
-		 * The meta object literal for the '<em><b>Krone Per Volume</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRODUCT__KRONE_PER_VOLUME = eINSTANCE.getProduct_KronePerVolume();
+		EReference PRODUCT__MEAL_TYPES = eINSTANCE.getProduct_MealTypes();
 
 		/**
 		 * The meta object literal for the '{@link polet.impl.CountryImpl <em>Country</em>}' class.
@@ -1449,12 +1397,12 @@ public interface PoletPackage extends EPackage {
 		EReference REGION__COUNTRY = eINSTANCE.getRegion_Country();
 
 		/**
-		 * The meta object literal for the '<em><b>Produces</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Products</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REGION__PRODUCES = eINSTANCE.getRegion_Produces();
+		EReference REGION__PRODUCTS = eINSTANCE.getRegion_Products();
 
 		/**
 		 * The meta object literal for the '{@link polet.impl.ProductTypeImpl <em>Product Type</em>}' class.
@@ -1483,15 +1431,7 @@ public interface PoletPackage extends EPackage {
 		EAttribute PRODUCT_TYPE__NAME = eINSTANCE.getProductType_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Produced In</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRODUCT_TYPE__PRODUCED_IN = eINSTANCE.getProductType_ProducedIn();
-
-		/**
-		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Products</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1499,56 +1439,20 @@ public interface PoletPackage extends EPackage {
 		EReference PRODUCT_TYPE__PRODUCTS = eINSTANCE.getProductType_Products();
 
 		/**
-		 * The meta object literal for the '{@link polet.impl.KronePerVolumeImpl <em>Krone Per Volume</em>}' class.
+		 * The meta object literal for the '<em><b>Product Type In Meal Type</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see polet.impl.KronePerVolumeImpl
-		 * @see polet.impl.PoletPackageImpl#getKronePerVolume()
 		 * @generated
 		 */
-		EClass KRONE_PER_VOLUME = eINSTANCE.getKronePerVolume();
+		EReference PRODUCT_TYPE__PRODUCT_TYPE_IN_MEAL_TYPE = eINSTANCE.getProductType_ProductTypeInMealType();
 
 		/**
-		 * The meta object literal for the '<em><b>Derived Number</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Product Type In Region</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute KRONE_PER_VOLUME__DERIVED_NUMBER = eINSTANCE.getKronePerVolume_DerivedNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KRONE_PER_VOLUME__PRODUCTS = eINSTANCE.getKronePerVolume_Products();
-
-		/**
-		 * The meta object literal for the '{@link polet.impl.KronePerAlcoholImpl <em>Krone Per Alcohol</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see polet.impl.KronePerAlcoholImpl
-		 * @see polet.impl.PoletPackageImpl#getKronePerAlcohol()
-		 * @generated
-		 */
-		EClass KRONE_PER_ALCOHOL = eINSTANCE.getKronePerAlcohol();
-
-		/**
-		 * The meta object literal for the '<em><b>Derived Number</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute KRONE_PER_ALCOHOL__DERIVED_NUMBER = eINSTANCE.getKronePerAlcohol_DerivedNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KRONE_PER_ALCOHOL__PRODUCTS = eINSTANCE.getKronePerAlcohol_Products();
+		EReference PRODUCT_TYPE__PRODUCT_TYPE_IN_REGION = eINSTANCE.getProductType_ProductTypeInRegion();
 
 		/**
 		 * The meta object literal for the '{@link polet.impl.MealTypeImpl <em>Meal Type</em>}' class.
@@ -1569,7 +1473,7 @@ public interface PoletPackage extends EPackage {
 		EAttribute MEAL_TYPE__NAME = eINSTANCE.getMealType_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Recipies</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Recipies</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1577,7 +1481,7 @@ public interface PoletPackage extends EPackage {
 		EReference MEAL_TYPE__RECIPIES = eINSTANCE.getMealType_Recipies();
 
 		/**
-		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Products</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1611,7 +1515,7 @@ public interface PoletPackage extends EPackage {
 		EAttribute RECIPE__RECEPIE_ID = eINSTANCE.getRecipe_RecepieId();
 
 		/**
-		 * The meta object literal for the '<em><b>Meal Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Meal Type</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1625,6 +1529,74 @@ public interface PoletPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RECIPE__LINK = eINSTANCE.getRecipe_Link();
+
+		/**
+		 * The meta object literal for the '{@link polet.impl.ProductOfTypeInMealTypeImpl <em>Product Of Type In Meal Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see polet.impl.ProductOfTypeInMealTypeImpl
+		 * @see polet.impl.PoletPackageImpl#getProductOfTypeInMealType()
+		 * @generated
+		 */
+		EClass PRODUCT_OF_TYPE_IN_MEAL_TYPE = eINSTANCE.getProductOfTypeInMealType();
+
+		/**
+		 * The meta object literal for the '<em><b>Meal Type</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT_OF_TYPE_IN_MEAL_TYPE__MEAL_TYPE = eINSTANCE.getProductOfTypeInMealType_MealType();
+
+		/**
+		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT_OF_TYPE_IN_MEAL_TYPE__PRODUCTS = eINSTANCE.getProductOfTypeInMealType_Products();
+
+		/**
+		 * The meta object literal for the '<em><b>Product Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT_OF_TYPE_IN_MEAL_TYPE__PRODUCT_TYPE = eINSTANCE.getProductOfTypeInMealType_ProductType();
+
+		/**
+		 * The meta object literal for the '{@link polet.impl.ProductOfTypeInRegionImpl <em>Product Of Type In Region</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see polet.impl.ProductOfTypeInRegionImpl
+		 * @see polet.impl.PoletPackageImpl#getProductOfTypeInRegion()
+		 * @generated
+		 */
+		EClass PRODUCT_OF_TYPE_IN_REGION = eINSTANCE.getProductOfTypeInRegion();
+
+		/**
+		 * The meta object literal for the '<em><b>Products</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT_OF_TYPE_IN_REGION__PRODUCTS = eINSTANCE.getProductOfTypeInRegion_Products();
+
+		/**
+		 * The meta object literal for the '<em><b>Product Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT_OF_TYPE_IN_REGION__PRODUCT_TYPE = eINSTANCE.getProductOfTypeInRegion_ProductType();
+
+		/**
+		 * The meta object literal for the '<em><b>Region</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRODUCT_OF_TYPE_IN_REGION__REGION = eINSTANCE.getProductOfTypeInRegion_Region();
 
 		/**
 		 * The meta object literal for the '<em>Meal Types</em>' data type.
