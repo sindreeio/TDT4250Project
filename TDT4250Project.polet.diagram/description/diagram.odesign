@@ -126,7 +126,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="MealTypeDetails" titleExpression="aql:'Details of ' + self.mealTypes" domainClass="polet::MealType" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="MealTypeDetails" titleExpression="aql:'Details of ' + self.name" domainClass="polet::MealType" enablePopupBars="true">
       <defaultLayer name="Default">
         <containerMappings name="MealTypeContainer" semanticCandidatesExpression="var:self" domainClass="polet::MealType" childrenPresentation="HorizontalStack">
           <subContainerMappings name="RecipeContainer" semanticCandidatesExpression="aql:self.recipies" domainClass="polet::Recipe" childrenPresentation="HorizontalStack">
