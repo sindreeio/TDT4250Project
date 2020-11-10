@@ -31,7 +31,7 @@ public static void main(String[] args) {
         "name": "String",
         "price": 0.0,
         "alcoholContent": 0.0,
-        "volume": 0.0
+        "volume": 0.0,
         "pricePerAlcohol": 0.0,
         "pricePerVolume": 0.0
     },
