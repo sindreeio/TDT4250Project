@@ -32,6 +32,8 @@ public static void main(String[] args) {
         "price": 0.0,
         "alcoholContent": 0.0,
         "volume": 0.0
+        "pricePerAlcohol": 0.0,
+        "pricePerVolume": 0.0
     },
     "country": {
         "countryId": "String",
@@ -45,8 +47,6 @@ public static void main(String[] args) {
         "productTypeId": "String",
         "name": "String"
     },
-    "kronePerVolume": 0.0,
-    "kronePerAlcohol": 0.0,
     "mealTypes": ["String"]
 }]
 ```
