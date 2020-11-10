@@ -1,8 +1,12 @@
 package polet.util;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -26,11 +30,12 @@ import com.google.gson.JsonObject;
 
 import polet.Categories;
 import polet.Country;
-import polet.KronePerAlcohol;
-import polet.KronePerVolume;
+import polet.MealType;
 import polet.PoletFactory;
 import polet.PoletPackage;
 import polet.Product;
+import polet.ProductOfTypeInMealType;
+import polet.ProductOfTypeInRegion;
 import polet.ProductType;
 import polet.Region;
 
@@ -38,10 +43,12 @@ import static polet.util.Constants.API_KEY;
 
 public class DataGenerator {
 	
+	private JsonArray editedData;
+	
 	public static void main(String[] args) {
 		DataGenerator dg = new DataGenerator();
-		//dg.downloadJson();
-		dg.saveXMI();
+		dg.downloadJson();
+		dg.saveAsXMI();
 	}
 	
 	
@@ -67,7 +74,7 @@ public class DataGenerator {
             if (entity != null) 
             {   
                 JsonElement element = gson.fromJson(EntityUtils.toString(entity), JsonElement.class);
-                JsonArray editedData = editedData(element.getAsJsonArray());
+                editedData = editedData(element.getAsJsonArray());
                 String jsonString = gson.toJson(editedData);
                 // Write JSON file
             	// Saves file in model folder
@@ -93,8 +100,10 @@ public class DataGenerator {
 		
 		JsonArray editedData = new JsonArray();
 		
+		//HashMap<String, String> mealtypes = new HashMap<String, String>();
+		
 		int counter = 0;
-		int limit = 10;
+		int limit = 500;
 		
 		for (JsonElement element : jArray) {
 			try {
@@ -102,22 +111,27 @@ public class DataGenerator {
 				if (obj.get("basic").getAsJsonObject().get("volume").getAsFloat() <= 0.0) {
 					continue;
 				}
-				
+					
 				float salePrice = obj.get("prices").getAsJsonArray().get(0).getAsJsonObject().get("salesPrice").getAsFloat();
 				float alcoholContent = obj.get("basic").getAsJsonObject().get("alcoholContent").getAsFloat();
-				float pricePerAlcohol = (float) Math.round((salePrice / alcoholContent) * 100) / 100;
+				float volume = obj.get("basic").getAsJsonObject().get("volume").getAsFloat();
+				float alcoholVolume = (float) (volume * alcoholContent);
+				float pricePerAlcohol = (float) Math.round((salePrice / alcoholVolume));
 				
 				JsonObject x = new JsonObject();
 				JsonObject product = new JsonObject();
 				JsonObject country = new JsonObject();
 				JsonObject region = new JsonObject();
 				JsonObject productType = new JsonObject();
+				JsonArray mealtypes = new JsonArray();
 				
 				product.addProperty("productId", obj.get("basic").getAsJsonObject().get("productId").getAsString());
 				product.addProperty("name", obj.get("basic").getAsJsonObject().get("productShortName").getAsString());
 				product.addProperty("price", salePrice);
 				product.addProperty("alcoholContent", alcoholContent);
-				product.addProperty("volume", obj.get("basic").getAsJsonObject().get("volume").getAsFloat());
+				product.addProperty("volume", volume);
+				product.addProperty("pricePerAlcohol", pricePerAlcohol);
+				product.addProperty("pricePerVolume",(float) Math.round(obj.get("prices").getAsJsonArray().get(0).getAsJsonObject().get("salesPricePrLiter").getAsFloat()));
 				
 				x.add("product", product);
 				
@@ -131,14 +145,19 @@ public class DataGenerator {
 				x.add("country", country);
 				
 				productType.addProperty("productTypeId", obj.get("classification").getAsJsonObject().get("subProductTypeId").getAsString());
-				productType.addProperty("productTypeName", obj.get("classification").getAsJsonObject().get("subProductTypeName").getAsString());
+				productType.addProperty("name", obj.get("classification").getAsJsonObject().get("subProductTypeName").getAsString());
 				
 				x.add("productType", productType);
 				
-				x.addProperty("kronePerVolume", obj.get("prices").getAsJsonArray().get(0).getAsJsonObject().get("salesPricePrLiter").getAsFloat());
-				x.addProperty("kronePerAlcohol", pricePerAlcohol);
+				for (JsonElement m : obj.get("description").getAsJsonObject().get("recommendedFood").getAsJsonArray()) {
+					String desc = m.getAsJsonObject().get("foodDesc").getAsString();
+					mealtypes.add(desc);
+				}
+				
+				x.add("mealTypes", mealtypes);
 				
 				editedData.add(x);
+				System.out.println(x.toString());
 				
 				counter += 1;
 				
@@ -150,8 +169,20 @@ public class DataGenerator {
 			}
 			
 		}
+		
+		/*
+		Iterator it = mealtypes.entrySet().iterator();
+		while (it.hasNext()) {
+	        Map.Entry pair = (Map.Entry)it.next();
+	        System.out.println("Desc: " + pair.getKey() + " = " + "Id: " + pair.getValue());
+	        it.remove(); // avoids a ConcurrentModificationException
+		}
 		// Prints out number of elements in the database
+		*/
+		
 		System.out.println(editedData.size());
+		
+		
 		return editedData;	
 	}
 	
@@ -163,8 +194,9 @@ public class DataGenerator {
 		HashMap<String, Country> countries = new HashMap<String, Country>();
 		HashMap<String, Region> regions = new HashMap<String, Region>();
 		HashMap<String, ProductType> productTypes = new HashMap<String, ProductType>();
-		HashMap<Float, KronePerAlcohol> kronePerAlcohols = new HashMap<Float, KronePerAlcohol>();
-		HashMap<Float, KronePerVolume> kronePerVolumes = new HashMap<Float, KronePerVolume>();
+		HashMap<String, MealType> mealtypes = new HashMap<String, MealType>();
+		HashMap<String, ProductOfTypeInRegion> ptrs = new HashMap<String, ProductOfTypeInRegion>();
+		HashMap<String, ProductOfTypeInMealType> ptmts = new HashMap<String, ProductOfTypeInMealType>();
 		
 		try {
 		  
@@ -174,44 +206,19 @@ public class DataGenerator {
 		   BufferedReader br = new BufferedReader(
 		     new FileReader("./model/data.json"));
 		   
-		    //convert the json string back to object
+		   //convert the json string back to object
 		   productArray = gson.fromJson(br, JsonArray.class);
 		   
 		   for (JsonElement element : productArray) {
 			   Product product = PoletFactory.eINSTANCE.createProduct();
-			   categories.getProducts().add(product);
 			   
 			   product.setProductId(element.getAsJsonObject().get("product").getAsJsonObject().get("productId").getAsString());
 			   product.setName(element.getAsJsonObject().get("product").getAsJsonObject().get("name").getAsString());
 			   product.setPrice(element.getAsJsonObject().get("product").getAsJsonObject().get("price").getAsFloat());
 			   product.setAlcoholContent(element.getAsJsonObject().get("product").getAsJsonObject().get("alcoholContent").getAsFloat());
 			   product.setVolume(element.getAsJsonObject().get("product").getAsJsonObject().get("volume").getAsFloat());
-			   
-			   
-			   KronePerAlcohol kpa;
-			   
-			   if (!kronePerAlcohols.containsKey(element.getAsJsonObject().get("kronePerAlcohol").getAsFloat())) {
-				   kpa = PoletFactory.eINSTANCE.createKronePerAlcohol();
-				   kpa.setDerivedNumber(element.getAsJsonObject().get("kronePerAlcohol").getAsFloat());
-				   kronePerAlcohols.put(kpa.getDerivedNumber(), kpa);
-				   categories.getAlcoholPerKrones().add(kpa);
-			   } else {
-				   kpa = kronePerAlcohols.get(element.getAsJsonObject().get("kronePerAlcohol").getAsFloat());
-			   }
-			   product.setAlcoholPerKrone(kpa);
-			   
-			   
-			   KronePerVolume kpv;
-			   
-			   if (!kronePerVolumes.containsKey(element.getAsJsonObject().get("kronePerVolume").getAsFloat())) {
-				   kpv = PoletFactory.eINSTANCE.createKronePerVolume();
-				   kpv.setDerivedNumber(element.getAsJsonObject().get("kronePerVolume").getAsFloat());
-				   kronePerVolumes.put(kpv.getDerivedNumber(), kpv);
-				   categories.getKronePerVolumes().add(kpv);
-			   } else {
-				   kpv = kronePerVolumes.get(element.getAsJsonObject().get("kronePerVolume").getAsFloat());
-			   }
-			   product.setKronePerVolume(kpv);
+			   product.setPricePerAlcohol(element.getAsJsonObject().get("product").getAsJsonObject().get("pricePerAlcohol").getAsFloat());
+			   product.setPricePerVolume(element.getAsJsonObject().get("product").getAsJsonObject().get("pricePerVolume").getAsFloat());
 			   
 			   Country country;
 			   
@@ -247,24 +254,56 @@ public class DataGenerator {
 				   
 			   }
 			   
-			   product.setRegion(region);
-			   
 			   ProductType pt;
 			   if (!productTypes.containsKey(element.getAsJsonObject().get("productType").getAsJsonObject().get("productTypeId").getAsString())) {
 				   pt = PoletFactory.eINSTANCE.createProductType();
 				   pt.setProductTypeId(element.getAsJsonObject().get("productType").getAsJsonObject().get("productTypeId").getAsString());
-				   pt.setName(element.getAsJsonObject().get("productType").getAsJsonObject().get("productTypeName").getAsString());
+				   pt.setName(element.getAsJsonObject().get("productType").getAsJsonObject().get("name").getAsString());
 				   productTypes.put(pt.getProductTypeId(), pt);
 				   categories.getProductTypes().add(pt);
 			   } else {
 				   pt = productTypes.get(element.getAsJsonObject().get("productType").getAsJsonObject().get("productTypeId").getAsString());
 			   }
+			   product.setProductType(pt);
 			   
-			   if (!region.getProduces().contains(pt)) {
-				   region.getProduces().add(pt);
+			   ProductOfTypeInRegion ptr;
+			   if (ptrs.containsKey(region.getRegionId() + pt.getProductTypeId())) {
+				   ptr = ptrs.get(region.getRegionId() + pt.getProductTypeId());
+			   } else {
+				   ptr = PoletFactory.eINSTANCE.createProductOfTypeInRegion();
+				   ptr.setRegion(region);
+				   ptr.setProductType(pt);
+				   ptrs.put(region.getRegionId() + pt.getProductTypeId(), ptr);
+			   }
+			   ptr.getProducts().add(product);
+			   
+			   List<MealType> mts = new ArrayList<>();
+			   
+			   for (JsonElement m : element.getAsJsonObject().get("mealTypes").getAsJsonArray()) {
+				   MealType mt;
+				   if (mealtypes.containsKey(m.getAsString())) {
+					   mt = mealtypes.get(m.getAsString());
+				   } else {
+					   mt = PoletFactory.eINSTANCE.createMealType();
+					   mt.setName(m.getAsString());
+					   mealtypes.put(mt.getName(), mt);
+					   categories.getMealTypes().add(mt);
+				   }
+				   mts.add(mt);
 			   }
 			   
-			   product.setProductType(pt);
+			   for (MealType m : mts) {
+				   ProductOfTypeInMealType ptmt;
+				   if (ptmts.containsKey(pt.getProductTypeId() + m.getName()) ) {
+					   ptmt = ptmts.get(pt.getProductTypeId() + m.getName());
+				   } else {
+					   ptmt = PoletFactory.eINSTANCE.createProductOfTypeInMealType();
+					   ptmt.setMealType(m);
+					   ptmt.setProductType(pt);
+					   ptmts.put(pt.getProductTypeId() + m.getName(), ptmt);
+				   }
+				   ptmt.getProducts().add(product);
+			   }
 			   
 			   //System.out.println(categories.getProducts().toString());
 		   }
@@ -276,13 +315,11 @@ public class DataGenerator {
 		return categories;
 	}
 
-	private void saveXMI() {
+	private void saveAsXMI() {
 		ResourceSet resSet = new ResourceSetImpl();
 		resSet.getPackageRegistry().put(PoletPackage.eNS_URI, PoletPackage.eINSTANCE);
 		resSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
 		Resource resource = resSet.createResource(URI.createFileURI("./model/categories.xmi"));
-		
-		
 		
 		resource.getContents().add(jsonToXMI());
 		try {
