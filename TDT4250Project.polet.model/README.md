@@ -1,25 +1,25 @@
-# TDT4250 Project
+# TDT4250 Project - Model
 
-![](https://img.shields.io/badge/Editor-Eclipse-informational?style=flat&logo=eclipse-ide&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Code-Json-informational?style=flat&logo=json&logoColor=white&color=2bbc8a)
-
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
-
-### Java exmaple:
-`Press here` for someething.
-
-Java:
+### Data generator:
+The `DataGenerator` class can download, edit and store data from the API that Vinmonopolet provides.  
+Location of the file is under:
+`/src/util/DataGenerator.java`.  
+To initialize an object of type `DataGenerator`, simply write:
 ```java
-public static void main(String[] args) {
-    Data d = new Data;
-    d.someFunction();
-    System.out.println("Github");
-}
+DataGenerator dg = new DataGenerator(); // Where "dg" is the variable name
+```
+Several methods ar available. The most usefull ones are:
+```java
+dg.downloadJson();          // Downloads, edits and saves the data as data.json in ~/model.
+
+dg.saveAsXMI(int limit);    // Creates EObjects and saves them as an XMI file with the structure from the Ecore model.
+                            // Has a limit so you don't need to loop through the entire data set.
+```
+To use the `downloadJson()` function, you would need an API key. You can subscribe for one [here](https://api.vinmonopolet.no/).
+Type in your API key as a string in the `Constants` class at:
+`/src/util/Constants.java`.  
+```java
+public static final String API_KEY = "";
 ```
 
 ### JSON data structure
@@ -50,120 +50,52 @@ public static void main(String[] args) {
     "mealTypes": ["String"]
 }]
 ```
+
 ### Example for folder structure
 
 ```bash
-.
-├── TDT4250Project.polet.diagram
-│   ├── META-INF
-│   │   └── MANIFEST.MF
-│   ├── bin
-│   │   └── TDT4250Project
-│   │       └── polet
-│   │           └── diagram
-│   │               ├── Activator.class
-│   │               └── Services.class
-│   ├── build.properties
-│   ├── description
-│   │   └── diagram.odesign
-│   ├── plugin.properties
-│   ├── plugin.xml
-│   └── src
-│       └── TDT4250Project
-│           └── polet
-│               └── diagram
-│                   ├── Activator.java
-│                   └── Services.java
-├── TDT4250Project.polet.diagram.example
-│   ├── Categories.xmi
-│   └── representations.aird
-└── TDT4250Project.polet.model
-    ├── META-INF
-    │   └── MANIFEST.MF
-    ├── bin
-    │   └── polet
-    │       ├── Categories.class
-    │       ├── Country.class
-    │       ├── KronePerAlcohol.class
-    │       ├── KronePerVolume.class
-    │       ├── MealType.class
-    │       ├── PoletFactory.class
-    │       ├── PoletPackage$Literals.class
-    │       ├── PoletPackage.class
-    │       ├── Product.class
-    │       ├── ProductType.class
-    │       ├── Recipe.class
-    │       ├── Region.class
-    │       ├── impl
-    │       │   ├── CategoriesImpl.class
-    │       │   ├── CountryImpl.class
-    │       │   ├── KronePerAlcoholImpl.class
-    │       │   ├── KronePerVolumeImpl.class
-    │       │   ├── MealTypeImpl.class
-    │       │   ├── PoletFactoryImpl.class
-    │       │   ├── PoletPackageImpl$1.class
-    │       │   ├── PoletPackageImpl.class
-    │       │   ├── ProductImpl.class
-    │       │   ├── ProductTypeImpl.class
-    │       │   ├── RecipeImpl.class
-    │       │   └── RegionImpl.class
-    │       └── util
-    │           ├── Constants.class
-    │           ├── DataGenerator.class
-    │           ├── PoletAdapterFactory$1.class
-    │           ├── PoletAdapterFactory.class
-    │           ├── PoletResourceFactoryImpl.class
-    │           ├── PoletResourceImpl.class
-    │           ├── PoletSwitch.class
-    │           └── PoletValidator.class
-    ├── build.properties
-    ├── model
-    │   ├── Categories.xmi
-    │   ├── data.json
-    │   ├── polet.ecore
-    │   └── polet.genmodel
-    ├── plugin.properties
-    ├── plugin.xml
-    └── src
-        └── polet
-            ├── Categories.java
-            ├── Country.java
-            ├── KronePerAlcohol.java
-            ├── KronePerVolume.java
-            ├── MealType.java
-            ├── PoletFactory.java
-            ├── PoletPackage.java
-            ├── Product.java
-            ├── ProductType.java
-            ├── Recipe.java
-            ├── Region.java
-            ├── impl
-            │   ├── CategoriesImpl.java
-            │   ├── CountryImpl.java
-            │   ├── KronePerAlcoholImpl.java
-            │   ├── KronePerVolumeImpl.java
-            │   ├── MealTypeImpl.java
-            │   ├── PoletFactoryImpl.java
-            │   ├── PoletPackageImpl.java
-            │   ├── ProductImpl.java
-            │   ├── ProductTypeImpl.java
-            │   ├── RecipeImpl.java
-            │   └── RegionImpl.java
-            └── util
-                ├── Constants.java
-                ├── DataGenerator.java
-                ├── PoletAdapterFactory.java
-                ├── PoletResourceFactoryImpl.java
-                ├── PoletResourceImpl.java
-                ├── PoletSwitch.java
-                └── PoletValidator.java
+├── README.md
+├── META-INF
+│   └── MANIFEST.MF
+├── README.md
+├── build.properties
+├── model
+│   ├── polet.ecore
+│   └── polet.genmodel
+├── plugin.properties
+├── plugin.xml
+└── src
+    └── polet
+        ├── Categories.java
+        ├── Country.java
+        ├── MealType.java
+        ├── PoletFactory.java
+        ├── PoletPackage.java
+        ├── Product.java
+        ├── ProductOfTypeInMealType.java
+        ├── ProductOfTypeInRegion.java
+        ├── ProductType.java
+        ├── Recipe.java
+        ├── Region.java
+        ├── impl
+        │   ├── CategoriesImpl.java
+        │   ├── CountryImpl.java
+        │   ├── MealTypeImpl.java
+        │   ├── PoletFactoryImpl.java
+        │   ├── PoletPackageImpl.java
+        │   ├── ProductImpl.java
+        │   ├── ProductOfTypeInMealTypeImpl.java
+        │   ├── ProductOfTypeInRegionImpl.java
+        │   ├── ProductTypeImpl.java
+        │   ├── RecipeImpl.java
+        │   └── RegionImpl.java
+        └── util
+            ├── Constants.java
+            ├── DataGenerator.java
+            ├── PoletAdapterFactory.java
+            ├── PoletResourceFactoryImpl.java
+            ├── PoletResourceImpl.java
+            ├── PoletSwitch.java
+            └── PoletValidator.java
 ```
-### Libraries
-Java
 
-Eclise.EMF  
-Apache.HTTP  
-Google.GSON   
-
-### LICENSE
-MIT
