@@ -1,6 +1,6 @@
 # TDT4250 Project - Model
 
-### Data generator:
+### Data Generator:
 The `DataGenerator` class can download, edit and store data from the API that Vinmonopolet provides.  
 Location of the file is under:
 `/src/util/DataGenerator.java`.  
