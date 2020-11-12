@@ -4,6 +4,7 @@
 [![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a)](https://www.java.com/en/)
 [![](https://img.shields.io/badge/Code-Json-informational?style=flat&logo=json&logoColor=white&color=2bbc8a)](https://www.json.org/json-en.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![](https://img.shields.io/maintenance/no/2020)
 
 ## Table of Contents
 * [About the Project](#about-the-project)
@@ -14,7 +15,7 @@
   * [Installation](#installation)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
-* [Contributing](#contributing)
+* [Contributors](#contributors)
 * [License](#license)
 
 ## About The Project
@@ -46,6 +47,13 @@ git clone https://github.com/sindreeio/TDT4250Project.git
 cd TDT4250Project
 ```
 Add Plugins...
+
+## Usage
+
+## Roadmap
+School project,
+
+## Contributors
 
 ### Example for folder structure
 
