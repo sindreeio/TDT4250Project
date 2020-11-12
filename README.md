@@ -36,7 +36,7 @@ See each bundle directories for more specific instructions.
 ### Prerequisites
 TODO: Eclipse?
 Install guide for plugins if needed in eclipse.
-Extra guide if they are missing.
+Extra guide if they are missing.  
 ```Project-folder -> META-INF -> MANIFEST.MF```
 
 ### Installation
