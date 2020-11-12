@@ -158,6 +158,12 @@ public static void main(String[] args) {
                 ├── PoletSwitch.java
                 └── PoletValidator.java
 ```
+### Libraries
+Java
+
+Eclise.EMF
+Apache.HTTP
+Google.GSON
 
 ### LICENSE
 MIT
