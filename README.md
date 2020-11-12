@@ -54,15 +54,11 @@ public static void main(String[] args) {
 
 ```bash
 .
+├── README.md
 ├── TDT4250Project.polet.diagram
 │   ├── META-INF
 │   │   └── MANIFEST.MF
-│   ├── bin
-│   │   └── TDT4250Project
-│   │       └── polet
-│   │           └── diagram
-│   │               ├── Activator.class
-│   │               └── Services.class
+│   ├── README.md
 │   ├── build.properties
 │   ├── description
 │   │   └── diagram.odesign
@@ -76,50 +72,14 @@ public static void main(String[] args) {
 │                   └── Services.java
 ├── TDT4250Project.polet.diagram.example
 │   ├── Categories.xmi
+│   ├── README.md
 │   └── representations.aird
 └── TDT4250Project.polet.model
     ├── META-INF
     │   └── MANIFEST.MF
-    ├── bin
-    │   └── polet
-    │       ├── Categories.class
-    │       ├── Country.class
-    │       ├── KronePerAlcohol.class
-    │       ├── KronePerVolume.class
-    │       ├── MealType.class
-    │       ├── PoletFactory.class
-    │       ├── PoletPackage$Literals.class
-    │       ├── PoletPackage.class
-    │       ├── Product.class
-    │       ├── ProductType.class
-    │       ├── Recipe.class
-    │       ├── Region.class
-    │       ├── impl
-    │       │   ├── CategoriesImpl.class
-    │       │   ├── CountryImpl.class
-    │       │   ├── KronePerAlcoholImpl.class
-    │       │   ├── KronePerVolumeImpl.class
-    │       │   ├── MealTypeImpl.class
-    │       │   ├── PoletFactoryImpl.class
-    │       │   ├── PoletPackageImpl$1.class
-    │       │   ├── PoletPackageImpl.class
-    │       │   ├── ProductImpl.class
-    │       │   ├── ProductTypeImpl.class
-    │       │   ├── RecipeImpl.class
-    │       │   └── RegionImpl.class
-    │       └── util
-    │           ├── Constants.class
-    │           ├── DataGenerator.class
-    │           ├── PoletAdapterFactory$1.class
-    │           ├── PoletAdapterFactory.class
-    │           ├── PoletResourceFactoryImpl.class
-    │           ├── PoletResourceImpl.class
-    │           ├── PoletSwitch.class
-    │           └── PoletValidator.class
+    ├── README.md
     ├── build.properties
     ├── model
-    │   ├── Categories.xmi
-    │   ├── data.json
     │   ├── polet.ecore
     │   └── polet.genmodel
     ├── plugin.properties
@@ -128,24 +88,24 @@ public static void main(String[] args) {
         └── polet
             ├── Categories.java
             ├── Country.java
-            ├── KronePerAlcohol.java
-            ├── KronePerVolume.java
             ├── MealType.java
             ├── PoletFactory.java
             ├── PoletPackage.java
             ├── Product.java
+            ├── ProductOfTypeInMealType.java
+            ├── ProductOfTypeInRegion.java
             ├── ProductType.java
             ├── Recipe.java
             ├── Region.java
             ├── impl
             │   ├── CategoriesImpl.java
             │   ├── CountryImpl.java
-            │   ├── KronePerAlcoholImpl.java
-            │   ├── KronePerVolumeImpl.java
             │   ├── MealTypeImpl.java
             │   ├── PoletFactoryImpl.java
             │   ├── PoletPackageImpl.java
             │   ├── ProductImpl.java
+            │   ├── ProductOfTypeInMealTypeImpl.java
+            │   ├── ProductOfTypeInRegionImpl.java
             │   ├── ProductTypeImpl.java
             │   ├── RecipeImpl.java
             │   └── RegionImpl.java
