@@ -20,14 +20,26 @@
 ## About The Project
 
 ### Built With
-
+TODO: Build with Eclipse?
 #### Libraries
-* [Eclise EMF](https://www.eclipse.org/modeling/emf/)  
+* [Eclipse EMF](https://www.eclipse.org/modeling/emf/)  
+* [Sirius](https://www.eclipse.org/sirius/)  
+* [Acceleo](https://www.eclipse.org/acceleo/)  
 * [Apache HTTP Client](http://hc.apache.org/httpcomponents-client-4.5.x/index.html)  
 * [Google GSON](https://github.com/google/gson)   
 
 ## Getting Started
+TODO: An overal description.
+To download the project follow these instructions:
+```sh
+cd /to-your-desired-directory
+git clone https://github.com/sindreeio/TDT4250Project.git
+cd TDT4250Project
+```
+Add Plugins
+See each bundle directories for more specific instructions.
 ### Prerequisities
+TODO: Eclipse?
 ### Installation
 ## Usage
 ### Java exmaple:
@@ -44,7 +56,7 @@ public static void main(String[] args) {
 
 ### Example for folder structure
 
-```bash
+```sh
 .
 ├── README.md
 ├── TDT4250Project.polet.diagram
