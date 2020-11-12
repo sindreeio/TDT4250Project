@@ -31,7 +31,9 @@ public static void main(String[] args) {
         "name": "String",
         "price": 0.0,
         "alcoholContent": 0.0,
-        "volume": 0.0
+        "volume": 0.0,
+        "pricePerAlcohol": 0.0,
+        "pricePerVolume": 0.0
     },
     "country": {
         "countryId": "String",
@@ -45,8 +47,6 @@ public static void main(String[] args) {
         "productTypeId": "String",
         "name": "String"
     },
-    "kronePerVolume": 0.0,
-    "kronePerAlcohol": 0.0,
     "mealTypes": ["String"]
 }]
 ```
@@ -158,6 +158,12 @@ public static void main(String[] args) {
                 ├── PoletSwitch.java
                 └── PoletValidator.java
 ```
+### Libraries
+Java
+
+Eclise.EMF  
+Apache.HTTP  
+Google.GSON   
 
 ### LICENSE
 MIT
