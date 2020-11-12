@@ -3,6 +3,7 @@
 ![](https://img.shields.io/badge/Editor-Eclipse-informational?style=flat&logo=eclipse-ide&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=java&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Code-Json-informational?style=flat&logo=json&logoColor=white&color=2bbc8a)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Table of Contents**
 
@@ -22,34 +23,6 @@ public static void main(String[] args) {
 }
 ```
 
-### JSON data structure
-
-```json
-[{
-    "product": {
-        "productId": "String",
-        "name": "String",
-        "price": 0.0,
-        "alcoholContent": 0.0,
-        "volume": 0.0,
-        "pricePerAlcohol": 0.0,
-        "pricePerVolume": 0.0
-    },
-    "country": {
-        "countryId": "String",
-        "name": "String",
-        "region": {
-            "regionId": "String",
-            "name": "String"
-        }
-    },
-    "productType": {
-        "productTypeId": "String",
-        "name": "String"
-    },
-    "mealTypes": ["String"]
-}]
-```
 ### Example for folder structure
 
 ```bash
@@ -118,12 +91,15 @@ public static void main(String[] args) {
                 ├── PoletSwitch.java
                 └── PoletValidator.java
 ```
+
+### Technologies
+
 ### Libraries
 Java
 
-Eclise.EMF  
-Apache.HTTP  
-Google.GSON   
+[Eclise.EMF] (https://www.eclipse.org/modeling/emf/)  
+[Apache.HTTP] (http://hc.apache.org/httpcomponents-client-4.5.x/index.html)  
+[Google.GSON] (https://github.com/google/gson)   
 
 ### LICENSE
 MIT
