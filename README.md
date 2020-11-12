@@ -29,18 +29,24 @@ TODO: Build with Eclipse?
 * [Google GSON](https://github.com/google/gson)   
 
 ## Getting Started
-TODO: An overal description.
+TODO: An overall description.
+See each bundle directories for more specific instructions.
+
+### Prerequisities
+TODO: Eclipse?
+Install guide for plugins if needed in eclipse.
+Extra guide if they are missing.
+```Project-folder -> META-INF -> MANIFEST.MF```
+
+### Installation
 To download the project follow these instructions:
 ```sh
 cd /to-your-desired-directory
 git clone https://github.com/sindreeio/TDT4250Project.git
 cd TDT4250Project
 ```
-Add Plugins
-See each bundle directories for more specific instructions.
-### Prerequisities
-TODO: Eclipse?
-### Installation
+Add Plugins...
+
 ## Usage
 ### Java exmaple:
 `Press here` for someething.
