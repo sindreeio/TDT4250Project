@@ -33,7 +33,7 @@ TODO: Build with Eclipse?
 TODO: An overall description.
 See each bundle directories for more specific instructions.
 
-### Prerequisities
+### Prerequisites
 TODO: Eclipse?
 Install guide for plugins if needed in eclipse.
 Extra guide if they are missing.
