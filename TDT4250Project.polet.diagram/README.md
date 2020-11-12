@@ -1,6 +1,5 @@
 # TDT4250 Project - Diagram
 
-```
 ### Example for folder structure
 
 ```bash
@@ -25,4 +24,4 @@
             └── diagram
                 ├── Activator.java
                 └── Services.java
-
+```
