@@ -47,19 +47,6 @@ cd TDT4250Project
 ```
 Add Plugins...
 
-## Usage
-### Java exmaple:
-`Press here` for someething.
-
-Java:
-```java
-public static void main(String[] args) {
-    Data d = new Data;
-    d.someFunction();
-    System.out.println("Github");
-}
-```
-
 ### Example for folder structure
 
 ```sh
@@ -129,12 +116,6 @@ public static void main(String[] args) {
                 └── PoletValidator.java
 ```
 
-### Technologies
-
-### Libraries
-Java
-
-
-
 ### LICENSE
-MIT
+Distributed under the [MIT](https://opensource.org/licenses/MIT) License.
+Tearms of service API?
