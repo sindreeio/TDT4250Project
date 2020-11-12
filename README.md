@@ -15,13 +15,17 @@
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
-* [Contributors](#contributors)
 
 [TOCM]
 
 [TOC]
 
 ## About The Project
+### Built With
+## Getting Started
+### Prerequisities
+### Installation
+## Usage
 ### Java exmaple:
 `Press here` for someething.
 
