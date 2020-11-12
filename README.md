@@ -161,9 +161,9 @@ public static void main(String[] args) {
 ### Libraries
 Java
 
-Eclise.EMF
-Apache.HTTP
-Google.GSON
+Eclise.EMF  
+Apache.HTTP  
+Google.GSON   
 
 ### LICENSE
 MIT
