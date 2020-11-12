@@ -8,6 +8,7 @@
 ## Table of Contents
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+    * [Libraries](#libraries)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -16,12 +17,15 @@
 * [Contributing](#contributing)
 * [License](#license)
 
-[TOCM]
-
-[TOC]
-
 ## About The Project
+
 ### Built With
+
+#### Libraries
+* [Eclise EMF](https://www.eclipse.org/modeling/emf/)  
+* [Apache HTTP Client](http://hc.apache.org/httpcomponents-client-4.5.x/index.html)  
+* [Google GSON](https://github.com/google/gson)   
+
 ## Getting Started
 ### Prerequisities
 ### Installation
@@ -112,9 +116,7 @@ public static void main(String[] args) {
 ### Libraries
 Java
 
-[Eclise.EMF](https://www.eclipse.org/modeling/emf/)  
-[Apache.HTTP](http://hc.apache.org/httpcomponents-client-4.5.x/index.html)  
-[Google.GSON](https://github.com/google/gson)   
+
 
 ### LICENSE
 MIT
