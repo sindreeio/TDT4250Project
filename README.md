@@ -97,9 +97,9 @@ public static void main(String[] args) {
 ### Libraries
 Java
 
-[Eclise.EMF] (https://www.eclipse.org/modeling/emf/)  
-[Apache.HTTP] (http://hc.apache.org/httpcomponents-client-4.5.x/index.html)  
-[Google.GSON] (https://github.com/google/gson)   
+[Eclise.EMF](https://www.eclipse.org/modeling/emf/)  
+[Apache.HTTP](http://hc.apache.org/httpcomponents-client-4.5.x/index.html)  
+[Google.GSON](https://github.com/google/gson)   
 
 ### LICENSE
 MIT
