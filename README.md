@@ -62,7 +62,9 @@ For detailed description on how to use each bundle, check each bundles git direc
 We have no further plans for this school project. Until there are changes to our roadmap, this project will have no maintenance of the code as of 1. December 2020.
 
 ## Contributors
-
+[<img src="https://github.com/sindreeio.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/sindreeio)
+[<img src="https://github.com/Magwest1.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/Magwest1)
+[<img src="https://github.com/aspleym.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/aspleym)
 
 ### Example for folder structure
 
