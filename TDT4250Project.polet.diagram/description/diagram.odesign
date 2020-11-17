@@ -122,7 +122,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="DistributionOfProductionInCountries" titleExpression="aql:'Distribution of production in countries'" domainClass="polet::Categories" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="DistributionOfProductionInCountries" titleExpression="aql:'Distribution of production in countries'" domainClass="polet::Categories" enablePopupBars="true">
       <defaultLayer name="Default">
         <containerMappings name="Diagram" semanticCandidatesExpression="var:self" domainClass="polet::Categories" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Country" semanticCandidatesExpression="aql:self.countries" domainClass="polet::Country" childrenPresentation="HorizontalStack">
@@ -337,13 +337,13 @@
       <defaultLayer name="Default">
         <containerMappings name="productTypeContainer" semanticCandidatesExpression="var:self" domainClass="polet::ProductType" childrenPresentation="List">
           <subNodeMappings name="productNode" semanticCandidatesExpression="aql:self.products -> sortedBy(x | x.pricePerAlcohol)" domainClass="polet::Product">
-            <style xsi:type="style:BundledImageDescription" labelSize="12" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/product.png" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/productType.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
