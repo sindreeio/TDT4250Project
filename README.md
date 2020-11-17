@@ -15,6 +15,7 @@
   * [Installation](#installation)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
+* [File Structure](#file-structure)
 * [Contributors](#contributors)
 * [License](#license)
 
@@ -61,14 +62,8 @@ For a detailed description on how to use each bundle, check the bundles git dire
 ## Roadmap
 We have no further plans for this school project. Until there are changes to our roadmap, this project will have no maintenance of the code as of 1. December 2020.
 
-## Contributors
-[<img src="https://github.com/sindreeio.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/sindreeio)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="https://github.com/Magwest1.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/Magwest1)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<img src="https://github.com/aspleym.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/aspleym)
-
-### Example for folder structure
+## File structure
+This is a view of the file structure for this repository.
 
 ```sh
 .
@@ -137,6 +132,13 @@ We have no further plans for this school project. Until there are changes to our
                 └── PoletValidator.java
 ```
 
+## Contributors
+[<img src="https://github.com/sindreeio.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/sindreeio)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<img src="https://github.com/Magwest1.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/Magwest1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<img src="https://github.com/aspleym.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/aspleym)
+
 ### LICENSE
 Distributed under the [MIT](https://opensource.org/licenses/MIT) License.
-To use Vinmonopolet's API, you would need to read their [Terms of service](https://apimgmtstxpwulwcbypzj5uz.blob.core.windows.net/content/MediaLibrary/Terms/API%20Vinmonopolet%20-%20Terms%20of%20service.pdf).
+To use Vinmonopolet's API, you would need to read and accept their [Terms of service](https://apimgmtstxpwulwcbypzj5uz.blob.core.windows.net/content/MediaLibrary/Terms/API%20Vinmonopolet%20-%20Terms%20of%20service.pdf).
