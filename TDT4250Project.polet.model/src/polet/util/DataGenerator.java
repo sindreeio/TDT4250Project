@@ -46,7 +46,7 @@ public class DataGenerator {
 	public static void main(String[] args) {
 		DataGenerator dg = new DataGenerator();
 		//dg.downloadJson(); // If you uncomment this line, the generator will download the data from the server.
-		dg.saveAsXMI(); // This runs a function that will read a JSON file and create an XMI file.
+		dg.saveAsXMI(500); // This runs a function that will read a JSON file and create an XMI file.
 	}
 	
 	// This method will download the json file.
@@ -174,7 +174,8 @@ public class DataGenerator {
 	
 	// The purpose of this method is to create an instance
 	// of our root object and objects from the data in the Json file.
-	private EObject jsonToXMI() {
+	// Limit <= 0 is the same as infinite.
+	private EObject jsonToXMI(int limit) {
 		Gson gson = new Gson();
 		JsonArray productArray;
 		
@@ -193,7 +194,6 @@ public class DataGenerator {
 		
 		try {
 		   int counter = 0;
-		   int limit = 500; // Here you can change how many products you want to generate for the XMI file.
 		  
 		   System.out.println("Reading JSON from file..");
 		   System.out.println("-------------------------");
@@ -329,7 +329,7 @@ public class DataGenerator {
 	}
 
 	// This function stores a file as an XMI type
-	private void saveAsXMI() {
+	private void saveAsXMI(int limit) {
 		// This uses the package information for our model
 		ResourceSet resSet = new ResourceSetImpl();
 		resSet.getPackageRegistry().put(PoletPackage.eNS_URI, PoletPackage.eINSTANCE);
@@ -338,7 +338,7 @@ public class DataGenerator {
 		Resource resource = resSet.createResource(URI.createFileURI("./model/categories.xmi"));
 		
 		// Reads the Json file an creates an EObject
-		resource.getContents().add(jsonToXMI());
+		resource.getContents().add(jsonToXMI(limit));
 		try {
 			System.out.println("Generating the XMI file...");
 			resource.save(Collections.EMPTY_MAP);
