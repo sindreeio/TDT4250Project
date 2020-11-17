@@ -333,17 +333,17 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="productTypeDiagram" domainClass="polet::ProductType" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="productTypeDiagram" titleExpression="aql: 'Get best priced ' + self.name" domainClass="polet::ProductType" enablePopupBars="true">
       <defaultLayer name="Default">
         <containerMappings name="productTypeContainer" semanticCandidatesExpression="var:self" domainClass="polet::ProductType" childrenPresentation="List">
           <subNodeMappings name="productNode" semanticCandidatesExpression="aql:self.products -> sortedBy(x | x.pricePerAlcohol)" domainClass="polet::Product">
-            <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/product.png" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql: self.name + '\n Price: ' + self.price" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/product.png" labelAlignment="LEFT" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/productType.png">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql: self.name + '\n (Sorted by most alcohol per krone)'" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/productType.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
