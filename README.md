@@ -139,6 +139,6 @@ This is a view of the file structure for this repository.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="https://github.com/aspleym.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/aspleym)
 
-### LICENSE
+## LICENSE
 Distributed under the [MIT](https://opensource.org/licenses/MIT) License.
 To use Vinmonopolet's API, you would need to read and accept their [Terms of service](https://apimgmtstxpwulwcbypzj5uz.blob.core.windows.net/content/MediaLibrary/Terms/API%20Vinmonopolet%20-%20Terms%20of%20service.pdf).
