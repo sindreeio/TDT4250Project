@@ -1,8 +1,8 @@
 # TDT4250 Project - Diagram
 
-### Example for folder structure
+### File structure
 
-```bash
+```sh
 .
 ├── README.md
 ├── META-INF
