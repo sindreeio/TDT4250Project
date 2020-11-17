@@ -63,7 +63,9 @@ We have no further plans for this school project. Until there are changes to our
 
 ## Contributors
 [<img src="https://github.com/sindreeio.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/sindreeio)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="https://github.com/Magwest1.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/Magwest1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="https://github.com/aspleym.png?size=50" alt="" data-canonical-src="" width="50" height="50" />](https://github.com/aspleym)
 
 ### Example for folder structure
