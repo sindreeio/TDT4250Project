@@ -1,8 +1,8 @@
 # TDT4250 Project - Diagram example
 
-### Example for folder structure
+### File structure
 
-```bash
+```sh
 .
 ├── README.md
 ├── Categories.xmi
