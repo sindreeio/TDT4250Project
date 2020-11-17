@@ -39,9 +39,8 @@ TODO: An overall description.
 See each bundle directories for more specific instructions.
 
 ### Prerequisites
-TODO: Eclipse?
-To install this project you would need to install the [Eclipse IDE](https://www.eclipse.org/).
-Install guide for plugins if needed in eclipse.
+To install this project you would need to install the [Eclipse IDE](https://www.eclipse.org/).  
+TODO: Install guide for plugins if needed in eclipse.
 Extra guide if they are missing.  
 ```Project-folder -> META-INF -> MANIFEST.MF```
 
@@ -55,11 +54,15 @@ cd TDT4250Project
 Add Plugins...
 
 ## Usage
+TODO: General usage
+
+For detailed description on how to use each bundle, check each bundles git directory.
 
 ## Roadmap
 We have no further plans for this school project. Until there are changes to our roadmap, this project will have no maintenance of the code as of 1. December 2020.
 
 ## Contributors
+[![](https://github.com/aspleym.png?size=50)]
 
 ### Example for folder structure
 
