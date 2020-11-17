@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="diagram" version="12.0.0.2017041100">
   <ownedViewpoints name="PoletDiagramViewport" modelFileExtension="xmi">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="PoletDiagram" domainClass="polet::Categories" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="EditDiagram" domainClass="polet::Categories" preconditionExpression="var:self" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="ProductNode" domainClass="polet::Product">
-          <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" shape="triangle">
+        <nodeMappings name="ProductNode" semanticCandidatesExpression="aql:self.productTypes.products -> subSequence(1,10)" domainClass="polet::Product">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/product.png" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW" shape="triangle">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="RecepieNode" domainClass="polet::Recepie">
-          <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+        <nodeMappings name="RecepieNode" domainClass="polet::Recipe">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/recipe.png" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="mealTypeNode" domainClass="polet::MealType">
-          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="feature:mealTypes" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/mealTypeSmall.png" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="productToRegion" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']/@subNodeMappings[name='RegionNode']" targetFinderExpression="feature:region">
+        <nodeMappings name="productTypeNode" domainClass="polet::ProductType">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/productType.png" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="regionInProductRelation" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']/@subNodeMappings[name='RegionNode']" targetFinderExpression="feature:region">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -32,7 +39,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="recepieToMealTypeEdge" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='RecepieNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='mealTypeNode']" targetFinderExpression="feature:mealType">
+        <edgeMappings name="RegionInProduct" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']/@subNodeMappings[name='RegionNode']" targetFinderExpression="feature:region" sourceFinderExpression="feature:products" domainClass="polet::ProductOfTypeInRegion" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -40,7 +47,23 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="sutibleFor" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='mealTypeNode']" targetFinderExpression="feature:sutibleFor">
+        <edgeMappings name="recipeInMealType" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@nodeMappings[name='mealTypeNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@nodeMappings[name='RecepieNode']" targetFinderExpression="feature:recipies">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="sutibleFor" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@nodeMappings[name='mealTypeNode']" targetFinderExpression="feature:mealType" sourceFinderExpression="feature:products" domainClass="polet::ProductOfTypeInMealType" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="productInProductTypeEdge" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@nodeMappings[name='productTypeNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetFinderExpression="feature:products">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -50,13 +73,13 @@
         </edgeMappings>
         <containerMappings name="CountryContainer" domainClass="polet::Country">
           <subNodeMappings name="RegionNode" semanticCandidatesExpression="feature:eAllContents" domainClass="polet::Region">
-            <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" shape="dot">
+            <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/region.png" sizeComputationExpression="7" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/country.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -64,99 +87,264 @@
           </style>
         </containerMappings>
         <toolSections>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createRecepie" nodeMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='RecepieNode']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="polet::Recepie" referenceName="recepies"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createProduct" label="product" nodeMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="polet::Product" referenceName="Products"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="setRegion" edgeMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='productToRegion']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="setMealTypeForRecepie" label="Set meal type for recipe" edgeMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@edgeMappings[name='recipeInMealType']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="region" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="recipies" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="setMealTypeForRecepie" edgeMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='recepieToMealTypeEdge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="setMealTypeSutibleForProduct" label="Set sutible meal type for product" edgeMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@edgeMappings[name='sutibleFor']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="mealType" valueExpression="var:target"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="polet::ProductOfTypeInMealType" referenceName="products">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="products" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="productType" valueExpression="aql:source.productType"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="setMealTypeSutibleForProduct" edgeMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@edgeMappings[name='sutibleFor']">
-            <sourceVariable name="source"/>
-            <targetVariable name="target"/>
-            <sourceViewVariable name="sourceView"/>
-            <targetViewVariable name="targetView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="sutibleFor" valueExpression="var:target"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createCountryNode" containerMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='PoletDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createCountryNode" label="Create country" containerMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='EditDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="polet::Country" referenceName="countries"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation/>
-          </ownedTools>
         </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="DistributionOfProductionInCountries" titleExpression="aql:'Distribution of production in countries'" domainClass="polet::Categories" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings name="Diagram" semanticCandidatesExpression="var:self" domainClass="polet::Categories" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="Country" semanticCandidatesExpression="aql:self.countries" domainClass="polet::Country" childrenPresentation="HorizontalStack">
+            <subContainerMappings name="Region" semanticCandidatesExpression="aql:self.regions" domainClass="polet::Region" childrenPresentation="VerticalStack">
+              <subContainerMappings name="Distribution" semanticCandidatesExpression="aql:self.products" domainClass="polet::ProductOfTypeInRegion">
+                <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql: self.productType.name + ' from this region '  + '\n accounts for ' + (self.products -> size() * 100 / self.region.country.regions.products.products -> size()) + '% ' + 'of \n products from ' + self.region.country.name" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/productType.png" labelAlignment="LEFT">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                  <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </subContainerMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql: 'Region ' + self.name" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/region.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/country.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="MealTypeDetails" titleExpression="aql:'Details of ' + self.name" domainClass="polet::MealType" enablePopupBars="true">
       <defaultLayer name="Default">
         <containerMappings name="MealTypeContainer" semanticCandidatesExpression="var:self" domainClass="polet::MealType" childrenPresentation="HorizontalStack">
-          <subContainerMappings name="RecipeContainer" semanticCandidatesExpression="aql:self.recipies" domainClass="polet::Recipe" childrenPresentation="HorizontalStack">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name + '\n' + self.link">
+          <subContainerMappings name="RecipeContainer" semanticCandidatesExpression="aql:self.recipies" domainClass="polet::Recipe">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name + '\n' + self.link" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/Recipe.gif">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
           <subContainerMappings name="ProductTypeContainer" semanticCandidatesExpression="aql:self.products" domainClass="polet::ProductOfTypeInMealType" childrenPresentation="VerticalStack">
-            <subContainerMappings name="PorductContainer" semanticCandidatesExpression="aql:self.products" domainClass="polet::Product">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name">
+            <subContainerMappings name="PorductContainer" semanticCandidatesExpression="aql:self.products -> sortedBy(x | x.price)" domainClass="polet::Product" childrenPresentation="List">
+              <subNodeMappings name="Price" semanticCandidatesExpression="aql:self" domainClass="polet::Product">
+                <style xsi:type="style:NoteDescription" labelSize="12" labelExpression="aql:'Price: ' + self.price + ' NOK'" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+                </style>
+              </subNodeMappings>
+              <subNodeMappings name="Volume" semanticCandidatesExpression="aql:self" domainClass="polet::Product">
+                <style xsi:type="style:NoteDescription" labelSize="12" labelExpression="aql:'Volume: ' + self.Volume + ' l'" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+                <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.productType.name">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.productType.name" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/product.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/mealTypeSmall.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelFormat>underline</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ShowAllDiagram" domainClass="polet::Categories" preconditionExpression="var:self" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="ProductNode" domainClass="polet::Product">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/product.png" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW" shape="triangle">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="RecepieNode" domainClass="polet::Recipe">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/recipe.png" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="mealTypeNode" domainClass="polet::MealType">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/mealTypeSmall.png" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="productTypeNode" domainClass="polet::ProductType">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/productType.png" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="regionInProductRelation" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']/@subNodeMappings[name='RegionNode']" targetFinderExpression="feature:region">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="RegionInProduct" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']/@subNodeMappings[name='RegionNode']" targetFinderExpression="feature:region" sourceFinderExpression="feature:products" domainClass="polet::ProductOfTypeInRegion" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="recipeInMealType" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@nodeMappings[name='mealTypeNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@nodeMappings[name='RecepieNode']" targetFinderExpression="feature:recipies">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="sutibleFor" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@nodeMappings[name='mealTypeNode']" targetFinderExpression="feature:mealType" sourceFinderExpression="feature:products" domainClass="polet::ProductOfTypeInMealType" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="productInProductTypeEdge" sourceMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@nodeMappings[name='productTypeNode']" targetMapping="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@nodeMappings[name='ProductNode']" targetFinderExpression="feature:products">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="CountryContainer" domainClass="polet::Country">
+          <subNodeMappings name="RegionNode" semanticCandidatesExpression="feature:eAllContents" domainClass="polet::Region">
+            <style xsi:type="style:BundledImageDescription" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/region.png" sizeComputationExpression="7" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" iconPath="/TDT4250Project.polet.model.edit/icons/full/obj16/country.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="setMealTypeForRecepie" edgeMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@edgeMappings[name='recipeInMealType']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="recipies" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="setMealTypeSutibleForProduct" edgeMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@edgeMappings[name='sutibleFor']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="polet::ProductOfTypeInMealType" referenceName="products">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="products" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="productType" valueExpression="aql:source.productType"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createCountryNode" containerMappings="//@ownedViewpoints[name='PoletDiagramViewport']/@ownedRepresentations[name='ShowAllDiagram']/@defaultLayer/@containerMappings[name='CountryContainer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="polet::Country" referenceName="countries"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="productTypeDiagram" domainClass="polet::ProductType" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings name="productTypeContainer" semanticCandidatesExpression="var:self" domainClass="polet::ProductType" childrenPresentation="List">
+          <subNodeMappings name="productNode" semanticCandidatesExpression="aql:self.products -> sortedBy(x | x.pricePerAlcohol)" domainClass="polet::Product">
+            <style xsi:type="style:BundledImageDescription" labelSize="12" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
@@ -168,7 +356,7 @@
   </ownedViewpoints>
   <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
     <categories name="Default Category">
-      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.4"/>
       <groups name="Country" labelExpression="Group" domainClass="polet::Country" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:TextDescription" name="counryId" labelExpression="counryId" valueExpression="feature::countryId">
           <initialOperation>
@@ -177,8 +365,92 @@
             </firstModelOperations>
           </initialOperation>
         </controls>
-        <controls xsi:type="properties:CheckboxDescription">
-          <initialOperation/>
+        <controls xsi:type="properties:TextDescription" name="countryName" labelExpression="Name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:ButtonDescription" name="createNewRegion" buttonLabelExpression="Create New Region">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="polet::Region" referenceName="regions"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="MealType" labelExpression="Group" domainClass="polet::MealType" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ButtonDescription" name="createNewRecepie" buttonLabelExpression="Create New Recipie">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="polet::Recipe" referenceName="recipies"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="recipe" labelExpression="Group" domainClass="polet::Recipe" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="recipeName" labelExpression="Name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="recipeLink" labelExpression="Link">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="link" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="ProductType" labelExpression="Group" domainClass="polet::ProductType" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ButtonDescription" name="createNewProduct" buttonLabelExpression="Create New Product">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:CreateInstance" typeName="polet::Product" referenceName="products"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="Product" labelExpression="Group" domainClass="polet::Product" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="productId" labelExpression="Id">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="productId" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="productName" labelExpression="Name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="price" labelExpression="Price">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:newValue !=null">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="var:newValue"/>
+              </subModelOperations>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="alcoholContent" labelExpression="Alcohol content">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="aloholContent" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="Volume" labelExpression="Volume">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="volume" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
         </controls>
       </groups>
     </categories>
