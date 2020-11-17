@@ -118,7 +118,7 @@ public class DataGenerator {
 				float salePrice = obj.get("prices").getAsJsonArray().get(0).getAsJsonObject().get("salesPrice").getAsFloat();
 				float alcoholContent = obj.get("basic").getAsJsonObject().get("alcoholContent").getAsFloat();
 				float volume = obj.get("basic").getAsJsonObject().get("volume").getAsFloat();
-				float alcoholVolume = (float) (volume * alcoholContent);
+				float alcoholVolume = (float) (volume * (alcoholContent / 100));
 				float pricePerAlcohol = (float) Math.round((salePrice / alcoholVolume));
 				
 				JsonObject x = new JsonObject();
@@ -232,27 +232,28 @@ public class DataGenerator {
 				   country = countries.get(element.getAsJsonObject().get("country").getAsJsonObject().get("countryId").getAsString());
 			   }
 			   
+			   
 			   // Region
 			   Region region;
 			   // This one is a little more complicated.
-			   // Since some products haves the region name "Øvrige", which would be a region in every country.
+			   // Since some products haves the region name "Øvrige" or an empty string, which would be a region in every country.
 			   // We decided to register these products region name with the same country name to distinguish them. 
-			   if (((!regions.containsKey(element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString())) && !element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("00")) || (element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("00") && (!regions.containsKey(element.getAsJsonObject().get("country").getAsJsonObject().get("countryId").getAsString() + "1")))) {
+			   if (((!regions.containsKey(country.getCountryId() + element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString())) && (!element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("00") && !element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals(""))) || ((element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("00") || element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("")) && (!regions.containsKey(element.getAsJsonObject().get("country").getAsJsonObject().get("countryId").getAsString() + "1")))) {
 				   region = PoletFactory.eINSTANCE.createRegion();
-				   if (element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("00")) {
+				   if (element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("00") || element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("")) {
 					   region.setRegionId(element.getAsJsonObject().get("country").getAsJsonObject().get("countryId").getAsString() + "1");
 					   region.setName(element.getAsJsonObject().get("country").getAsJsonObject().get("name").getAsString());
 				   } else {
-					   region.setRegionId(element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString());
+					   region.setRegionId(country.getCountryId() + element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString());
 					   region.setName(element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("name").getAsString());
 				   }
 				   region.setCountry(country);
 				   regions.put(region.getRegionId(), region);
 			   } else {
-				   if (element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("00") ) {
+				   if (element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("00") || element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString().equals("")) {
 					   region = regions.get(element.getAsJsonObject().get("country").getAsJsonObject().get("countryId").getAsString() + "1");
 				   } else {
-					   region = regions.get(element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString());
+					   region = regions.get(country.getCountryId() + element.getAsJsonObject().get("country").getAsJsonObject().get("region").getAsJsonObject().get("regionId").getAsString());
 				   }
 			   }
 			   

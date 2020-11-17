@@ -352,8 +352,7 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * @generated NOT
 	 */
 	public float getPricePerAlcohol() {
-		float pPerAlc = price/alcoholContent;
-		return pPerAlc;
+		return pricePerAlcohol;
 	}
 
 	/**
