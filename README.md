@@ -25,7 +25,7 @@ We decided to collect data from Vinmonopolet's API and create a model with Ecore
 some of the products from Vinmonopolet to a specific meal. By implementing a transformation for the API, we were able to import and view the data by using EMF. The user interface is created with Sirius and EMF Forms and can be installed into Eclipse.
 
 ### Built With
-TODO: Build with Eclipse?  
+Everyone that contributed to the project used Eclipse to develop this software. The next section has a list of libraries that have been used in this project. The names are linked to one of the developers home page for their library.    
 
 #### Libraries
 * [Eclipse EMF](https://www.eclipse.org/modeling/emf/)  
@@ -40,6 +40,7 @@ See each bundle directories for more specific instructions.
 
 ### Prerequisites
 TODO: Eclipse?
+To install this project you would need to install the [Eclipse IDE](https://www.eclipse.org/).
 Install guide for plugins if needed in eclipse.
 Extra guide if they are missing.  
 ```Project-folder -> META-INF -> MANIFEST.MF```
@@ -56,7 +57,7 @@ Add Plugins...
 ## Usage
 
 ## Roadmap
-School project,
+We have no further plans for this school project. Until there are changes to our roadmap, this project will have no maintenance of the code as of 1. December 2020.
 
 ## Contributors
 
