@@ -62,7 +62,7 @@ For detailed description on how to use each bundle, check each bundles git direc
 We have no further plans for this school project. Until there are changes to our roadmap, this project will have no maintenance of the code as of 1. December 2020.
 
 ## Contributors
-[![](https://github.com/aspleym.png?size=50)]
+
 
 ### Example for folder structure
 
