@@ -19,9 +19,14 @@
 * [License](#license)
 
 ## About The Project
+This project is part of the course TDT4250 - Advanced Software Design in 2020 at NTNU.
+Our task was to build a DSL that is usable in the Eclipse IDE by using frameworks such as Xtext, Sirius or EMF Forms.
+We decided to collect data from Vinmonopolet's API and create a model with Ecore. In addition we decided to add a model for recipes to connect 
+some of the products from Vinmonopolet to a specific meal. By implementing a transformation for the API, we were able to import and view the data by using EMF. The user interface is created with Sirius and EMF Forms and can be installed into Eclipse.
 
 ### Built With
-TODO: Build with Eclipse?
+TODO: Build with Eclipse?  
+
 #### Libraries
 * [Eclipse EMF](https://www.eclipse.org/modeling/emf/)  
 * [Sirius](https://www.eclipse.org/sirius/)  
