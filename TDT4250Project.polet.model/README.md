@@ -8,7 +8,7 @@ To initialize an object of type `DataGenerator`, simply write:
 ```java
 DataGenerator dg = new DataGenerator(); // Where "dg" is the variable name
 ```
-Several methods ar available. The most usefull ones are:
+Several methods are available. The most usefull ones are:
 ```java
 dg.downloadJson();          // Downloads, edits and saves the data as data.json in ~/model.
 
@@ -19,7 +19,7 @@ To use the `downloadJson()` function, you would need an API key. You can subscri
 Type in your API key as a string in the `Constants` class at:
 `/src/util/Constants.java`.  
 ```java
-public static final String API_KEY = "";
+public static final String API_KEY = "YOUR_API_KEY";
 ```
 
 ### JSON data structure
@@ -51,9 +51,9 @@ public static final String API_KEY = "";
 }]
 ```
 
-### Example for folder structure
+### File structure
 
-```bash
+```sh
 ├── README.md
 ├── META-INF
 │   └── MANIFEST.MF
