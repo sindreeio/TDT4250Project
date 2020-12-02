@@ -84,7 +84,7 @@ The project is separated into several bundles.
 - **_Diagram_**: The diagrams' source code can be viewed and edited in this bundle.
 - **_Model.edit_**: A bundle for defining custom icons for your diagrams.
 
-We **_suggest_** viewing each bundle in order above for a more detailed description on how to use each bundle.
+We **_suggest_** viewing each bundle in the order above for a more detailed description on how to use each bundle.
 You can decide to ignore the two last bundles unless you want to change some of the source code for the diagrams.
 
 ## Roadmap
