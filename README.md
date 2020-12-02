@@ -47,7 +47,7 @@ To install this project you would first need to install [Eclipse](https://www.ec
 
 ### Download project
 
-This section will guide you to clone this git repository. Type the following lines in the terminal (for unix users):
+This section will guide you to clone this git repository. Type the following lines in the terminal (for **_unix_** users):
 
 ```sh
 cd /to-your-desired-directory
