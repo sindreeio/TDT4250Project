@@ -75,6 +75,7 @@ This is how the JSON data is structured:
 ### Ecore model
 
 The ecore model are located in `TDT4250Project/TDT4250Project.polet.model/model/polet.ecore`
+![Ecore model](https://github.com/sindreeio/TDT4250Project/blob/master/images/ecore-model.png)
 
 ### File structure
 
