@@ -28,6 +28,9 @@ Type in your API key as a string in the `Constants` class at:
 public static final String API_KEY = "YOUR_API_KEY";
 ```
 
+To use the `saveAsXMI(int limit)` function, you would need a `data.json` file in the `~/model` directory.  
+The result would be an XMI file to use with the *diagram.example bundle*.
+
 `DataGenerator.java` contains a main function:
 
 ```java
